@@ -1,0 +1,141 @@
+{
+  "name": "نظام المكتب العقاري",
+  "short_name": "العقاري",
+  "description": "نظام تشغيل متكامل للمكاتب العقارية المصرية",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/ar/dashboard",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "لوحة التحكم الرئيسية"
+    },
+    {
+      "src": "/screenshots/leads.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "إدارة العملاء المحتملين"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "النسخة المحمولة"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "إضافة عميل محتمل",
+      "short_name": "عميل جديد",
+      "description": "إضافة عميل محتمل جديد",
+      "url": "/ar/dashboard/leads/new",
+      "icons": [{ "src": "/icons/shortcut-leads.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "إضافة عقار",
+      "short_name": "عقار جديد",
+      "description": "إضافة عقار جديد للنظام",
+      "url": "/ar/dashboard/properties/new",
+      "icons": [{ "src": "/icons/shortcut-properties.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "البريد الوارد",
+      "short_name": "البريد",
+      "description": "عرض الرسائل الواردة",
+      "url": "/ar/dashboard/inbox",
+      "icons": [{ "src": "/icons/shortcut-inbox.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "share_target": {
+    "action": "/ar/dashboard/leads/new",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "name",
+      "text": "notes",
+      "url": "source",
+      "files": [
+        {
+          "name": "document",
+          "accept": ["image/*", "application/pdf"]
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+realestate",
+      "url": "/ar/dashboard/property?id=%s"
+    }
+  ]
+}

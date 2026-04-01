@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Customer Portal Styles */
+@theme {
+  --color-primary: hsl(220 90% 45%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --font-family-sans: 'Cairo', 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Touch targets */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}

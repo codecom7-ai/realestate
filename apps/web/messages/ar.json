@@ -1,0 +1,2482 @@
+{
+  "common": {
+    "appName": "نظام تشغيل المكتب العقاري",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "errorTitle": "حدث خطأ",
+    "errorMessage": "حدث خطأ أثناء تحميل البيانات. يرجى المحاولة مرة أخرى.",
+    "retry": "إعادة المحاولة",
+    "tryAgain": "إعادة المحاولة",
+    "refreshPage": "تحديث الصفحة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "yes": "نعم",
+    "no": "لا",
+    "all": "الكل",
+    "none": "لا شيء",
+    "actions": "إجراءات",
+    "status": "الحالة",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "amount": "المبلغ",
+    "currency": "العملة",
+    "egp": "جنيه مصري",
+    "notes": "ملاحظات",
+    "required": "مطلوب",
+    "optional": "اختياري",
+    "success": "تمت العملية بنجاح",
+    "warning": "تحذير",
+    "info": "معلومة"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "leads": "العملاء المحتملين",
+    "clients": "العملاء",
+    "properties": "العقارات",
+    "deals": "الصفقات",
+    "reservations": "الحجوزات",
+    "contracts": "العقود",
+    "payments": "المدفوعات",
+    "commissions": "العمولات",
+    "documents": "المستندات",
+    "compliance": "الامتثال",
+    "inbox": "صندوق الوارد",
+    "reports": "التقارير",
+    "settings": "الإعدادات",
+    "ai": "AI Copilot",
+    "automation": "الأتمتة",
+    "viewings": "المعاينات",
+    "eta": "الفوترة الإلكترونية",
+    "branches": "الفروع",
+    "users": "المستخدمون",
+    "audit": "سجل التدقيق",
+    "financial-reports": "التقارير المالية",
+    "payment-schedules": "جداول الأقساط",
+    "reconciliation": "التسوية المالية",
+    "audit-logs": "سجل التدقيق"
+  },
+  "accessibility": {
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "toggleSidebar": "تبديل الشريط الجانبي",
+    "expandSidebar": "توسيع الشريط الجانبي",
+    "collapseSidebar": "طي الشريط الجانبي",
+    "mainNavigation": "التنقل الرئيسي",
+    "sidebar": "الشريط الجانبي",
+    "toggleTheme": "تبديل المظهر",
+    "switchToLight": "التبديل إلى المظهر الفاتح",
+    "switchToDark": "التبديل إلى المظهر الداكن",
+    "notifications": "الإشعارات",
+    "notificationsCount": "{count} إشعارات غير مقروءة",
+    "noNotifications": "لا توجد إشعارات",
+    "changeLanguage": "تغيير اللغة",
+    "selectLanguage": "اختر اللغة",
+    "currentLanguage": "اللغة الحالية",
+    "languageArabic": "العربية",
+    "languageEnglish": "الإنجليزية",
+    "userMenu": "قائمة المستخدم",
+    "logout": "تسجيل الخروج",
+    "currentPage": "الصفحة الحالية",
+    "skipToContent": "تخطي إلى المحتوى الرئيسي"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "rememberMe": "تذكرني",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "loginButton": "دخول",
+    "loginError": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+    "mfaRequired": "مطلوب رمز التحقق الثنائي",
+    "mfaCode": "رمز التحقق",
+    "mfaPlaceholder": "أدخل الرمز المكون من 6 أرقام"
+  },
+  "setup": {
+    "title": "إعداد النظام",
+    "subtitle": "مرحباً بك في نظام تشغيل المكتب العقاري",
+    "step": "الخطوة",
+    "of": "من",
+    "step1Title": "بيانات المكتب",
+    "step2Title": "حساب المالك",
+    "step3Title": "جهاز POS",
+    "step4Title": "واتساب",
+    "step5Title": "تأكيد",
+    "officeName": "اسم المكتب",
+    "officeNameAr": "اسم المكتب بالعربية",
+    "taxId": "الرقم الضريبي (RIN)",
+    "brokerLicenseNo": "رقم ترخيص السمسرة",
+    "classification": "التصنيف",
+    "phone": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "address": "العنوان",
+    "city": "المدينة",
+    "ownerName": "اسم المالك",
+    "ownerEmail": "بريد المالك",
+    "ownerPassword": "كلمة المرور",
+    "ownerPhone": "هاتف المالك",
+    "posSerial": "الرقم التسلسلي للجهاز",
+    "posOsVersion": "إصدار نظام التشغيل",
+    "whatsappToken": "رمز واتساب API",
+    "whatsappPhoneId": "معرف رقم الهاتف",
+    "complete": "إتمام الإعداد",
+    "setupSuccess": "تم إعداد النظام بنجاح"
+  },
+  "leads": {
+    "title": "العملاء المحتملين",
+    "newLead": "عميل محتمل جديد",
+    "editLead": "تعديل العميل المحتمل",
+    "leadDetails": "تفاصيل العميل المحتمل",
+    "pipeline": "خط الأنابيب",
+    "list": "القائمة",
+    "searchPlaceholder": "ابحث بالاسم أو الهاتف...",
+    "emptyTitle": "لا يوجد عملاء محتملين",
+    "emptyDescription": "ابدأ بإضافة عميل محتمل جديد",
+    "stages": {
+      "NEW": "جديد",
+      "CONTACTED": "تم التواصل",
+      "QUALIFIED": "مؤهل",
+      "PROPERTY_PRESENTED": "تم عرض عقار",
+      "VIEWING_SCHEDULED": "معاينة مجدولة",
+      "VIEWED": "تمت المعاينة",
+      "NEGOTIATING": "في التفاوض",
+      "RESERVED": "محجوز",
+      "CONTRACT_SENT": "تم إرسال العقد",
+      "CONTRACT_SIGNED": "تم توقيع العقد",
+      "CLOSED_WON": "مغلق (نجاح)",
+      "CLOSED_LOST": "مغلق (فقدان)"
+    },
+    "score": {
+      "hot": "ساخن",
+      "warm": "دافئ",
+      "cold": "بارد"
+    },
+    "assignTo": "تعيين إلى",
+    "assign": "تعيين",
+    "assignedTo": "المسؤول",
+    "unassigned": "غير معيّن",
+    "budget": "الميزانية",
+    "preferredAreas": "المناطق المفضلة",
+    "propertyTypes": "أنواع العقارات",
+    "source": "المصدر",
+    "notes": "ملاحظات",
+    "activities": "الأنشطة",
+    "viewings": "المعاينات",
+    "changeStage": "تغيير المرحلة",
+    "stageChanged": "تم تغيير المرحلة",
+    "lostReason": "سبب الفقدان",
+    "lostReasonPlaceholder": "أدخل سبب إغلاق الـ Lead كخاسر",
+    "lostReasonRequired": "سبب الفقدان مطلوب عند الإغلاق كخاسر",
+    "client": "العميل",
+    "noClient": "بدون عميل",
+    "createSuccess": "تم إضافة العميل المحتمل بنجاح",
+    "updateSuccess": "تم تحديث العميل المحتمل بنجاح",
+    "deleteSuccess": "تم حذف العميل المحتمل بنجاح",
+    "confirmDelete": "هل أنت متأكد من حذف هذا العميل المحتمل؟",
+    "validation": {
+      "clientIdRequired": "العميل مطلوب",
+      "minSize": "أقل مساحة",
+      "maxSize": "أكبر مساحة",
+      "minBedrooms": "أقل غرف",
+      "maxBedrooms": "أكثر غرف"
+    },
+    "notesPlaceholder": "أدخل ملاحظاتك هنا...",
+    "expectedCloseDate": "تاريخ الإغلاق المتوقع",
+    "size": "المساحة",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "تاريخ التحديث",
+    "stats": {
+      "total": "إجمالي العملاء المحتملين",
+      "newThisMonth": "جدد هذا الشهر",
+      "hotLeads": "عملاء ساخنون",
+      "avgScore": "متوسط التقييم"
+    },
+    "filters": {
+      "all": "الكل",
+      "mine": "عملائي",
+      "unassigned": "غير معيّن",
+      "hot": "ساخن",
+      "warm": "دافئ",
+      "cold": "بارد"
+    },
+    "table": {
+      "client": "العميل",
+      "stage": "المرحلة",
+      "budget": "الميزانية",
+      "assignedTo": "المسؤول",
+      "aiScore": "تقييم AI",
+      "activities": "الأنشطة"
+    }
+  },
+  "properties": {
+    "title": "العقارات",
+    "newProperty": "عقار جديد",
+    "editProperty": "تعديل العقار",
+    "propertyDetails": "تفاصيل العقار",
+    "grid": "شبكة",
+    "list": "قائمة",
+    "map": "خريطة",
+    "searchPlaceholder": "ابحث بالعنوان أو المدينة أو المنطقة...",
+    "emptyTitle": "لا توجد عقارات",
+    "emptyDescription": "ابدأ بإضافة عقارك الأول",
+    "emptyAddButton": "إضافة عقار",
+    "types": {
+      "APARTMENT": "شقة",
+      "VILLA": "فيلا",
+      "DUPLEX": "دوبلكس",
+      "PENTHOUSE": "بنتهاوس",
+      "STUDIO": "استوديو",
+      "OFFICE": "مكتب",
+      "SHOP": "محل",
+      "WAREHOUSE": "مستودع",
+      "LAND": "أرض",
+      "COMPOUND_UNIT": "وحدة كمباوند"
+    },
+    "statuses": {
+      "AVAILABLE": "متاح",
+      "RESERVED_TEMP": "محجوز مؤقتاً",
+      "RESERVED_CONFIRMED": "محجوز مؤكد",
+      "SOLD": "مباع",
+      "RENTED": "مؤجر",
+      "SUSPENDED": "معلق",
+      "UNDER_MAINTENANCE": "تحت الصيانة"
+    },
+    "statusColors": {
+      "AVAILABLE": "bg-green-100 text-green-800",
+      "RESERVED_TEMP": "bg-yellow-100 text-yellow-800",
+      "RESERVED_CONFIRMED": "bg-orange-100 text-orange-800",
+      "SOLD": "bg-blue-100 text-blue-800",
+      "RENTED": "bg-purple-100 text-purple-800",
+      "SUSPENDED": "bg-gray-100 text-gray-800",
+      "UNDER_MAINTENANCE": "bg-red-100 text-red-800"
+    },
+    "finishingTypes": {
+      "FULLY_FINISHED": "تشطيب كامل",
+      "SEMI_FINISHED": "تشطيب جزئي",
+      "CORE_SHELL": "هيكل فقط",
+      "ULTRA_LUXURY": "تشطيب فاخر"
+    },
+    "fields": {
+      "title": "عنوان العقار",
+      "titleAr": "عنوان العقار بالعربية",
+      "description": "وصف العقار",
+      "propertyType": "نوع العقار",
+      "finishingType": "نوع التشطيب",
+      "status": "حالة العقار",
+      "city": "المدينة",
+      "district": "المنطقة/الحي",
+      "address": "العنوان التفصيلي",
+      "floor": "الدور",
+      "unitNumber": "رقم الوحدة",
+      "areaM2": "المساحة (م²)",
+      "bedrooms": "غرف النوم",
+      "bathrooms": "الحمامات",
+      "parking": "أماكن الانتظار",
+      "askingPrice": "السعر المطلوب",
+      "currency": "العملة",
+      "commissionRate": "نسبة العمولة (%)",
+      "isListed": "معروض للبيع",
+      "isOffPlan": "على المخطط (Off-Plan)",
+      "branchId": "الفرع",
+      "projectId": "المشروع",
+      "developerId": "المطور"
+    },
+    "placeholders": {
+      "title": "أدخل عنوان العقار",
+      "description": "أدخل وصفاً تفصيلياً للعقار...",
+      "city": "اختر المدينة",
+      "district": "اختر المنطقة",
+      "address": "الشارع، رقم المبنى،...",
+      "unitNumber": "مثال: A15"
+    },
+    "validation": {
+      "titleRequired": "عنوان العقار مطلوب",
+      "propertyTypeRequired": "نوع العقار مطلوب",
+      "cityRequired": "المدينة مطلوبة",
+      "areaM2Required": "المساحة مطلوبة",
+      "areaM2Min": "المساحة يجب أن تكون أكبر من صفر",
+      "askingPriceRequired": "السعر المطلوب مطلوب",
+      "askingPriceMin": "السعر يجب أن يكون أكبر من أو يساوي صفر",
+      "commissionRateMax": "نسبة العمولة لا يمكن أن تتجاوز 100%"
+    },
+    "price": "السعر",
+    "area": "المساحة",
+    "bedrooms": "غرف النوم",
+    "bathrooms": "الحمامات",
+    "floor": "الدور",
+    "city": "المدينة",
+    "district": "المنطقة",
+    "lock": "حجز",
+    "unlock": "إلغاء الحجز",
+    "lockedBy": "محجوز بواسطة",
+    "lockType": {
+      "temporary": "حجز مؤقت",
+      "confirmed": "حجز مؤكد"
+    },
+    "lockExpires": "ينتهي الحجز في",
+    "confirmLock": "تأكيد الحجز",
+    "confirmUnlock": "تأكيد إلغاء الحجز",
+    "lockSuccess": "تم حجز العقار بنجاح",
+    "unlockSuccess": "تم إلغاء حجز العقار",
+    "alreadyLocked": "العقار محجوز مسبقاً",
+    "cannotDeleteLocked": "لا يمكن حذف عقار محجوز",
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "lock": "حجز",
+      "unlock": "إلغاء الحجز"
+    },
+    "confirmDelete": "هل أنت متأكد من حذف هذا العقار؟",
+    "createSuccess": "تم إضافة العقار بنجاح",
+    "updateSuccess": "تم تحديث العقار بنجاح",
+    "deleteSuccess": "تم حذف العقار بنجاح",
+    "priceHistory": "سجل الأسعار",
+    "priceChanged": "تم تغيير السعر",
+    "fromPrice": "من",
+    "toPrice": "إلى",
+    "changedOn": "تم التغيير في",
+    "filters": {
+      "all": "الكل",
+      "available": "متاح فقط",
+      "reserved": "محجوز",
+      "sold": "مباع",
+      "rented": "مؤجر"
+    },
+    "advancedFilters": "فلاتر متقدمة",
+    "priceRange": "نطاق السعر",
+    "areaRange": "نطاق المساحة",
+    "minPrice": "أقل سعر",
+    "maxPrice": "أعلى سعر",
+    "minArea": "أقل مساحة",
+    "maxArea": "أعلى مساحة",
+    "minBedrooms": "أقل غرف",
+    "maxBedrooms": "أكثر غرف",
+    "stats": {
+      "total": "إجمالي العقارات",
+      "available": "متاح",
+      "reserved": "محجوز",
+      "sold": "مباع",
+      "rented": "مؤجر",
+      "totalValue": "إجمالي القيمة"
+    },
+    "table": {
+      "title": "العنوان",
+      "type": "النوع",
+      "status": "الحالة",
+      "city": "المدينة",
+      "area": "المساحة",
+      "price": "السعر",
+      "bedrooms": "غرف",
+      "createdAt": "تاريخ الإضافة"
+    },
+    "m2": "م²",
+    "rooms": "غرف",
+    "noImages": "لا توجد صور",
+    "viewOnMap": "عرض على الخريطة",
+    "share": "مشاركة",
+    "copyLink": "نسخ الرابط",
+    "linkCopied": "تم نسخ الرابط"
+  },
+  "uploads": {
+    "title": "رفع الصور",
+    "uploadImages": "رفع الصور",
+    "dragDropHint": "اسحب الصور هنا أو انقر للاختيار",
+    "maxImages": "الحد الأقصى {count} صور",
+    "maxSize": "الحجم الأقصى {size}MB",
+    "allowedTypes": "الأنواع المسموحة: JPEG, PNG, WebP, GIF",
+    "uploading": "جاري الرفع...",
+    "uploadSuccess": "تم رفع الصورة بنجاح",
+    "uploadError": "فشل رفع الصورة",
+    "deleteConfirm": "هل أنت متأكد من حذف هذه الصورة؟",
+    "deleteSuccess": "تم حذف الصورة",
+    "setPrimary": "تعيين كصورة رئيسية",
+    "primary": "الرئيسية",
+    "reorder": "إعادة الترتيب",
+    "saving": "جاري الحفظ...",
+    "saved": "تم الحفظ",
+    "dragDropTitle": "اسحب الصور هنا",
+    "clickToSelect": "أو انقر للاختيار",
+    "processing": "جاري المعالجة...",
+    "uploadProgress": "تقدم الرفع",
+    "cancelUpload": "إلغاء الرفع",
+    "errors": {
+      "fileTooBig": "الملف كبير جداً. الحد الأقصى {size}MB",
+      "invalidType": "نوع الملف غير مسموح",
+      "maxImagesReached": "تم الوصول للحد الأقصى من الصور",
+      "uploadFailed": "فشل رفع الملف",
+      "networkError": "خطأ في الاتصال",
+      "presignedUrlFailed": "فشل الحصول على رابط الرفع",
+      "confirmFailed": "فشل تأكيد الرفع"
+    },
+    "entityTypes": {
+      "property": "عقار",
+      "client": "عميل",
+      "deal": "صفقة",
+      "contract": "عقد",
+      "document": "مستند",
+      "user_avatar": "صورة المستخدم",
+      "organization_logo": "شعار المنظمة"
+    },
+    "imageCount": "{count} من {max} صورة",
+    "noImagesUploaded": "لم يتم رفع صور بعد",
+    "addImagesHint": "أضف صوراً للعقار لعرضها للعملاء",
+    "imageOrderSaved": "تم حفظ ترتيب الصور"
+  },
+  "deals": {
+    "title": "الصفقات",
+    "subtitle": "إدارة الصفقات والمتابعة",
+    "newDeal": "صفقة جديدة",
+    "editDeal": "تعديل الصفقة",
+    "dealDetails": "تفاصيل الصفقة",
+    "kanban": "كانبان",
+    "list": "قائمة",
+    "searchPlaceholder": "ابحث بالاسم أو العنوان...",
+    "emptyTitle": "لا توجد صفقات",
+    "emptyDescription": "ابدأ بإضافة صفقة جديدة",
+    "emptyAddButton": "إضافة صفقة",
+    "stages": {
+      "LEAD": "عميل محتمل",
+      "VIEWING": "معاينة",
+      "NEGOTIATION": "تفاوض",
+      "RESERVATION": "حجز",
+      "CONTRACT_PREPARATION": "إعداد العقد",
+      "CONTRACT_SIGNED": "تم توقيع العقد",
+      "PAYMENT_ACTIVE": "سداد نشط",
+      "HANDOVER_PENDING": "في انتظار التسليم",
+      "CLOSED": "مغلق",
+      "CANCELLED": "ملغي"
+    },
+    "stageColors": {
+      "LEAD": "bg-blue-100 text-blue-800",
+      "VIEWING": "bg-cyan-100 text-cyan-800",
+      "NEGOTIATION": "bg-yellow-100 text-yellow-800",
+      "RESERVATION": "bg-orange-100 text-orange-800",
+      "CONTRACT_PREPARATION": "bg-purple-100 text-purple-800",
+      "CONTRACT_SIGNED": "bg-green-100 text-green-800",
+      "PAYMENT_ACTIVE": "bg-emerald-100 text-emerald-800",
+      "HANDOVER_PENDING": "bg-teal-100 text-teal-800",
+      "CLOSED": "bg-gray-100 text-gray-800",
+      "CANCELLED": "bg-red-100 text-red-800"
+    },
+    "types": {
+      "sale": "بيع",
+      "rent": "إيجار",
+      "management": "إدارة"
+    },
+    "typeColors": {
+      "sale": "bg-green-100 text-green-800",
+      "rent": "bg-blue-100 text-blue-800",
+      "management": "bg-purple-100 text-purple-800"
+    },
+    "fields": {
+      "client": "العميل",
+      "property": "العقار",
+      "assignedBroker": "المسؤول",
+      "dealType": "نوع الصفقة",
+      "stage": "المرحلة",
+      "agreedPrice": "السعر المتفق عليه",
+      "currency": "العملة",
+      "notes": "ملاحظات",
+      "createdAt": "تاريخ الإنشاء",
+      "updatedAt": "تاريخ التحديث",
+      "closedAt": "تاريخ الإغلاق",
+      "closedReason": "سبب الإغلاق"
+    },
+    "placeholders": {
+      "selectClient": "اختر العميل",
+      "selectProperty": "اختر العقار",
+      "selectBroker": "اختر المسؤول",
+      "selectType": "اختر نوع الصفقة",
+      "notes": "أضف ملاحظات عن الصفقة..."
+    },
+    "validation": {
+      "clientRequired": "العميل مطلوب",
+      "propertyRequired": "العقار مطلوب",
+      "dealTypeRequired": "نوع الصفقة مطلوب",
+      "agreedPriceRequired": "السعر المتفق عليه مطلوب",
+      "agreedPriceMin": "السعر يجب أن يكون أكبر من صفر"
+    },
+    "messages": {
+      "createSuccess": "تم إضافة الصفقة بنجاح",
+      "updateSuccess": "تم تحديث الصفقة بنجاح",
+      "deleteSuccess": "تم حذف الصفقة بنجاح",
+      "stageChanged": "تم تغيير المرحلة",
+      "deleteConfirm": "هل أنت متأكد من حذف هذه الصفقة؟"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "changeStage": "تغيير المرحلة",
+      "addPayment": "إضافة دفعة",
+      "viewContract": "عرض العقد"
+    },
+    "filters": {
+      "all": "الكل",
+      "mine": "صفقاتي",
+      "byType": "حسب النوع",
+      "byStage": "حسب المرحلة",
+      "byBroker": "حسب المسؤول"
+    },
+    "stats": {
+      "title": "إحصائيات الصفقات",
+      "total": "إجمالي الصفقات",
+      "active": "نشطة",
+      "closed": "مغلقة",
+      "totalValue": "إجمالي القيمة",
+      "pendingPayments": "مدفوعات معلقة"
+    },
+    "table": {
+      "client": "العميل",
+      "property": "العقار",
+      "type": "النوع",
+      "stage": "المرحلة",
+      "price": "السعر",
+      "broker": "المسؤول",
+      "createdAt": "تاريخ الإنشاء",
+      "actions": "إجراءات"
+    },
+    "timeline": {
+      "title": "الجدول الزمني",
+      "stageChanged": "تم تغيير المرحلة",
+      "fromStage": "من",
+      "toStage": "إلى",
+      "changedBy": "تم التغيير بواسطة"
+    },
+    "amounts": {
+      "title": "المبالغ والعمولات",
+      "agreedPrice": "السعر المتفق عليه",
+      "commissionRate": "نسبة العمولة",
+      "commissionAmount": "مبلغ العمولة",
+      "vatAmount": "ضريبة القيمة المضافة",
+      "totalCommission": "إجمالي العمولة",
+      "paidAmount": "المبلغ المدفوع",
+      "remainingAmount": "المبلغ المتبقي"
+    },
+    "documents": {
+      "title": "المستندات",
+      "empty": "لا توجد مستندات",
+      "add": "إضافة مستند",
+      "contract": "العقد",
+      "idCopy": "صورة الهوية",
+      "paymentReceipt": "إيصال الدفع"
+    },
+    "noClient": "بدون عميل",
+    "noProperty": "بدون عقار",
+    "unassigned": "غير معيّن",
+    "changeStage": "تغيير المرحلة",
+    "stageChanged": "تم تغيير المرحلة",
+    "pipeline": "خط الأنابيب",
+    "score": {
+      "hot": "ساخن",
+      "warm": "دافئ",
+      "cold": "بارد"
+    }
+  },
+  "reservations": {
+    "title": "الحجوزات",
+    "subtitle": "إدارة حجوزات العقارات",
+    "newReservation": "حجز جديد",
+    "searchPlaceholder": "ابحث بالاسم أو العنوان...",
+    "emptyTitle": "لا توجد حجوزات",
+    "emptyDescription": "لا توجد حجوزات حالياً",
+    "statuses": {
+      "active": "نشط",
+      "expired": "منتهي",
+      "cancelled": "ملغي",
+      "converted": "تم التحويل"
+    },
+    "statusColors": {
+      "active": "bg-green-100 text-green-800",
+      "expired": "bg-gray-100 text-gray-800",
+      "cancelled": "bg-red-100 text-red-800",
+      "converted": "bg-blue-100 text-blue-800"
+    },
+    "lockTypes": {
+      "temporary": "حجز مؤقت",
+      "confirmed": "حجز مؤكد"
+    },
+    "lockTypeColors": {
+      "temporary": "bg-yellow-100 text-yellow-800",
+      "confirmed": "bg-green-100 text-green-800"
+    },
+    "fields": {
+      "deal": "الصفقة",
+      "client": "العميل",
+      "property": "العقار",
+      "lockType": "نوع الحجز",
+      "depositAmount": "مبلغ العربون",
+      "depositMethod": "طريقة الدفع",
+      "depositPaidAt": "تاريخ دفع العربون",
+      "lockedAt": "تاريخ الحجز",
+      "expiresAt": "تاريخ الانتهاء",
+      "status": "الحالة",
+      "timeRemaining": "الوقت المتبقي"
+    },
+    "placeholders": {
+      "selectDeal": "اختر الصفقة",
+      "notes": "أضف ملاحظات..."
+    },
+    "validation": {
+      "dealRequired": "الصفقة مطلوبة",
+      "depositAmountRequired": "مبلغ العربون مطلوب",
+      "depositAmountMin": "مبلغ العربون يجب أن يكون أكبر من صفر",
+      "expiresAtRequired": "تاريخ الانتهاء مطلوب",
+      "expiresAtFuture": "تاريخ الانتهاء يجب أن يكون في المستقبل"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء الحجز بنجاح",
+      "cancelSuccess": "تم إلغاء الحجز",
+      "confirmSuccess": "تم تأكيد الحجز",
+      "extendSuccess": "تم تمديد الحجز",
+      "cancelConfirm": "هل أنت متأكد من إلغاء هذا الحجز؟"
+    },
+    "actions": {
+      "view": "عرض",
+      "cancel": "إلغاء",
+      "confirm": "تأكيد",
+      "extend": "تمديد",
+      "convert": "تحويل لعقد"
+    },
+    "filters": {
+      "all": "الكل",
+      "active": "نشطة",
+      "expired": "منتهية",
+      "temporary": "مؤقتة",
+      "confirmed": "مؤكدة"
+    },
+    "stats": {
+      "title": "إحصائيات الحجوزات",
+      "total": "إجمالي الحجوزات",
+      "active": "نشطة",
+      "expired": "منتهية",
+      "expiringSoon": "تنتهي قريباً",
+      "totalDeposit": "إجمالي العربون"
+    },
+    "table": {
+      "client": "العميل",
+      "property": "العقار",
+      "lockType": "النوع",
+      "deposit": "العربون",
+      "lockedAt": "تاريخ الحجز",
+      "expiresAt": "تاريخ الانتهاء",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "countdown": {
+      "days": "يوم",
+      "hours": "ساعة",
+      "minutes": "دقيقة",
+      "seconds": "ثانية",
+      "expired": "منتهي",
+      "expiresIn": "ينتهي خلال"
+    },
+    "noDeal": "بدون صفقة",
+    "noClient": "بدون عميل",
+    "noProperty": "بدون عقار"
+  },
+  "payments": {
+    "title": "المدفوعات",
+    "subtitle": "إدارة المدفوعات والمتحصلات",
+    "newPayment": "دفعة جديدة",
+    "recordPayment": "تسجيل دفعة",
+    "schedule": "جدول الدفعات",
+    "paymentDetails": "تفاصيل الدفعة",
+    "searchPlaceholder": "ابحث بالرقم المرجعي أو اسم العميل...",
+    "emptyTitle": "لا توجد مدفوعات",
+    "emptyDescription": "ابدأ بتسجيل أول دفعة",
+    "emptyAddButton": "تسجيل دفعة",
+    "methods": {
+      "CASH": "نقدي",
+      "CHECK": "شيك",
+      "BANK_TRANSFER": "تحويل بنكي",
+      "INSTAPAY": "InstaPay",
+      "FAWRY": "فوري",
+      "PAYMOB_CARD": "بطاقة Paymob",
+      "PAYMOB_WALLET": "محفظة Paymob",
+      "PAYMOB_BNPL": "الآن اشتري لاحقاً"
+    },
+    "methodIcons": {
+      "CASH": "💵",
+      "CHECK": "📝",
+      "BANK_TRANSFER": "🏦",
+      "INSTAPAY": "📱",
+      "FAWRY": "🏪",
+      "PAYMOB_CARD": "💳",
+      "PAYMOB_WALLET": "👛",
+      "PAYMOB_BNPL": "🛒"
+    },
+    "statuses": {
+      "PENDING": "قيد الانتظار",
+      "CONFIRMED": "مؤكد",
+      "FAILED": "فشل",
+      "REFUNDED": "مسترد"
+    },
+    "statusColors": {
+      "PENDING": "bg-yellow-100 text-yellow-800",
+      "CONFIRMED": "bg-green-100 text-green-800",
+      "FAILED": "bg-red-100 text-red-800",
+      "REFUNDED": "bg-gray-100 text-gray-800"
+    },
+    "fields": {
+      "deal": "الصفقة",
+      "installment": "القسط",
+      "amount": "المبلغ",
+      "method": "طريقة الدفع",
+      "status": "الحالة",
+      "reference": "الرقم المرجعي",
+      "paidAt": "تاريخ الدفع",
+      "dueDate": "تاريخ الاستحقاق",
+      "notes": "ملاحظات",
+      "receiptNumber": "رقم الإيصال",
+      "bankName": "اسم البنك",
+      "checkNumber": "رقم الشيك",
+      "checkDueDate": "تاريخ استحقاق الشيك"
+    },
+    "placeholders": {
+      "selectDeal": "اختر الصفقة",
+      "selectInstallment": "اختر القسط",
+      "selectMethod": "اختر طريقة الدفع",
+      "reference": "أدخل الرقم المرجعي",
+      "notes": "أضف ملاحظات...",
+      "receiptNumber": "أدخل رقم الإيصال"
+    },
+    "validation": {
+      "dealRequired": "الصفقة مطلوبة",
+      "amountRequired": "المبلغ مطلوب",
+      "amountMin": "المبلغ يجب أن يكون أكبر من صفر",
+      "methodRequired": "طريقة الدفع مطلوبة"
+    },
+    "messages": {
+      "createSuccess": "تم تسجيل الدفعة بنجاح",
+      "updateSuccess": "تم تحديث الدفعة بنجاح",
+      "confirmSuccess": "تم تأكيد الدفعة",
+      "refundSuccess": "تم استرداد الدفعة",
+      "deleteConfirm": "هل أنت متأكد من حذف هذه الدفعة؟"
+    },
+    "actions": {
+      "view": "عرض",
+      "confirm": "تأكيد",
+      "refund": "استرداد",
+      "print": "طباعة",
+      "download": "تحميل"
+    },
+    "filters": {
+      "all": "الكل",
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "failed": "فشل",
+      "refunded": "مسترد",
+      "today": "اليوم",
+      "thisWeek": "هذا الأسبوع",
+      "thisMonth": "هذا الشهر",
+      "overdue": "متأخر"
+    },
+    "stats": {
+      "title": "إحصائيات المدفوعات",
+      "total": "إجمالي المدفوعات",
+      "confirmed": "مؤكدة",
+      "pending": "قيد الانتظار",
+      "overdue": "متأخرة",
+      "thisMonth": "هذا الشهر",
+      "totalAmount": "إجمالي المبلغ"
+    },
+    "table": {
+      "reference": "المرجع",
+      "deal": "الصفقة",
+      "client": "العميل",
+      "amount": "المبلغ",
+      "method": "الطريقة",
+      "status": "الحالة",
+      "date": "التاريخ",
+      "dueDate": "تاريخ الاستحقاق",
+      "actions": "إجراءات"
+    },
+    "alerts": {
+      "overdue": "متأخر",
+      "dueToday": "مستحق اليوم",
+      "dueTomorrow": "مستحق غداً",
+      "dueThisWeek": "مستحق هذا الأسبوع"
+    },
+    "totals": {
+      "totalReceived": "إجمالي المحصل",
+      "totalPending": "إجمالي المعلق",
+      "totalOverdue": "إجمالي المتأخر"
+    },
+    "selectDealFirst": "اختر الصفقة أولاً",
+    "availableInstallments": "الأقساط المتاحة",
+    "noInstallments": "لا توجد أقساط متاحة",
+    "paymentFor": "دفعة مقابل",
+    "installmentNumber": "القسط رقم"
+  },
+  "commissions": {
+    "title": "العمولات",
+    "subtitle": "إدارة عمولات الوسطاء والوكلاء",
+    "calculate": "حساب العمولة",
+    "approve": "موافقة",
+    "settle": "تسوية",
+    "pay": "دفع",
+    "dispute": "نزاع",
+    "locked": "مغلق",
+    "commissionDetails": "تفاصيل العمولة",
+    "searchPlaceholder": "ابحث باسم الوسيط أو الصفقة...",
+    "emptyTitle": "لا توجد عمولات",
+    "emptyDescription": "ستظهر العمولات هنا عند إتمام الصفقات",
+    "statuses": {
+      "CALCULATED": "تم الحساب",
+      "APPROVED": "تمت الموافقة",
+      "SETTLED": "تم التسوية",
+      "PAID": "تم الدفع",
+      "DISPUTED": "متنازع عليه"
+    },
+    "statusColors": {
+      "CALCULATED": "bg-blue-100 text-blue-800",
+      "APPROVED": "bg-green-100 text-green-800",
+      "SETTLED": "bg-purple-100 text-purple-800",
+      "PAID": "bg-emerald-100 text-emerald-800",
+      "DISPUTED": "bg-red-100 text-red-800"
+    },
+    "fields": {
+      "deal": "الصفقة",
+      "broker": "الوسيط",
+      "baseAmount": "المبلغ الأساسي",
+      "vatAmount": "ضريبة القيمة المضافة",
+      "totalAmount": "إجمالي العمولة",
+      "status": "الحالة",
+      "calculatedAt": "تاريخ الحساب",
+      "approvedAt": "تاريخ الموافقة",
+      "settledAt": "تاريخ التسوية",
+      "paidAt": "تاريخ الدفع",
+      "notes": "ملاحظات"
+    },
+    "placeholders": {
+      "notes": "أضف ملاحظات..."
+    },
+    "validation": {
+      "amountMin": "المبلغ يجب أن يكون أكبر من صفر"
+    },
+    "messages": {
+      "approveSuccess": "تمت الموافقة على العمولة",
+      "settleSuccess": "تم تسوية العمولة",
+      "paySuccess": "تم دفع العمولة",
+      "disputeSuccess": "تم تحويل العمولة للنزاع",
+      "confirmApprove": "هل أنت متأكد من الموافقة على هذه العمولة؟",
+      "confirmSettle": "هل أنت متأكد من تسوية هذه العمولة؟",
+      "confirmPay": "هل أنت متأكد من دفع هذه العمولة؟"
+    },
+    "actions": {
+      "view": "عرض",
+      "approve": "موافقة",
+      "settle": "تسوية",
+      "pay": "دفع",
+      "dispute": "نزاع"
+    },
+    "filters": {
+      "all": "الكل",
+      "calculated": "تم الحساب",
+      "approved": "تمت الموافقة",
+      "settled": "تم التسوية",
+      "paid": "تم الدفع",
+      "disputed": "متنازع عليه"
+    },
+    "stats": {
+      "title": "إحصائيات العمولات",
+      "total": "إجمالي العمولات",
+      "calculated": "تم الحساب",
+      "approved": "تمت الموافقة",
+      "settled": "تم التسوية",
+      "paid": "تم الدفع",
+      "totalAmount": "إجمالي المبالغ",
+      "totalVat": "إجمالي الضريبة"
+    },
+    "table": {
+      "deal": "الصفقة",
+      "broker": "الوسيط",
+      "baseAmount": "المبلغ الأساسي",
+      "vat": "الضريبة",
+      "total": "الإجمالي",
+      "status": "الحالة",
+      "date": "التاريخ",
+      "actions": "إجراءات"
+    },
+    "distribution": {
+      "title": "توزيع العمولة",
+      "broker": "حصة الوسيط",
+      "company": "حصة الشركة",
+      "percentage": "النسبة المئوية"
+    },
+    "vatInfo": "ضريبة القيمة المضافة (14%)"
+  },
+  "paymentSchedules": {
+    "title": "جداول الأقساط",
+    "subtitle": "متابعة جدول سداد الأقساط",
+    "emptyTitle": "لا توجد جداول أقساط",
+    "emptyDescription": "ستظهر جداول الأقساط هنا عند إنشاء الصفقات",
+    "fields": {
+      "deal": "الصفقة",
+      "client": "العميل",
+      "property": "العقار",
+      "totalAmount": "إجمالي المبلغ",
+      "paidAmount": "المبلغ المدفوع",
+      "remainingAmount": "المبلغ المتبقي",
+      "installmentsCount": "عدد الأقساط",
+      "paidInstallments": "الأقساط المدفوعة",
+      "progress": "نسبة الإنجاز"
+    },
+    "installment": {
+      "number": "رقم القسط",
+      "amount": "المبلغ",
+      "dueDate": "تاريخ الاستحقاق",
+      "paidAt": "تاريخ الدفع",
+      "status": "الحالة",
+      "statuses": {
+        "PENDING": "قيد الانتظار",
+        "PAID": "مدفوع",
+        "OVERDUE": "متأخر",
+        "PARTIAL": "مدفوع جزئياً"
+      },
+      "statusColors": {
+        "PENDING": "bg-yellow-100 text-yellow-800",
+        "PAID": "bg-green-100 text-green-800",
+        "OVERDUE": "bg-red-100 text-red-800",
+        "PARTIAL": "bg-orange-100 text-orange-800"
+      }
+    },
+    "timeline": {
+      "title": "الجدول الزمني",
+      "view": "عرض الجدول",
+      "list": "قائمة",
+      "calendar": "تقويم"
+    },
+    "alerts": {
+      "overdue": "متأخر",
+      "dueToday": "مستحق اليوم",
+      "dueThisWeek": "مستحق هذا الأسبوع",
+      "dueThisMonth": "مستحق هذا الشهر",
+      "overdueInstallments": "أقساط متأخرة",
+      "upcomingInstallments": "أقساط قادمة"
+    },
+    "stats": {
+      "title": "إحصائيات الأقساط",
+      "totalDeals": "إجمالي الصفقات",
+      "totalInstallments": "إجمالي الأقساط",
+      "paid": "مدفوعة",
+      "pending": "قيد الانتظار",
+      "overdue": "متأخرة",
+      "totalValue": "إجمالي القيمة",
+      "paidValue": "المبلغ المدفوع",
+      "remainingValue": "المبلغ المتبقي"
+    },
+    "filters": {
+      "all": "الكل",
+      "overdue": "متأخر",
+      "dueThisWeek": "مستحق هذا الأسبوع",
+      "dueThisMonth": "مستحق هذا الشهر"
+    },
+    "progress": "نسبة السداد",
+    "viewDeal": "عرض الصفقة",
+    "recordPayment": "تسجيل دفعة"
+  },
+  "eta": {
+    "title": "الفوترة الإلكترونية",
+    "newReceipt": "إيصال جديد",
+    "statuses": {
+      "PENDING": "قيد الانتظار",
+      "VALID": "صالح",
+      "INVALID": "غير صالح",
+      "CANCELLED": "ملغي",
+      "QUEUED_FOR_RETRY": "في انتظار إعادة المحاولة"
+    },
+    "subtitle": "نظام ETA للإيصالات الإلكترونية",
+    "emptyTitle": "لا توجد إيصالات"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "إدارة إعدادات النظام والمكتب",
+    "organization": "بيانات المكتب",
+    "branches": "الفروع",
+    "users": "المستخدمين",
+    "roles": "الأدوار والصلاحيات",
+    "integrations": "التكاملات",
+    "notifications": "الإشعارات",
+    "security": "الأمان",
+    "appearance": "المظهر",
+    "language": "اللغة",
+    "regional": "الإعدادات الإقليمية",
+    "commission": "إعدادات العمولة",
+    "save": "حفظ التغييرات",
+    "saving": "جاري الحفظ...",
+    "saved": "تم الحفظ",
+    "fields": {
+      "officeName": "اسم المكتب (EN)",
+      "officeNameAr": "اسم المكتب (AR)",
+      "taxId": "الرقم الضريبي (RIN)",
+      "brokerLicenseNo": "رقم ترخيص السمسرة",
+      "classification": "التصنيف",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "city": "المدينة",
+      "address": "العنوان"
+    },
+    "classifications": {
+      "A": "درجة أ",
+      "B": "درجة ب",
+      "C": "درجة ج"
+    },
+    "themes": {
+      "light": "فاتح",
+      "dark": "داكن",
+      "system": "تلقائي"
+    },
+    "currencies": {
+      "EGP": "جنيه مصري",
+      "USD": "دولار أمريكي",
+      "SAR": "ريال سعودي",
+      "AED": "درهم إماراتي"
+    },
+    "timezones": {
+      "Cairo": "القاهرة (GMT+2)",
+      "Riyadh": "الرياض (GMT+3)",
+      "Dubai": "دبي (GMT+4)"
+    },
+    "commissionRates": {
+      "brokerRate": "نسبة السمسار (%)",
+      "managerRate": "نسبة المدير (%)",
+      "companyRate": "نسبة الشركة (%)",
+      "totalMustBe100": "يجب أن يكون المجموع 100%"
+    },
+    "notificationSettings": {
+      "emailNotifications": "إشعارات البريد الإلكتروني",
+      "smsNotifications": "إشعارات SMS",
+      "whatsappNotifications": "إشعارات واتساب"
+    }
+  },
+  "branches": {
+    "title": "إدارة الفروع",
+    "subtitle": "إضافة وتعديل وحذف فروع المكتب",
+    "newBranch": "إضافة فرع جديد",
+    "editBranch": "تعديل الفرع",
+    "searchPlaceholder": "ابحث بالاسم أو المدينة...",
+    "emptyTitle": "لا توجد فروع",
+    "emptyDescription": "ابدأ بإضافة فرع جديد للمكتب",
+    "emptyAddButton": "إضافة فرع",
+    "fields": {
+      "name": "اسم الفرع (EN)",
+      "nameAr": "اسم الفرع (AR)",
+      "etaBranchCode": "كود فرع ETA",
+      "isHeadquarters": "المقر الرئيسي",
+      "address": "العنوان",
+      "city": "المدينة",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني"
+    },
+    "placeholders": {
+      "name": "Branch Name",
+      "nameAr": "اسم الفرع",
+      "etaBranchCode": "اختر كود الفرع",
+      "address": "العنوان التفصيلي...",
+      "phone": "+20 123 456 7890",
+      "email": "branch@company.com"
+    },
+    "validation": {
+      "nameRequired": "اسم الفرع مطلوب",
+      "cityRequired": "المدينة مطلوبة",
+      "addressRequired": "العنوان مطلوب",
+      "emailInvalid": "البريد الإلكتروني غير صالح"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء الفرع بنجاح",
+      "updateSuccess": "تم تحديث الفرع بنجاح",
+      "deleteSuccess": "تم حذف الفرع بنجاح",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا الفرع؟",
+      "cannotDeleteHeadquarters": "لا يمكن حذف المقر الرئيسي"
+    },
+    "headquarters": "المقر الرئيسي",
+    "inactive": "غير نشط",
+    "etaCodeInfo": "الرمز المستخدم في الفوترة الإلكترونية المصرية",
+    "setAsHeadquarters": "تعيين كمقر رئيسي",
+    "users": "مستخدم",
+    "properties": "عقار"
+  },
+  "users": {
+    "title": "إدارة المستخدمين",
+    "subtitle": "إضافة وتعديل وحذف مستخدمي النظام",
+    "newUser": "إضافة مستخدم",
+    "editUser": "تعديل المستخدم",
+    "inviteUser": "دعوة مستخدم",
+    "searchPlaceholder": "ابحث بالاسم أو البريد...",
+    "emptyTitle": "لا يوجد مستخدمين",
+    "emptyDescription": "ابدأ بإضافة مستخدم جديد للنظام",
+    "emptyAddButton": "إضافة مستخدم",
+    "fields": {
+      "firstName": "الاسم الأول (EN)",
+      "lastName": "اسم العائلة (EN)",
+      "firstNameAr": "الاسم الأول (AR)",
+      "lastNameAr": "اسم العائلة (AR)",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "role": "الدور",
+      "branch": "الفرع",
+      "sendInvite": "إرسال دعوة للمستخدم"
+    },
+    "roles": {
+      "OWNER": "المالك",
+      "GENERAL_MANAGER": "المدير العام",
+      "SALES_MANAGER": "مدير المبيعات",
+      "BROKER": "سمسار",
+      "ACCOUNTANT": "محاسب",
+      "COMPLIANCE_OFFICER": "مسؤول الامتثال",
+      "FIELD_AGENT": "مندوب ميداني",
+      "RECEPTIONIST": "موظف استقبال",
+      "READ_ONLY": "قراءة فقط"
+    },
+    "validation": {
+      "firstNameRequired": "الاسم الأول مطلوب",
+      "lastNameRequired": "اسم العائلة مطلوب",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "البريد الإلكتروني غير صالح",
+      "roleRequired": "الدور مطلوب"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء المستخدم بنجاح",
+      "updateSuccess": "تم تحديث المستخدم بنجاح",
+      "deleteSuccess": "تم حذف المستخدم بنجاح",
+      "inviteSuccess": "تم إرسال الدعوة بنجاح",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا المستخدم؟"
+    },
+    "permissions": "صلاحية",
+    "inactive": "غير نشط",
+    "emailNotVerified": "البريد غير مؤكد",
+    "mfaEnabled": "MFA",
+    "noBranch": "بدون فرع"
+  },
+  "automation": {
+    "title": "قواعد الأتمتة",
+    "subtitle": "إنشاء وإدارة قواعد الأتمتة التلقائية",
+    "newRule": "إنشاء قاعدة جديدة",
+    "editRule": "تعديل القاعدة",
+    "emptyTitle": "لا توجد قواعد أتمتة",
+    "emptyDescription": "ابدأ بإنشاء قاعدة أتمتة جديدة لأتمتة العمليات المتكررة",
+    "emptyAddButton": "إنشاء قاعدة",
+    "searchPlaceholder": "ابحث بالاسم أو المحفز...",
+    "stats": {
+      "totalRules": "إجمالي القواعد",
+      "activeRules": "القواعد النشطة",
+      "totalRuns": "مرات التشغيل",
+      "successRate": "معدل النجاح"
+    },
+    "filters": {
+      "all": "الكل",
+      "active": "نشط",
+      "inactive": "متوقف",
+      "search": "بحث"
+    },
+    "table": {
+      "name": "القاعدة",
+      "trigger": "المحفز",
+      "status": "الحالة",
+      "lastRun": "آخر تشغيل",
+      "actions": "الإجراءات",
+      "runCount": "عدد التشغيل"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "متوقف"
+    },
+    "triggers": {
+      "title": "المحفز",
+      "subtitle": "الحدث الذي سيُشغِّل القاعدة",
+      "selectTrigger": "اختر المحفز",
+      "searchTrigger": "ابحث عن المحفز...",
+      "noResults": "لا توجد نتائج مطابقة",
+      "groups": {
+        "leads": "العملاء المحتملين",
+        "deals": "الصفقات",
+        "payments": "المدفوعات",
+        "documents": "المستندات",
+        "viewings": "المعاينات",
+        "contracts": "العقود"
+      },
+      "types": {
+        "lead.created": "عميل محتمل جديد",
+        "lead.created_desc": "عند إضافة عميل محتمل جديد",
+        "lead.stage_changed": "تغيير مرحلة العميل",
+        "lead.stage_changed_desc": "عند تغيير مرحلة العميل المحتمل",
+        "lead.assigned": "تعيين عميل",
+        "lead.assigned_desc": "عند تعيين عميل لمسؤول",
+        "deal.created": "صفقة جديدة",
+        "deal.created_desc": "عند إنشاء صفقة جديدة",
+        "deal.stage_changed": "تغيير مرحلة الصفقة",
+        "deal.stage_changed_desc": "عند تغيير مرحلة الصفقة",
+        "deal.closed": "إغلاق صفقة",
+        "deal.closed_desc": "عند إغلاق صفقة (نجاح أو فشل)",
+        "payment.received": "استلام دفعة",
+        "payment.received_desc": "عند استلام دفعة جديدة",
+        "payment.overdue": "تأخر دفعة",
+        "payment.overdue_desc": "عند تأخر دفعة عن موعدها",
+        "document.uploaded": "رفع مستند",
+        "document.uploaded_desc": "عند رفع مستند جديد",
+        "document.expiring": "مستند منتهي الصلاحية",
+        "document.expiring_desc": "عند اقتراب انتهاء صلاحية مستند",
+        "viewing.scheduled": "جدولة معاينة",
+        "viewing.scheduled_desc": "عند جدولة معاينة جديدة",
+        "viewing.completed": "إتمام معاينة",
+        "viewing.completed_desc": "عند إتمام معاينة",
+        "contract.signed": "توقيع عقد",
+        "contract.signed_desc": "عند توقيع عقد"
+      }
+    },
+    "conditions": {
+      "title": "الشروط",
+      "subtitle": "اختياري - حدد شروطاً إضافية",
+      "addCondition": "إضافة شرط",
+      "addGroup": "إضافة مجموعة",
+      "removeCondition": "حذف الشرط",
+      "removeGroup": "حذف المجموعة",
+      "emptyTitle": "لا توجد شروط",
+      "emptyDescription": "أضف شروطاً لتقييد تنفيذ القاعدة",
+      "and": "و",
+      "or": "أو",
+      "conditionsCount": "شرط",
+      "field": "الحقل",
+      "operator": "المقارنة",
+      "value": "القيمة",
+      "operators": {
+        "equals": "يساوي",
+        "not_equals": "لا يساوي",
+        "contains": "يحتوي على",
+        "not_contains": "لا يحتوي على",
+        "greater_than": "أكبر من",
+        "less_than": "أقل من",
+        "greater_than_or_equal": "أكبر من أو يساوي",
+        "less_than_or_equal": "أقل من أو يساوي",
+        "in": "في قائمة",
+        "not_in": "ليس في قائمة",
+        "is_empty": "فارغ",
+        "is_not_empty": "غير فارغ",
+        "starts_with": "يبدأ بـ",
+        "ends_with": "ينتهي بـ"
+      },
+      "fields": {
+        "stage": "المرحلة",
+        "status": "الحالة",
+        "budget": "الميزانية",
+        "source": "المصدر",
+        "assignedToId": "المسؤول",
+        "dealType": "نوع الصفقة",
+        "agreedPrice": "السعر المتفق عليه",
+        "amount": "المبلغ",
+        "method": "طريقة الدفع",
+        "notes": "الملاحظات"
+      }
+    },
+    "actions": {
+      "title": "الإجراءات",
+      "subtitle": "الإجراءات التي سيتم تنفيذها",
+      "addAction": "إضافة إجراء",
+      "removeAction": "حذف الإجراء",
+      "emptyTitle": "لم يتم إضافة إجراءات",
+      "emptyDescription": "أضف إجراءات ليتم تنفيذها عند تحقق الشروط",
+      "order": "الترتيب",
+      "delay": "تأخير",
+      "seconds": "ثانية",
+      "test": "اختبار",
+      "types": {
+        "send_notification": "إرسال إشعار",
+        "send_notification_desc": "إرسال إشعار للمستخدمين",
+        "send_whatsapp": "إرسال واتساب",
+        "send_whatsapp_desc": "إرسال رسالة واتساب",
+        "send_email": "إرسال بريد إلكتروني",
+        "send_email_desc": "إرسال بريد إلكتروني",
+        "create_task": "إنشاء مهمة",
+        "create_task_desc": "إنشاء مهمة جديدة",
+        "update_field": "تحديث حقل",
+        "update_field_desc": "تحديث قيمة حقل",
+        "assign_to": "تعيين لمسؤول",
+        "assign_to_desc": "تعيين العنصر لمسؤول",
+        "trigger_webhook": "استدعاء Webhook",
+        "trigger_webhook_desc": "إرسال طلب HTTP"
+      },
+      "fields": {
+        "title": "العنوان",
+        "body": "المحتوى",
+        "message": "الرسالة",
+        "subject": "الموضوع",
+        "description": "الوصف",
+        "to": "المستقبل",
+        "from": "المرسل",
+        "userId": "المستخدم",
+        "role": "الدور",
+        "assignedToId": "المسؤول",
+        "dueInDays": "استحقاق خلال (أيام)",
+        "priority": "الأولوية",
+        "field": "الحقل",
+        "value": "القيمة",
+        "url": "الرابط",
+        "method": "الطريقة",
+        "headers": "Headers",
+        "templateName": "اسم القالب"
+      },
+      "variables": {
+        "title": "متغيرات",
+        "lead_client_name": "اسم العميل",
+        "lead_client_phone": "هاتف العميل",
+        "lead_stage": "المرحلة",
+        "lead_budget": "الميزانية",
+        "deal_agreedPrice": "السعر المتفق",
+        "deal_property_title": "عنوان العقار",
+        "user_name": "اسم المستخدم",
+        "date": "التاريخ الحالي",
+        "time": "الوقت الحالي"
+      },
+      "priorities": {
+        "low": "منخفضة",
+        "medium": "متوسطة",
+        "high": "عالية"
+      },
+      "roles": {
+        "all": "جميع المستخدمين",
+        "owner": "المالك",
+        "gm": "المدير العام",
+        "sales_manager": "مدير المبيعات",
+        "broker": "وسيط"
+      }
+    },
+    "builder": {
+      "steps": {
+        "trigger": "المحفز",
+        "conditions": "الشروط",
+        "actions": "الإجراءات"
+      },
+      "ruleName": "اسم القاعدة",
+      "ruleNamePlaceholder": "مثال: إشعار عند تغيير مرحلة العميل",
+      "isActive": "تفعيل القاعدة",
+      "save": "حفظ القاعدة",
+      "saving": "جاري الحفظ...",
+      "cancel": "إلغاء",
+      "test": "اختبار",
+      "testing": "جاري الاختبار...",
+      "runNow": "تشغيل الآن",
+      "duplicate": "نسخ",
+      "delete": "حذف",
+      "edit": "تعديل"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء القاعدة بنجاح",
+      "updateSuccess": "تم تحديث القاعدة بنجاح",
+      "deleteSuccess": "تم حذف القاعدة بنجاح",
+      "toggleActive": "تم تفعيل القاعدة",
+      "toggleInactive": "تم إيقاف القاعدة",
+      "duplicateSuccess": "تم نسخ القاعدة بنجاح",
+      "runSuccess": "تم تشغيل القاعدة",
+      "testSuccess": "القاعدة تطابق البيانات",
+      "testFail": "القاعدة لا تطابق البيانات",
+      "deleteConfirm": "هل أنت متأكد من حذف هذه القاعدة؟",
+      "deleteWarning": "لا يمكن التراجع عن هذا الإجراء",
+      "nameRequired": "اسم القاعدة مطلوب",
+      "triggerRequired": "المحفز مطلوب",
+      "actionsRequired": "يجب إضافة إجراء واحد على الأقل",
+      "loadError": "فشل في تحميل البيانات",
+      "saveError": "فشل في حفظ القاعدة",
+      "deleteError": "فشل في حذف القاعدة",
+      "testError": "فشل في اختبار القاعدة"
+    }
+  },
+  "aiCopilot": {
+    "title": "AI Copilot",
+    "subtitle": "مساعدك الذكي لإدارة المكتب العقاري",
+    "welcome": "مرحباً! أنا AI Copilot",
+    "welcomeMessage": "مساعدك الذكي لإدارة المكتب العقاري. يمكنني مساعدتك في تحليل البيانات، اقتراح أفضل الممارسات، والإجابة على استفساراتك.",
+    "placeholder": "اكتب سؤالك هنا...",
+    "thinking": "جاري التفكير...",
+    "cancel": "إلغاء",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "clearHistory": "مسح المحادثة",
+    "disclaimer": "AI Copilot قد يُنتج معلومات غير دقيقة. تحقق من المعلومات المهمة.",
+    "contexts": {
+      "general": "عام",
+      "leads": "العملاء المحتملين",
+      "properties": "العقارات",
+      "deals": "الصفقات",
+      "analytics": "التحليلات"
+    },
+    "suggestedPrompts": {
+      "general": [
+        "ما هي أفضل الممارسات لإدارة العملاء المحتملين؟",
+        "كيف يمكنني تحسين معدل إغلاق الصفقات؟",
+        "ما هي التقارير الأكثر أهمية لمتابعة أداء المكتب؟"
+      ],
+      "leads": [
+        "ما هي العملاء المحتملين الأكثر احتمالية للتحويل؟",
+        "أي العملاء يحتاجون متابعة عاجلة؟",
+        "قيم لي هذا العميل المحتمل"
+      ],
+      "properties": [
+        "ما هي العقارات الأكثر طلباً؟",
+        "أي العقارات تحتاج لتخفيض السعر؟",
+        "ما هي العقارات المناسبة لهذا العميل؟"
+      ],
+      "deals": [
+        "ما هي الصفقات المعرضة للخطر؟",
+        "كيف يمكنني تسريع عملية إغلاق الصفقات؟",
+        "ما هي الصفقات المتوقعة هذا الشهر؟"
+      ],
+      "analytics": [
+        "كيف كان أداء الفريق هذا الشهر؟",
+        "ما هي مصادر العملاء الأكثر فعالية؟",
+        "قارن أداء هذا الشهر بالشهر السابق"
+      ]
+    },
+    "tryThese": "جرب أحد هذه الأسئلة:"
+  },
+  "errors": {
+    "unexpectedError": "حدث خطأ غير متوقع",
+    "unexpectedErrorDesc": "نعتذر عن هذا الخطأ. يرجى المحاولة مرة أخرى أو العودة للصفحة الرئيسية.",
+    "retry": "إعادة المحاولة",
+    "goHome": "الصفحة الرئيسية",
+    "loadFailed": "فشل تحميل البيانات",
+    "networkError": "خطأ في الاتصال",
+    "networkErrorDesc": "تعذر الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت.",
+    "permissionDenied": "لا تملك صلاحية",
+    "permissionDeniedDesc": "ليس لديك الصلاحية اللازمة للوصول إلى هذه الصفحة."
+  },
+  "empty": {
+    "noData": "لا توجد بيانات",
+    "noLeads": "لا يوجد عملاء محتملين",
+    "noProperties": "لا توجد عقارات",
+    "noDeals": "لا توجد صفقات",
+    "noResults": "لا توجد نتائج",
+    "addFirst": "أضف الأول",
+    "noClients": "لا يوجد عملاء"
+  },
+  "clients": {
+    "title": "العملاء",
+    "newClient": "عميل جديد",
+    "editClient": "تعديل العميل",
+    "clientDetails": "تفاصيل العميل",
+    "list": "قائمة العملاء",
+    "searchPlaceholder": "ابحث بالاسم أو الهاتف...",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "firstNameAr": "الاسم الأول بالعربية",
+    "lastNameAr": "اسم العائلة بالعربية",
+    "phone": "رقم الهاتف",
+    "phone2": "رقم هاتف إضافي",
+    "email": "البريد الإلكتروني",
+    "nationalId": "الرقم القومي",
+    "nationality": "الجنسية",
+    "clientType": "نوع العميل",
+    "companyName": "اسم الشركة",
+    "taxId": "الرقم الضريبي",
+    "source": "مصدر العميل",
+    "tags": "الوسوم",
+    "notes": "ملاحظات",
+    "isVip": "عميل VIP",
+    "createdAt": "تاريخ الإضافة",
+    "lastActivity": "آخر نشاط",
+    "types": {
+      "individual": "فرد",
+      "company": "شركة"
+    },
+    "sources": {
+      "whatsapp": "واتساب",
+      "phone": "هاتف",
+      "website": "الموقع",
+      "referral": "توصية",
+      "portal": "بوابة عقارات",
+      "other": "أخرى"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "merge": "دمج",
+      "convertToLead": "تحويل لعميل محتمل"
+    },
+    "confirmDelete": "هل أنت متأكد من حذف هذا العميل؟",
+    "cannotDeleteWithDeals": "لا يمكن حذف عميل لديه صفقات نشطة",
+    "phoneExists": "رقم الهاتف مسجل مسبقاً",
+    "phoneExistsWarning": "رقم الهاتف مسجل مسبقاً للعميل: {name}",
+    "duplicateFound": "تم العثور على عميل بنفس الرقم",
+    "mergeTitle": "دمج العملاء",
+    "mergeDescription": "سيتم نقل جميع البيانات من العميل المصدر إلى العميل المستهدف",
+    "sourceClient": "العميل المصدر",
+    "targetClient": "العميل المستهدف",
+    "mergeSuccess": "تم دمج العميل بنجاح",
+    "createSuccess": "تم إضافة العميل بنجاح",
+    "updateSuccess": "تم تحديث العميل بنجاح",
+    "deleteSuccess": "تم حذف العميل بنجاح",
+    "validation": {
+      "firstNameRequired": "الاسم الأول مطلوب",
+      "lastNameRequired": "اسم العائلة مطلوب",
+      "phoneRequired": "رقم الهاتف مطلوب",
+      "phoneInvalid": "رقم الهاتف غير صالح",
+      "emailInvalid": "البريد الإلكتروني غير صالح",
+      "nationalIdInvalid": "الرقم القومي غير صالح"
+    },
+    "table": {
+      "name": "الاسم",
+      "contact": "التواصل",
+      "type": "النوع",
+      "source": "المصدر",
+      "vip": "VIP",
+      "addedDate": "تاريخ الإضافة"
+    },
+    "filters": {
+      "all": "الكل",
+      "vip": "VIP فقط",
+      "individuals": "أفراد",
+      "companies": "شركات"
+    },
+    "emptyState": {
+      "title": "لا يوجد عملاء",
+      "description": "ابدأ بإضافة عميلك الأول",
+      "addButton": "إضافة عميل"
+    },
+    "stats": {
+      "total": "إجمالي العملاء",
+      "vip": "عملاء VIP",
+      "newThisMonth": "جدد هذا الشهر",
+      "activeDeals": "صفقات نشطة"
+    }
+  },
+  "activities": {
+    "title": "الأنشطة",
+    "timeline": "الجدول الزمني",
+    "newActivity": "نشاط جديد",
+    "addActivity": "إضافة نشاط",
+    "editActivity": "تعديل النشاط",
+    "activityDetails": "تفاصيل النشاط",
+    "noActivities": "لا توجد أنشطة",
+    "noActivitiesDescription": "لم يتم تسجيل أي أنشطة بعد",
+    "loadMore": "تحميل المزيد",
+    "showMore": "عرض المزيد",
+    "showLess": "عرض أقل",
+    "types": {
+      "call": "مكالمة",
+      "whatsapp": "واتساب",
+      "email": "بريد إلكتروني",
+      "meeting": "اجتماع",
+      "note": "ملاحظة",
+      "viewing": "معاينة",
+      "contract": "عقد",
+      "payment": "دفعة",
+      "system": "النظام"
+    },
+    "typeIcons": {
+      "call": "📞",
+      "whatsapp": "💬",
+      "email": "📧",
+      "meeting": "👥",
+      "note": "📝",
+      "viewing": "🏠",
+      "contract": "📄",
+      "payment": "💰",
+      "system": "⚙️"
+    },
+    "entityTypes": {
+      "lead": "عميل محتمل",
+      "client": "عميل",
+      "property": "عقار",
+      "deal": "صفقة",
+      "contract": "عقد",
+      "payment": "دفعة"
+    },
+    "fields": {
+      "type": "نوع النشاط",
+      "title": "العنوان",
+      "description": "الوصف",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "user": "المستخدم",
+      "relatedTo": "مرتبط بـ",
+      "aiGenerated": "مُولَّد بواسطة AI"
+    },
+    "placeholders": {
+      "title": "أدخل عنوان النشاط",
+      "description": "أدخل تفاصيل النشاط...",
+      "selectType": "اختر نوع النشاط"
+    },
+    "validation": {
+      "titleRequired": "العنوان مطلوب",
+      "typeRequired": "نوع النشاط مطلوب",
+      "titleMinLength": "العنوان يجب أن يكون 3 أحرف على الأقل",
+      "titleMaxLength": "العنوان لا يمكن أن يتجاوز 200 حرف",
+      "bodyMaxLength": "الوصف لا يمكن أن يتجاوز 2000 حرف"
+    },
+    "messages": {
+      "createSuccess": "تم إضافة النشاط بنجاح",
+      "updateSuccess": "تم تحديث النشاط بنجاح",
+      "deleteSuccess": "تم حذف النشاط بنجاح",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا النشاط؟"
+    },
+    "filters": {
+      "all": "الكل",
+      "byType": "حسب النوع",
+      "byUser": "حسب المستخدم",
+      "byDate": "حسب التاريخ"
+    },
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "thisWeek": "هذا الأسبوع",
+    "lastWeek": "الأسبوع الماضي",
+    "thisMonth": "هذا الشهر",
+    "older": "أقدم"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً بك",
+    "lastUpdated": "آخر تحديث",
+    "refresh": "تحديث",
+    "refreshing": "جاري التحديث...",
+    "fromCache": "من الذاكرة المؤقتة",
+    "kpis": {
+      "pipelineValue": "قيمة Pipeline",
+      "newLeads": "Leads جديدة",
+      "dealsClosed": "صفقات مغلقة",
+      "totalCommission": "عمولات متوقعة",
+      "availableProperties": "عقارات متاحة",
+      "scheduledViewings": "معاينات مجدولة"
+    },
+    "trends": {
+      "up": "ارتفاع",
+      "down": "انخفاض",
+      "stable": "ثابت",
+      "fromLastMonth": "من الشهر الماضي",
+      "noChange": "لا يوجد تغيير"
+    },
+    "charts": {
+      "leadsByStage": "توزيع Leads حسب المرحلة",
+      "propertiesByType": "توزيع العقارات حسب النوع",
+      "monthlyTrends": "الاتجاهات الشهرية",
+      "activitiesByType": "توزيع الأنشطة"
+    },
+    "leadsStats": {
+      "title": "إحصائيات Leads",
+      "totalLeads": "إجمالي Leads",
+      "totalBudget": "إجمالي الميزانية",
+      "newLeads": "جدد",
+      "qualifiedLeads": "مؤهلين",
+      "closedWon": "مغلقة (نجاح)",
+      "closedLost": "مغلقة (فقدان)"
+    },
+    "propertiesStats": {
+      "title": "إحصائيات العقارات",
+      "total": "إجمالي العقارات",
+      "available": "متاحة",
+      "reserved": "محجوزة",
+      "sold": "مباعة",
+      "rented": "مؤجرة",
+      "totalValue": "إجمالي القيمة"
+    },
+    "clientsStats": {
+      "title": "إحصائيات العملاء",
+      "total": "إجمالي العملاء",
+      "individuals": "أفراد",
+      "companies": "شركات",
+      "newThisMonth": "جدد هذا الشهر"
+    },
+    "activitiesStats": {
+      "title": "إحصائيات الأنشطة",
+      "total": "إجمالي الأنشطة",
+      "today": "اليوم",
+      "thisWeek": "هذا الأسبوع",
+      "calls": "مكالمات",
+      "whatsapp": "واتساب",
+      "viewings": "معاينات"
+    },
+    "alerts": {
+      "title": "التنبيهات",
+      "noAlerts": "لا توجد تنبيهات",
+      "staleLeads": "Leads بدون متابعة",
+      "staleLeadsDescription": "{count} leads لم يتم متابعتهم منذ أكثر من 3 أيام",
+      "expiringReservations": "حجوزات منتهية قريباً",
+      "expiringReservationsDescription": "{count} حجز مؤقت سينتهي خلال 24 ساعة",
+      "propertiesWithoutImages": "عقارات بدون صور",
+      "propertiesWithoutImagesDescription": "{count} عقار بدون صور"
+    },
+    "topAgents": {
+      "title": "أفضل الوكلاء",
+      "name": "الاسم",
+      "dealsClosed": "صفقات مغلقة",
+      "totalValue": "إجمالي القيمة",
+      "leadsAssigned": "Leads مسندة",
+      "noAgents": "لا توجد بيانات"
+    },
+    "monthlyTrends": {
+      "title": "الاتجاهات الشهرية (آخر 6 أشهر)",
+      "month": "الشهر",
+      "leads": "Leads",
+      "properties": "عقارات",
+      "clients": "عملاء",
+      "dealsClosed": "صفقات مغلقة"
+    },
+    "quickActions": {
+      "title": "إجراءات سريعة",
+      "addLead": "إضافة Lead",
+      "addProperty": "إضافة عقار",
+      "addClient": "إضافة عميل",
+      "scheduleViewing": "جدولة معاينة"
+    },
+    "colors": {
+      "blue": "أزرق",
+      "green": "أخضر",
+      "purple": "بنفسجي",
+      "yellow": "أصفر",
+      "indigo": "نيلي",
+      "pink": "وردي",
+      "red": "أحمر",
+      "orange": "برتقالي"
+    },
+    "loading": "جاري تحميل البيانات...",
+    "error": "حدث خطأ في تحميل البيانات"
+  },
+  "search": {
+    "title": "البحث الشامل",
+    "placeholder": "ابحث عن عميل، عقار، صفقة...",
+    "noResults": "لا توجد نتائج",
+    "noResultsHint": "جرب البحث بكلمات مختلفة",
+    "resultsCount": "{count} نتيجة",
+    "searchTime": "{time} مللي ثانية",
+    "suggestions": "اقتراحات",
+    "recent": "عمليات بحث حديثة",
+    "navigate": "للتنقل",
+    "select": "للاختيار",
+    "close": "للإغلاق",
+    "types": {
+      "all": "الكل",
+      "clients": "العملاء",
+      "leads": "العملاء المحتملين",
+      "properties": "العقارات",
+      "deals": "الصفقات"
+    },
+    "errors": {
+      "tooShort": "نص البحث يجب أن يكون حرفين على الأقل",
+      "rateLimit": "تم تجاوز حد البحث المسموح، حاول لاحقاً"
+    }
+  },
+  "inbox": {
+    "title": "صندوق الوارد",
+    "subtitle": "إدارة المحادثات والرسائل",
+    "searchPlaceholder": "ابحث بالاسم أو رقم الهاتف...",
+    "allStatuses": "جميع الحالات",
+    "statusOpen": "مفتوح",
+    "statusPending": "في الانتظار",
+    "statusResolved": "تم الحل",
+    "emptyTitle": "لا توجد محادثات",
+    "emptyDescription": "ستظهر المحادثات هنا عند استلام رسائل WhatsApp",
+    "unknown": "غير معروف",
+    "noMessages": "لا توجد رسائل",
+    "assignedTo": "المسؤول",
+    "previous": "السابق",
+    "next": "التالي",
+    "page": "صفحة",
+    "conversationNotFound": "المحادثة غير موجودة",
+    "backToInbox": "العودة للوارد",
+    "typeMessage": "اكتب رسالتك...",
+    "channels": {
+      "whatsapp": "واتساب",
+      "sms": "SMS",
+      "email": "بريد إلكتروني"
+    },
+    "statusLabels": {
+      "OPEN": "مفتوح",
+      "PENDING": "في الانتظار",
+      "RESOLVED": "تم الحل"
+    }
+  },
+  "contracts": {
+    "title": "العقود",
+    "subtitle": "إدارة عقود البيع والإيجار",
+    "newContract": "عقد جديد",
+    "editContract": "تعديل العقد",
+    "contractDetails": "تفاصيل العقد",
+    "searchPlaceholder": "ابحث برقم العقد...",
+    "emptyTitle": "لا توجد عقود",
+    "emptyDescription": "ستظهر العقود هنا بعد إتمام الصفقات",
+    "emptyAddButton": "إضافة عقد",
+    "statuses": {
+      "all": "الكل",
+      "pending": "قيد الانتظار",
+      "signed": "مُوقّع",
+      "cancelled": "ملغي"
+    },
+    "statusColors": {
+      "pending": "bg-yellow-100 text-yellow-800",
+      "signed": "bg-green-100 text-green-800",
+      "cancelled": "bg-red-100 text-red-800"
+    },
+    "fields": {
+      "contractNumber": "رقم العقد",
+      "contractDate": "تاريخ العقد",
+      "deal": "الصفقة",
+      "property": "العقار",
+      "client": "العميل",
+      "dealType": "نوع الصفقة",
+      "agreedPrice": "السعر المتفق عليه",
+      "signedByClient": "توقيع العميل",
+      "signedByOffice": "توقيع المكتب",
+      "signedAt": "تاريخ التوقيع",
+      "fileUrl": "ملف العقد",
+      "notes": "ملاحظات",
+      "parties": "أطراف العقد",
+      "signatures": "التوقيعات",
+      "attachments": "المرفقات",
+      "timeline": "السجل الزمني"
+    },
+    "dealTypes": {
+      "sale": "بيع",
+      "rent": "إيجار",
+      "management": "إدارة"
+    },
+    "table": {
+      "number": "الرقم",
+      "date": "التاريخ",
+      "type": "النوع",
+      "property": "العقار",
+      "client": "العميل",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "download": "تحميل",
+      "sign": "توقيع",
+      "cancel": "إلغاء"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء العقد بنجاح",
+      "updateSuccess": "تم تحديث العقد بنجاح",
+      "signSuccess": "تم توقيع العقد بنجاح",
+      "cancelSuccess": "تم إلغاء العقد",
+      "confirmSign": "هل أنت متأكد من توقيع هذا العقد؟",
+      "confirmCancel": "هل أنت متأكد من إلغاء هذا العقد؟"
+    },
+    "noFile": "لا يوجد ملف",
+    "notSigned": "غير مُوقّع",
+    "signed": "مُوقّع",
+    "pendingSignature": "في انتظار التوقيع",
+    "partyFirst": "الطرف الأول (البائع/المؤجر)",
+    "partySecond": "الطرف الثاني (المشتري/المستأجر)",
+    "officeSignature": "توقيع المكتب",
+    "clientSignature": "توقيع العميل",
+    "attachmentUpload": "رفع مرفق",
+    "noAttachments": "لا توجد مرفقات",
+    "viewDeal": "عرض الصفقة",
+    "viewProperty": "عرض العقار",
+    "viewClient": "عرض العميل"
+  },
+  "documents": {
+    "title": "المستندات",
+    "subtitle": "إدارة مستندات العملاء والعقارات",
+    "newDocument": "رفع مستند",
+    "editDocument": "تعديل المستند",
+    "documentDetails": "تفاصيل المستند",
+    "searchPlaceholder": "ابحث بالعنوان أو النوع...",
+    "emptyTitle": "لا توجد مستندات",
+    "emptyDescription": "ابدأ برفع المستندات للعملاء والعقارات",
+    "emptyAddButton": "رفع مستند",
+    "statuses": {
+      "all": "الكل",
+      "pending_review": "قيد المراجعة",
+      "verified": "موثق",
+      "rejected": "مرفوض",
+      "expired": "منتهي"
+    },
+    "statusColors": {
+      "pending_review": "bg-yellow-100 text-yellow-800",
+      "verified": "bg-green-100 text-green-800",
+      "rejected": "bg-red-100 text-red-800",
+      "expired": "bg-gray-100 text-gray-800"
+    },
+    "ocrStatuses": {
+      "pending": "قيد المعالجة",
+      "processing": "جاري الاستخراج",
+      "completed": "مكتمل",
+      "failed": "فشل"
+    },
+    "entityTypes": {
+      "all": "الكل",
+      "client": "عميل",
+      "property": "عقار",
+      "deal": "صفقة",
+      "contract": "عقد"
+    },
+    "documentTypes": {
+      "all": "الكل",
+      "national_id": "بطاقة الرقم القومي",
+      "passport": "جواز سفر",
+      "commercial_register": "السجل التجاري",
+      "tax_card": "البطاقة الضريبية",
+      "power_of_attorney": "توكيل",
+      "ownership_deed": "صك ملكية",
+      "contract": "عقد",
+      "other": "أخرى"
+    },
+    "fields": {
+      "title": "عنوان المستند",
+      "entityType": "مرتبط بـ",
+      "entityId": "الكيان",
+      "documentType": "نوع المستند",
+      "status": "الحالة",
+      "ocrStatus": "حالة OCR",
+      "fileUrl": "الملف",
+      "sizeBytes": "الحجم",
+      "mimeType": "نوع الملف",
+      "expiresAt": "تاريخ الانتهاء",
+      "uploadedBy": "رفع بواسطة",
+      "verifiedBy": "تم التحقق بواسطة",
+      "verifiedAt": "تاريخ التحقق",
+      "notes": "ملاحظات",
+      "ocrData": "بيانات OCR",
+      "versionHistory": "سجل الإصدارات",
+      "createdAt": "تاريخ الرفع"
+    },
+    "placeholders": {
+      "title": "أدخل عنوان المستند",
+      "selectEntityType": "اختر نوع الكيان",
+      "selectEntity": "اختر الكيان",
+      "selectDocumentType": "اختر نوع المستند",
+      "notes": "أضف ملاحظات..."
+    },
+    "table": {
+      "title": "العنوان",
+      "type": "النوع",
+      "entity": "مرتبط بـ",
+      "status": "الحالة",
+      "ocr": "OCR",
+      "uploaded": "تاريخ الرفع",
+      "actions": "إجراءات"
+    },
+    "actions": {
+      "view": "عرض",
+      "download": "تحميل",
+      "verify": "توثيق",
+      "reject": "رفض",
+      "delete": "حذف"
+    },
+    "messages": {
+      "uploadSuccess": "تم رفع المستند بنجاح",
+      "verifySuccess": "تم توثيق المستند",
+      "rejectSuccess": "تم رفض المستند",
+      "deleteSuccess": "تم حذف المستند",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا المستند؟",
+      "verifyConfirm": "هل أنت متأكد من توثيق هذا المستند؟",
+      "rejectConfirm": "هل أنت متأكد من رفض هذا المستند؟"
+    },
+    "dragDropHint": "اسحب الملف هنا أو انقر للاختيار",
+    "allowedTypes": "PDF, صور, Word",
+    "maxSize": "الحد الأقصى 10MB",
+    "preview": "معاينة",
+    "noPreview": "لا يمكن معاينة هذا الملف",
+    "downloadFile": "تحميل الملف",
+    "ocrResults": "نتائج استخراج النص",
+    "noOcrData": "لم يتم استخراج بيانات",
+    "ocrProcessing": "جاري استخراج النص...",
+    "relatedEntity": "الكيان المرتبط",
+    "rejectionReason": "سبب الرفض",
+    "rejectionReasonPlaceholder": "أدخل سبب الرفض...",
+    "expiresWarning": "ينتهي قريباً",
+    "expiredWarning": "منتهي الصلاحية",
+    "uploadButton": "رفع مستند"
+  },
+  "viewings": {
+    "title": "المعاينات",
+    "subtitle": "جدولة وإدارة معاينات العقارات",
+    "newViewing": "جدولة معاينة",
+    "editViewing": "تعديل المعاينة",
+    "viewingDetails": "تفاصيل المعاينة",
+    "searchPlaceholder": "ابحث بالاسم أو العنوان...",
+    "emptyTitle": "لا توجد معاينات",
+    "emptyDescription": "ابدأ بجدولة معاينة جديدة",
+    "emptyAddButton": "جدولة معاينة",
+    "statuses": {
+      "scheduled": "مجدولة",
+      "confirmed": "مؤكدة",
+      "completed": "تمت",
+      "cancelled": "ملغاة",
+      "no_show": "لم يحضر"
+    },
+    "statusColors": {
+      "scheduled": "bg-blue-100 text-blue-800",
+      "confirmed": "bg-green-100 text-green-800",
+      "completed": "bg-purple-100 text-purple-800",
+      "cancelled": "bg-red-100 text-red-800",
+      "no_show": "bg-gray-100 text-gray-800"
+    },
+    "fields": {
+      "lead": "العميل المحتمل",
+      "property": "العقار",
+      "scheduledAt": "تاريخ ووقت المعاينة",
+      "status": "الحالة",
+      "notes": "ملاحظات",
+      "feedback": "ملاحظات بعد المعاينة",
+      "rating": "التقييم",
+      "duration": "المدة (دقائق)",
+      "conductedAt": "تمت في"
+    },
+    "placeholders": {
+      "selectLead": "اختر العميل المحتمل",
+      "selectProperty": "اختر العقار",
+      "notes": "أضف ملاحظات عن المعاينة...",
+      "feedback": "أضف ملاحظات بعد المعاينة...",
+      "reason": "سبب الإلغاء..."
+    },
+    "validation": {
+      "leadRequired": "العميل المحتمل مطلوب",
+      "propertyRequired": "العقار مطلوب",
+      "scheduledAtRequired": "تاريخ ووقت المعاينة مطلوب",
+      "scheduledAtFuture": "يجب أن يكون الموعد في المستقبل",
+      "ratingRange": "التقييم يجب أن يكون من 1 إلى 5"
+    },
+    "messages": {
+      "createSuccess": "تم جدولة المعاينة بنجاح",
+      "updateSuccess": "تم تحديث المعاينة بنجاح",
+      "cancelSuccess": "تم إلغاء المعاينة",
+      "confirmSuccess": "تم تأكيد المعاينة",
+      "completeSuccess": "تم تسجيل المعاينة كمكتملة",
+      "deleteConfirm": "هل أنت متأكد من إلغاء هذه المعاينة؟",
+      "conflictError": "يوجد معاينة أخرى مجدولة في هذا الوقت"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "cancel": "إلغاء",
+      "confirm": "تأكيد",
+      "complete": "إكمال",
+      "reschedule": "إعادة جدولة"
+    },
+    "filters": {
+      "all": "الكل",
+      "scheduled": "مجدولة",
+      "confirmed": "مؤكدة",
+      "completed": "مكتملة",
+      "cancelled": "ملغاة",
+      "today": "اليوم",
+      "thisWeek": "هذا الأسبوع",
+      "upcoming": "القادمة",
+      "past": "السابقة"
+    },
+    "stats": {
+      "title": "إحصائيات المعاينات",
+      "scheduled": "مجدولة",
+      "completed": "مكتملة",
+      "cancelled": "ملغاة",
+      "noShow": "لم يحضر",
+      "today": "اليوم",
+      "thisWeek": "هذا الأسبوع"
+    },
+    "table": {
+      "client": "العميل",
+      "property": "العقار",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "calendar": {
+      "title": "التقويم",
+      "list": "القائمة",
+      "day": "يوم",
+      "week": "أسبوع",
+      "month": "شهر",
+      "noViewings": "لا توجد معاينات في هذا اليوم"
+    },
+    "confirmCancel": "تأكيد الإلغاء",
+    "cancelReason": "سبب الإلغاء",
+    "cancelReasonPlaceholder": "أدخل سبب الإلغاء (اختياري)",
+    "confirmComplete": "تأكيد الإكمال",
+    "addFeedback": "إضافة ملاحظات",
+    "rateViewing": "قيّم المعاينة",
+    "clientNotArrived": "العميل لم يحضر",
+    "viewProperty": "عرض العقار",
+    "viewLead": "عرض العميل المحتمل",
+    "conflictWarning": "يوجد تعارض",
+    "conflictDescription": "يوجد معاينة أخرى لنفس العقار في نفس الوقت تقريباً",
+    "upcomingViewings": "المعاينات القادمة",
+    "pastViewings": "المعاينات السابقة",
+    "noUpcoming": "لا توجد معاينات قادمة",
+    "noPast": "لا توجد معاينات سابقة"
+  },
+  "reconciliation": {
+    "title": "شاشة التحصيل",
+    "subtitle": "متابعة الأقساط والمتحصلات",
+    "kpis": {
+      "totalDue": "إجمالي المستحق",
+      "collected": "المحصل",
+      "overdue": "المتأخر",
+      "collectionRate": "نسبة التحصيل"
+    },
+    "overdueTable": {
+      "title": "الأقساط المتأخرة",
+      "clientName": "اسم العميل",
+      "dealNumber": "رقم الصفقة",
+      "overdueAmount": "المبلغ المتأخر",
+      "daysOverdue": "أيام التأخير",
+      "status": "حالة التأخير",
+      "contactClient": "تواصل مع العميل",
+      "empty": "لا توجد أقساط متأخرة",
+      "noOverdue": "ممتاز! لا توجد أقساط متأخرة"
+    },
+    "delayStatus": {
+      "critical": "حرج",
+      "warning": "تحذير",
+      "normal": "عادي",
+      "criticalDays": "أكثر من 30 يوم",
+      "warningDays": "15-30 يوم",
+      "normalDays": "أقل من 15 يوم"
+    },
+    "chart": {
+      "title": "التحصيل الشهري",
+      "collected": "المحصل",
+      "due": "المستحق",
+      "month": "الشهر"
+    },
+    "filters": {
+      "branch": "الفرع",
+      "period": "الفترة",
+      "delayStatus": "حالة التأخير",
+      "allBranches": "جميع الفروع",
+      "thisMonth": "هذا الشهر",
+      "lastMonth": "الشهر الماضي",
+      "last3Months": "آخر 3 أشهر",
+      "last6Months": "آخر 6 أشهر",
+      "thisYear": "هذا العام",
+      "all": "الكل",
+      "criticalOnly": "حرج فقط",
+      "warningOnly": "تحذير فقط"
+    },
+    "lastUpdated": "آخر تحديث",
+    "refresh": "تحديث البيانات",
+    "exportReport": "تصدير التقرير"
+  },
+  "financialReports": {
+    "title": "التقارير المالية",
+    "subtitle": "تقارير شاملة عن الأداء المالي",
+    "monthlyRevenue": {
+      "title": "تقرير الإيرادات الشهرية",
+      "totalRevenue": "إجمالي الإيرادات",
+      "previousMonth": "الشهر السابق",
+      "comparison": "المقارنة",
+      "increase": "ارتفاع",
+      "decrease": "انخفاض",
+      "noChange": "لا يوجد تغيير"
+    },
+    "etaSummary": {
+      "title": "ملخص الفوترة الإلكترونية (ETA)",
+      "totalInvoices": "عدد الفواتير",
+      "totalAmount": "إجمالي المبالغ",
+      "validInvoices": "فواتير صالحة",
+      "invalidInvoices": "فواتير غير صالحة",
+      "pendingInvoices": "فواتير معلقة",
+      "valid": "صالح",
+      "invalid": "غير صالح",
+      "pending": "معلق"
+    },
+    "commissionSummary": {
+      "title": "ملخص العمولات",
+      "calculated": "عمولات محسوبة",
+      "approved": "عمولات معتمدة",
+      "paid": "عمولات مدفوعة",
+      "pendingApproval": "في انتظار الاعتماد",
+      "pendingPayment": "في انتظار الدفع",
+      "totalAmount": "إجمالي المبلغ"
+    },
+    "export": {
+      "title": "تصدير التقارير",
+      "excel": "تصدير Excel",
+      "pdf": "تصدير PDF",
+      "exporting": "جاري التصدير...",
+      "exportSuccess": "تم تصدير التقرير بنجاح",
+      "exportError": "حدث خطأ أثناء التصدير"
+    },
+    "filters": {
+      "period": "الفترة",
+      "branch": "الفرع",
+      "allBranches": "جميع الفروع",
+      "thisMonth": "هذا الشهر",
+      "lastMonth": "الشهر الماضي",
+      "last3Months": "آخر 3 أشهر",
+      "last6Months": "آخر 6 أشهر",
+      "thisYear": "هذا العام",
+      "custom": "مخصص"
+    },
+    "chart": {
+      "revenueTrend": "اتجاه الإيرادات",
+      "monthly": "شهري",
+      "amount": "المبلغ",
+      "revenue": "الإيرادات"
+    },
+    "table": {
+      "month": "الشهر",
+      "revenue": "الإيرادات",
+      "collected": "المحصل",
+      "pending": "المعلق",
+      "rate": "نسبة التحصيل"
+    },
+    "noData": "لا توجد بيانات للفترة المحددة",
+    "generateReport": "إنشاء تقرير",
+    "downloadReport": "تحميل التقرير"
+  },
+  "ai": {
+    "title": "AI Copilot",
+    "subtitle": "مساعدك الذكي لإدارة المكتب العقاري",
+    "welcome": "مرحباً! أنا AI Copilot",
+    "welcomeMessage": "مساعدك الذكي لإدارة المكتب العقاري. يمكنني مساعدتك في تحليل البيانات، اقتراح أفضل الممارسات، والإجابة على استفساراتك.",
+    "howCanIHelp": "كيف أقدر أساعدك؟",
+    "askQuestion": "اسألني أي شيء عن العملاء أو العقارات أو الصفقات",
+    "thinking": "جاري التفكير...",
+    "typePlaceholder": "اكتب سؤالك هنا...",
+    "send": "إرسال",
+    "cancel": "إلغاء",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "clearHistory": "مسح المحادثة",
+    "openFullPage": "فتح في صفحة كاملة",
+    "minimize": "تصغير",
+    "maximize": "تكبير",
+    "close": "إغلاق",
+    "disclaimer": "AI Copilot قد يُنتج معلومات غير دقيقة. تحقق من المعلومات المهمة.",
+    "connectionError": "فشل في الاتصال بالخادم",
+    "processingError": "حدث خطأ أثناء معالجة طلبك",
+    "context": {
+      "title": "سياق المحادثة",
+      "general": "عام",
+      "leads": "العملاء المحتملين",
+      "properties": "العقارات",
+      "deals": "الصفقات",
+      "analytics": "التحليلات"
+    },
+    "quickActions": {
+      "title": "إجراءات سريعة",
+      "summarizeClient": "لخص لي هذا العميل",
+      "suggestProperties": "اقترح وحدات مناسبة",
+      "writeFollowup": "اكتب رسالة متابعة",
+      "analyzeDeal": "حلل الصفقة",
+      "scoreLead": "قيّم هذا العميل المحتمل",
+      "generateReport": "تقرير الصفقة"
+    },
+    "suggestedPrompts": {
+      "title": "جرب أحد هذه الأسئلة:",
+      "general": [
+        "ما هي أفضل الممارسات لإدارة العملاء المحتملين؟",
+        "كيف يمكنني تحسين معدل إغلاق الصفقات؟",
+        "ما هي التقارير الأكثر أهمية لمتابعة أداء المكتب؟"
+      ],
+      "leads": [
+        "ما هي العملاء المحتملين الأكثر احتمالية للتحويل؟",
+        "أي العملاء يحتاجون متابعة عاجلة؟",
+        "قيم لي هذا العميل المحتمل"
+      ],
+      "properties": [
+        "ما هي العقارات الأكثر طلباً؟",
+        "أي العقارات تحتاج لتخفيض السعر؟",
+        "ما هي العقارات المناسبة لهذا العميل؟"
+      ],
+      "deals": [
+        "ما هي الصفقات المعرضة للخطر؟",
+        "كيف يمكنني تسريع عملية إغلاق الصفقات؟",
+        "ما هي الصفقات المتوقعة هذا الشهر؟"
+      ],
+      "analytics": [
+        "كيف كان أداء الفريق هذا الشهر؟",
+        "ما هي مصادر العملاء الأكثر فعالية؟",
+        "قارن أداء هذا الشهر بالشهر السابق"
+      ]
+    },
+    "history": {
+      "title": "المحادثات السابقة",
+      "save": "حفظ الحالية",
+      "messages": "رسالة",
+      "noConversations": "لا توجد محادثات سابقة"
+    },
+    "prompts": {
+      "title": "النصوص المحفوظة",
+      "save": "حفظ النص",
+      "saveTitle": "حفظ النص",
+      "titlePlaceholder": "مثال: متابعة العملاء الجدد",
+      "noPrompts": "لا توجد نصوص محفوظة. يمكنك حفظ أي نص من المحادثة."
+    },
+    "settings": {
+      "title": "إعدادات AI",
+      "temperature": "الإبداعية (Temperature)",
+      "temperatureHint": "قيمة أعلى = إجابات أكثر إبداعاً",
+      "maxTokens": "أقصى طول للإجابة",
+      "maxTokensUnit": "كلمة",
+      "autoSave": "حفظ تلقائي",
+      "showQuickActions": "إظهار الإجراءات السريعة",
+      "reset": "إعادة الإعدادات الافتراضية"
+    },
+    "leadScore": {
+      "title": "تقييم AI",
+      "hot": "ساخن",
+      "warm": "دافئ",
+      "cold": "بارد",
+      "rescore": "إعادة التقييم",
+      "factors": "عوامل التقييم",
+      "budgetAlignment": "توافق الميزانية",
+      "timelineUrgency": "إلحاح الجدول الزمني",
+      "engagementLevel": "مستوى التفاعل",
+      "propertyMatch": "توافق العقار"
+    }
+  },
+  "ocr": {
+    "title": "تصوير المستندات",
+    "subtitle": "استخراج البيانات بالذكاء الاصطناعي",
+    "selectDocumentType": "اختر نوع المستند",
+    "selectDocumentTypeHint": "حدد نوع المستند لاستخراج البيانات بشكل صحيح",
+    "startCamera": "تشغيل الكاميرا",
+    "capture": "تصوير",
+    "retake": "إعادة",
+    "extractData": "استخراج البيانات",
+    "processing": "جاري معالجة الصورة...",
+    "processingHint": "يتم استخراج البيانات باستخدام الذكاء الاصطناعي...",
+    "resultTitle": "نتائج التعرف الضوئي",
+    "extractedFields": "الحقول المستخرجة",
+    "extractedFieldsHint": "يمكنك تعديل البيانات قبل التأكيد",
+    "confirmAndFill": "تأكيد وملء النموذج",
+    "confirming": "جاري التأكيد...",
+    "noFieldsExtracted": "لم يتم استخراج أي حقول من المستند",
+    "confidence": "دقة التعرف",
+    "confidenceHigh": "عالية",
+    "confidenceMedium": "متوسطة",
+    "confidenceLow": "منخفضة",
+    "lowConfidenceWarning": "دقة التعرف منخفضة",
+    "lowConfidenceHint": "يرجى مراجعة البيانات المستخرجة بعناية وإجراء التعديلات اللازمة قبل التأكيد.",
+    "documentTypes": {
+      "national_id": "بطاقة الرقم القومي",
+      "passport": "جواز السفر",
+      "property_contract": "عقد الملكية",
+      "receipt": "إيصال",
+      "other": "مستند آخر"
+    },
+    "fields": {
+      "name": "الاسم",
+      "nameAr": "الاسم بالعربية",
+      "nationalId": "الرقم القومي",
+      "passportNumber": "رقم جواز السفر",
+      "address": "العنوان",
+      "birthDate": "تاريخ الميلاد",
+      "issueDate": "تاريخ الإصدار",
+      "expiryDate": "تاريخ الانتهاء",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "propertyAddress": "عنوان العقار",
+      "propertyArea": "مساحة العقار",
+      "propertyType": "نوع العقار",
+      "ownerName": "اسم المالك",
+      "buyerName": "اسم المشتري",
+      "price": "السعر",
+      "contractDate": "تاريخ العقد",
+      "receiptNumber": "رقم الإيصال",
+      "amount": "المبلغ",
+      "date": "التاريخ",
+      "vendorName": "اسم البائع",
+      "vendorAddress": "عنوان البائع"
+    },
+    "errors": {
+      "cameraAccessDenied": "تم رفض الوصول للكاميرا. يرجى السماح بالوصول من إعدادات المتصفح.",
+      "cameraNotFound": "لم يتم العثور على كاميرا على هذا الجهاز.",
+      "cameraStartFailed": "فشل في تشغيل الكاميرا. يرجى المحاولة مرة أخرى.",
+      "captureFailed": "فشل في التقاط الصورة",
+      "ocrFailed": "فشل في معالجة الصورة",
+      "noCameraActive": "الكاميرا غير مفعلة",
+      "notSupported": "الكاميرا غير مدعومة على هذا المتصفح"
+    }
+  },
+  "offline": {
+    "online": "متصل",
+    "offlineMessage": "أنت غير متصل - سيتم المزامنة عند الاتصال",
+    "pendingSync": "لديك {count} عنصر في انتظار المزامنة",
+    "pendingCount": "{count} معلق",
+    "syncNow": "مزامنة الآن",
+    "syncing": "جاري المزامنة...",
+    "syncSuccess": "تمت المزامنة بنجاح",
+    "lastSync": "آخر مزامنة",
+    "timeNow": "الآن",
+    "timeMinutesAgo": "منذ {count} دقيقة",
+    "timeHoursAgo": "منذ {count} ساعة",
+    "timeDaysAgo": "منذ {count} يوم"
+  },
+  "pwa": {
+    "installTitle": "تثبيت التطبيق",
+    "installHint": "ثبّت التطبيق على جهازك للوصول السريع والعمل بدون اتصال",
+    "installButton": "تثبيت الآن",
+    "installLater": "لاحقاً",
+    "installed": "تم تثبيت التطبيق",
+    "updateAvailable": "تحديث جديد متاح",
+    "updateNow": "تحديث الآن",
+    "offlineReady": "التطبيق جاهز للعمل بدون اتصال",
+    "offlineMode": "وضع عدم الاتصال",
+    "offlineHint": "يمكنك استخدام التطبيق بدون اتصال وسيتم حفظ البيانات محلياً"
+  },
+  "emptyStates": {
+    "default": {
+      "title": "لا توجد بيانات",
+      "description": "لم يتم العثور على أي عناصر هنا"
+    },
+    "noResults": {
+      "title": "لا توجد نتائج",
+      "description": "حاول تغيير معايير البحث"
+    },
+    "noClients": {
+      "title": "لا يوجد عملاء",
+      "description": "قم بإضافة عميل جديد للبدء"
+    },
+    "noLeads": {
+      "title": "لا توجد فرص",
+      "description": "أضف فرصة جديدة لتتبع العملاء المحتملين"
+    },
+    "noProperties": {
+      "title": "لا توجد عقارات",
+      "description": "أضف عقاراً جديداً لعرضه هنا"
+    },
+    "noDeals": {
+      "title": "لا توجد صفقات",
+      "description": "ابدأ بإضافة صفقة جديدة"
+    },
+    "noActivities": {
+      "title": "لا توجد أنشطة",
+      "description": "لم يتم تسجيل أي نشاط بعد"
+    },
+    "noDocuments": {
+      "title": "لا توجد مستندات",
+      "description": "قم برفع مستند جديد"
+    }
+  },
+  "compliance": {
+    "title": "الامتثال والتراخيص",
+    "subtitle": "متابعة تراخيص المكتب والوسطاء (قانون 578/2025)",
+    "addRecord": "إضافة سجل",
+    "emptyTitle": "لا توجد سجلات امتثال",
+    "recordTypes": {
+      "broker_license": "ترخيص وسيط",
+      "office_license": "ترخيص مكتب",
+      "manager_certificate": "شهادة مدير",
+      "tax_registration": "تسجيل ضريبي",
+      "insurance": "تأمين",
+      "other": "أخرى"
+    }
+  },
+  "reports": {
+    "title": "التقارير",
+    "subtitle": "تقارير الأداء والإيرادات",
+    "export": "تصدير",
+    "selectPeriod": "اختر الفترة"
+  }
+}

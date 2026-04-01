@@ -1,0 +1,45 @@
+{
+  "name": "realestate-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "نظام تشغيل المكتب العقاري المصري - Single-Tenant",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@realestate/web",
+    "dev:api": "turbo run dev --filter=@realestate/api",
+    "build": "turbo run build --concurrency=4",
+    "build:web": "npm run build --workspace=@realestate/web",
+    "build:api": "npm run build --workspace=@realestate/api",
+    "build:portal": "npm run build --workspace=@real-estate-os/customer-portal",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "test:unit": "turbo run test:unit",
+    "test:e2e": "turbo run test:e2e",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "db:migrate": "npm run db:migrate --workspace=@realestate/api",
+    "db:generate": "npm run db:generate --workspace=@realestate/api",
+    "db:studio": "npm run db:studio --workspace=@realestate/api",
+    "db:seed": "npx ts-node apps/api/prisma/seed.ts"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "^19.0.0-beta-ebf51a3-20250411",
+    "bcryptjs": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@fastify/static": "^9.0.0",
+    "docx": "^9.6.1",
+    "next-intl": "^4.8.3"
+  }
+}

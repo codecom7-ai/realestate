@@ -1,0 +1,2471 @@
+{
+  "common": {
+    "appName": "Real Estate Office OS",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "all": "All",
+    "none": "None",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "time": "Time",
+    "amount": "Amount",
+    "currency": "Currency",
+    "egp": "Egyptian Pound",
+    "notes": "Notes",
+    "required": "Required",
+    "optional": "Optional",
+    "success": "Operation successful",
+    "warning": "Warning",
+    "info": "Info",
+    "errorTitle": "An error occurred",
+    "errorMessage": "An error occurred while loading data. Please try again.",
+    "retry": "Retry",
+    "tryAgain": "Retry",
+    "refreshPage": "Refresh Page"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "leads": "Leads",
+    "clients": "Clients",
+    "properties": "Properties",
+    "deals": "Deals",
+    "reservations": "Reservations",
+    "contracts": "Contracts",
+    "payments": "Payments",
+    "commissions": "Commissions",
+    "documents": "Documents",
+    "compliance": "Compliance",
+    "inbox": "Inbox",
+    "reports": "Reports",
+    "settings": "Settings",
+    "ai": "AI Copilot",
+    "automation": "Automation",
+    "viewings": "Viewings",
+    "eta": "Electronic Invoicing",
+    "branches": "Branches",
+    "users": "Users",
+    "audit": "Audit Log",
+    "financial-reports": "Financial Reports",
+    "payment-schedules": "Payment Schedules",
+    "reconciliation": "Reconciliation",
+    "audit-logs": "Audit Logs"
+  },
+  "accessibility": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleSidebar": "Toggle sidebar",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar",
+    "mainNavigation": "Main navigation",
+    "sidebar": "Sidebar",
+    "toggleTheme": "Toggle theme",
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme",
+    "notifications": "Notifications",
+    "notificationsCount": "{count} unread notifications",
+    "noNotifications": "No notifications",
+    "changeLanguage": "Change language",
+    "selectLanguage": "Select language",
+    "currentLanguage": "Current language",
+    "languageArabic": "Arabic",
+    "languageEnglish": "English",
+    "userMenu": "User menu",
+    "logout": "Logout",
+    "currentPage": "Current page",
+    "skipToContent": "Skip to main content"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Sign in",
+    "loginError": "Invalid email or password",
+    "mfaRequired": "Two-factor authentication required",
+    "mfaCode": "Verification code",
+    "mfaPlaceholder": "Enter 6-digit code"
+  },
+  "setup": {
+    "title": "System Setup",
+    "subtitle": "Welcome to Real Estate Office OS",
+    "step": "Step",
+    "of": "of",
+    "step1Title": "Office Information",
+    "step2Title": "Owner Account",
+    "step3Title": "POS Device",
+    "step4Title": "WhatsApp",
+    "step5Title": "Confirm",
+    "officeName": "Office Name",
+    "officeNameAr": "Office Name (Arabic)",
+    "taxId": "Tax ID (RIN)",
+    "brokerLicenseNo": "Broker License Number",
+    "classification": "Classification",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "city": "City",
+    "ownerName": "Owner Name",
+    "ownerEmail": "Owner Email",
+    "ownerPassword": "Password",
+    "ownerPhone": "Owner Phone",
+    "posSerial": "Device Serial Number",
+    "posOsVersion": "OS Version",
+    "whatsappToken": "WhatsApp API Token",
+    "whatsappPhoneId": "Phone ID",
+    "complete": "Complete Setup",
+    "setupSuccess": "Setup completed successfully"
+  },
+  "leads": {
+    "title": "Leads",
+    "newLead": "New Lead",
+    "editLead": "Edit Lead",
+    "leadDetails": "Lead Details",
+    "pipeline": "Pipeline",
+    "list": "List",
+    "searchPlaceholder": "Search by name or phone...",
+    "emptyTitle": "No leads found",
+    "emptyDescription": "Start by adding a new lead",
+    "stages": {
+      "NEW": "New",
+      "CONTACTED": "Contacted",
+      "QUALIFIED": "Qualified",
+      "PROPERTY_PRESENTED": "Property Presented",
+      "VIEWING_SCHEDULED": "Viewing Scheduled",
+      "VIEWED": "Viewed",
+      "NEGOTIATING": "Negotiating",
+      "RESERVED": "Reserved",
+      "CONTRACT_SENT": "Contract Sent",
+      "CONTRACT_SIGNED": "Contract Signed",
+      "CLOSED_WON": "Closed (Won)",
+      "CLOSED_LOST": "Closed (Lost)"
+    },
+    "score": {
+      "hot": "Hot",
+      "warm": "Warm",
+      "cold": "Cold"
+    },
+    "assignTo": "Assign to",
+    "assign": "Assign",
+    "assignedTo": "Assigned to",
+    "unassigned": "Unassigned",
+    "budget": "Budget",
+    "preferredAreas": "Preferred Areas",
+    "propertyTypes": "Property Types",
+    "source": "Source",
+    "notes": "Notes",
+    "activities": "Activities",
+    "viewings": "Viewings",
+    "changeStage": "Change Stage",
+    "stageChanged": "Stage changed",
+    "lostReason": "Lost Reason",
+    "lostReasonPlaceholder": "Enter reason for closing as lost",
+    "lostReasonRequired": "Lost reason is required when closing as lost",
+    "client": "Client",
+    "noClient": "No client",
+    "createSuccess": "Lead created successfully",
+    "updateSuccess": "Lead updated successfully",
+    "deleteSuccess": "Lead deleted successfully",
+    "confirmDelete": "Are you sure you want to delete this lead?",
+    "validation": {
+      "clientIdRequired": "Client is required",
+      "minSize": "Min Size",
+      "maxSize": "Max Size",
+      "minBedrooms": "Min Bedrooms",
+      "maxBedrooms": "Max Bedrooms"
+    },
+    "notesPlaceholder": "Enter your notes here...",
+    "expectedCloseDate": "Expected Close Date",
+    "size": "Size",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "stats": {
+      "total": "Total Leads",
+      "newThisMonth": "New This Month",
+      "hotLeads": "Hot Leads",
+      "avgScore": "Average Score"
+    },
+    "filters": {
+      "all": "All",
+      "mine": "My Leads",
+      "unassigned": "Unassigned",
+      "hot": "Hot",
+      "warm": "Warm",
+      "cold": "Cold"
+    },
+    "table": {
+      "client": "Client",
+      "stage": "Stage",
+      "budget": "Budget",
+      "assignedTo": "Assigned To",
+      "aiScore": "AI Score",
+      "activities": "Activities"
+    }
+  },
+  "properties": {
+    "title": "Properties",
+    "newProperty": "New Property",
+    "editProperty": "Edit Property",
+    "propertyDetails": "Property Details",
+    "grid": "Grid",
+    "list": "List",
+    "map": "Map",
+    "searchPlaceholder": "Search by title, city, or area...",
+    "emptyTitle": "No properties found",
+    "emptyDescription": "Start by adding your first property",
+    "emptyAddButton": "Add Property",
+    "types": {
+      "APARTMENT": "Apartment",
+      "VILLA": "Villa",
+      "DUPLEX": "Duplex",
+      "PENTHOUSE": "Penthouse",
+      "STUDIO": "Studio",
+      "OFFICE": "Office",
+      "SHOP": "Shop",
+      "WAREHOUSE": "Warehouse",
+      "LAND": "Land",
+      "COMPOUND_UNIT": "Compound Unit"
+    },
+    "statuses": {
+      "AVAILABLE": "Available",
+      "RESERVED_TEMP": "Temporarily Reserved",
+      "RESERVED_CONFIRMED": "Confirmed Reservation",
+      "SOLD": "Sold",
+      "RENTED": "Rented",
+      "SUSPENDED": "Suspended",
+      "UNDER_MAINTENANCE": "Under Maintenance"
+    },
+    "statusColors": {
+      "AVAILABLE": "bg-green-100 text-green-800",
+      "RESERVED_TEMP": "bg-yellow-100 text-yellow-800",
+      "RESERVED_CONFIRMED": "bg-orange-100 text-orange-800",
+      "SOLD": "bg-blue-100 text-blue-800",
+      "RENTED": "bg-purple-100 text-purple-800",
+      "SUSPENDED": "bg-gray-100 text-gray-800",
+      "UNDER_MAINTENANCE": "bg-red-100 text-red-800"
+    },
+    "finishingTypes": {
+      "FULLY_FINISHED": "Fully Finished",
+      "SEMI_FINISHED": "Semi Finished",
+      "CORE_SHELL": "Core & Shell",
+      "ULTRA_LUXURY": "Ultra Luxury"
+    },
+    "fields": {
+      "title": "Property Title",
+      "titleAr": "Property Title (Arabic)",
+      "description": "Description",
+      "propertyType": "Property Type",
+      "finishingType": "Finishing Type",
+      "status": "Property Status",
+      "city": "City",
+      "district": "District",
+      "address": "Address",
+      "floor": "Floor",
+      "unitNumber": "Unit Number",
+      "areaM2": "Area (m²)",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "parking": "Parking",
+      "askingPrice": "Asking Price",
+      "currency": "Currency",
+      "commissionRate": "Commission Rate (%)",
+      "isListed": "Listed for Sale",
+      "isOffPlan": "Off-Plan",
+      "branchId": "Branch",
+      "projectId": "Project",
+      "developerId": "Developer"
+    },
+    "placeholders": {
+      "title": "Enter property title",
+      "description": "Enter detailed description...",
+      "city": "Select city",
+      "district": "Select district",
+      "address": "Street, building number, ...",
+      "unitNumber": "Example: A15"
+    },
+    "validation": {
+      "titleRequired": "Property title is required",
+      "propertyTypeRequired": "Property type is required",
+      "cityRequired": "City is required",
+      "areaM2Required": "Area is required",
+      "areaM2Min": "Area must be greater than zero",
+      "askingPriceRequired": "Asking price is required",
+      "askingPriceMin": "Price must be greater than or equal to zero",
+      "commissionRateMax": "Commission rate cannot exceed 100%"
+    },
+    "price": "Price",
+    "area": "Area",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "floor": "Floor",
+    "city": "City",
+    "district": "District",
+    "lock": "Lock",
+    "unlock": "Unlock",
+    "lockedBy": "Locked by",
+    "lockType": {
+      "temporary": "Temporary Lock",
+      "confirmed": "Confirmed Lock"
+    },
+    "lockExpires": "Lock expires",
+    "confirmLock": "Confirm Lock",
+    "confirmUnlock": "Confirm Unlock",
+    "lockSuccess": "Property locked successfully",
+    "unlockSuccess": "Property unlocked successfully",
+    "alreadyLocked": "Property is already locked",
+    "cannotDeleteLocked": "Cannot delete a locked property",
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "lock": "Lock",
+      "unlock": "Unlock"
+    },
+    "confirmDelete": "Are you sure you want to delete this property?",
+    "createSuccess": "Property created successfully",
+    "updateSuccess": "Property updated successfully",
+    "deleteSuccess": "Property deleted successfully",
+    "priceHistory": "Price History",
+    "priceChanged": "Price changed",
+    "fromPrice": "From",
+    "toPrice": "To",
+    "changedOn": "Changed on",
+    "filters": {
+      "all": "All",
+      "available": "Available Only",
+      "reserved": "Reserved",
+      "sold": "Sold",
+      "rented": "Rented"
+    },
+    "advancedFilters": "Advanced Filters",
+    "priceRange": "Price Range",
+    "areaRange": "Area Range",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "minArea": "Min Area",
+    "maxArea": "Max Area",
+    "minBedrooms": "Min Bedrooms",
+    "maxBedrooms": "Max Bedrooms",
+    "stats": {
+      "total": "Total Properties",
+      "available": "Available",
+      "reserved": "Reserved",
+      "sold": "Sold",
+      "rented": "Rented",
+      "totalValue": "Total Value"
+    },
+    "table": {
+      "title": "Title",
+      "type": "Type",
+      "status": "Status",
+      "city": "City",
+      "area": "Area",
+      "price": "Price",
+      "bedrooms": "Bedrooms",
+      "createdAt": "Added On"
+    },
+    "m2": "m²",
+    "rooms": "rooms",
+    "noImages": "No images",
+    "viewOnMap": "View on Map",
+    "share": "Share",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied"
+  },
+  "deals": {
+    "title": "Deals",
+    "subtitle": "Manage deals and track progress",
+    "newDeal": "New Deal",
+    "editDeal": "Edit Deal",
+    "dealDetails": "Deal Details",
+    "kanban": "Kanban",
+    "list": "List",
+    "searchPlaceholder": "Search by name or address...",
+    "emptyTitle": "No deals found",
+    "emptyDescription": "Start by adding a new deal",
+    "emptyAddButton": "Add Deal",
+    "stages": {
+      "LEAD": "Lead",
+      "VIEWING": "Viewing",
+      "NEGOTIATION": "Negotiation",
+      "RESERVATION": "Reservation",
+      "CONTRACT_PREPARATION": "Contract Preparation",
+      "CONTRACT_SIGNED": "Contract Signed",
+      "PAYMENT_ACTIVE": "Payment Active",
+      "HANDOVER_PENDING": "Handover Pending",
+      "CLOSED": "Closed",
+      "CANCELLED": "Cancelled"
+    },
+    "stageColors": {
+      "LEAD": "bg-blue-100 text-blue-800",
+      "VIEWING": "bg-cyan-100 text-cyan-800",
+      "NEGOTIATION": "bg-yellow-100 text-yellow-800",
+      "RESERVATION": "bg-orange-100 text-orange-800",
+      "CONTRACT_PREPARATION": "bg-purple-100 text-purple-800",
+      "CONTRACT_SIGNED": "bg-green-100 text-green-800",
+      "PAYMENT_ACTIVE": "bg-emerald-100 text-emerald-800",
+      "HANDOVER_PENDING": "bg-teal-100 text-teal-800",
+      "CLOSED": "bg-gray-100 text-gray-800",
+      "CANCELLED": "bg-red-100 text-red-800"
+    },
+    "types": {
+      "sale": "Sale",
+      "rent": "Rent",
+      "management": "Management"
+    },
+    "typeColors": {
+      "sale": "bg-green-100 text-green-800",
+      "rent": "bg-blue-100 text-blue-800",
+      "management": "bg-purple-100 text-purple-800"
+    },
+    "fields": {
+      "client": "Client",
+      "property": "Property",
+      "assignedBroker": "Assigned Broker",
+      "dealType": "Deal Type",
+      "stage": "Stage",
+      "agreedPrice": "Agreed Price",
+      "currency": "Currency",
+      "notes": "Notes",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "closedAt": "Closed At",
+      "closedReason": "Closed Reason"
+    },
+    "placeholders": {
+      "selectClient": "Select client",
+      "selectProperty": "Select property",
+      "selectBroker": "Select broker",
+      "selectType": "Select type",
+      "notes": "Add notes about the deal..."
+    },
+    "validation": {
+      "clientRequired": "Client is required",
+      "propertyRequired": "Property is required",
+      "dealTypeRequired": "Deal type is required",
+      "agreedPriceRequired": "Agreed price is required",
+      "agreedPriceMin": "Price must be greater than zero"
+    },
+    "messages": {
+      "createSuccess": "Deal created successfully",
+      "updateSuccess": "Deal updated successfully",
+      "deleteSuccess": "Deal deleted successfully",
+      "stageChanged": "Stage changed",
+      "deleteConfirm": "Are you sure you want to delete this deal?"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "changeStage": "Change Stage",
+      "addPayment": "Add Payment",
+      "viewContract": "View Contract"
+    },
+    "filters": {
+      "all": "All",
+      "mine": "My Deals",
+      "byType": "By Type",
+      "byStage": "By Stage",
+      "byBroker": "By Broker"
+    },
+    "stats": {
+      "title": "Deal Statistics",
+      "total": "Total Deals",
+      "active": "Active",
+      "closed": "Closed",
+      "totalValue": "Total Value",
+      "pendingPayments": "Pending Payments"
+    },
+    "table": {
+      "client": "Client",
+      "property": "Property",
+      "type": "Type",
+      "stage": "Stage",
+      "price": "Price",
+      "broker": "Broker",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "stageChanged": "Stage Changed",
+      "fromStage": "From",
+      "toStage": "To",
+      "changedBy": "Changed by"
+    },
+    "amounts": {
+      "title": "Amounts and Commissions",
+      "agreedPrice": "Agreed Price",
+      "commissionRate": "Commission Rate",
+      "commissionAmount": "Commission Amount",
+      "vatAmount": "VAT Amount",
+      "totalCommission": "Total Commission",
+      "paidAmount": "Paid Amount",
+      "remainingAmount": "Remaining Amount"
+    },
+    "documents": {
+      "title": "Documents",
+      "empty": "No documents",
+      "add": "Add Document",
+      "contract": "Contract",
+      "idCopy": "ID Copy",
+      "paymentReceipt": "Payment Receipt"
+    },
+    "noClient": "No client",
+    "noProperty": "No property",
+    "unassigned": "Unassigned",
+    "changeStage": "Change Stage",
+    "stageChanged": "Stage changed"
+  },
+  "payments": {
+    "title": "Payments",
+    "subtitle": "Manage payments and collections",
+    "newPayment": "New Payment",
+    "recordPayment": "Record Payment",
+    "schedule": "Payment Schedule",
+    "paymentDetails": "Payment Details",
+    "searchPlaceholder": "Search by reference or client name...",
+    "emptyTitle": "No payments found",
+    "emptyDescription": "Start by recording your first payment",
+    "emptyAddButton": "Record Payment",
+    "methods": {
+      "CASH": "Cash",
+      "CHECK": "Check",
+      "BANK_TRANSFER": "Bank Transfer",
+      "INSTAPAY": "InstaPay",
+      "FAWRY": "Fawry",
+      "PAYMOB_CARD": "Paymob Card",
+      "PAYMOB_WALLET": "Paymob Wallet",
+      "PAYMOB_BNPL": "Buy Now Pay Later"
+    },
+    "methodIcons": {
+      "CASH": "💵",
+      "CHECK": "📝",
+      "BANK_TRANSFER": "🏦",
+      "INSTAPAY": "📱",
+      "FAWRY": "🏪",
+      "PAYMOB_CARD": "💳",
+      "PAYMOB_WALLET": "👛",
+      "PAYMOB_BNPL": "🛒"
+    },
+    "statuses": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "FAILED": "Failed",
+      "REFUNDED": "Refunded"
+    },
+    "statusColors": {
+      "PENDING": "bg-yellow-100 text-yellow-800",
+      "CONFIRMED": "bg-green-100 text-green-800",
+      "FAILED": "bg-red-100 text-red-800",
+      "REFUNDED": "bg-gray-100 text-gray-800"
+    },
+    "fields": {
+      "deal": "Deal",
+      "installment": "Installment",
+      "amount": "Amount",
+      "method": "Payment Method",
+      "status": "Status",
+      "reference": "Reference Number",
+      "paidAt": "Payment Date",
+      "dueDate": "Due Date",
+      "notes": "Notes",
+      "receiptNumber": "Receipt Number",
+      "bankName": "Bank Name",
+      "checkNumber": "Check Number",
+      "checkDueDate": "Check Due Date"
+    },
+    "placeholders": {
+      "selectDeal": "Select deal",
+      "selectInstallment": "Select installment",
+      "selectMethod": "Select payment method",
+      "reference": "Enter reference number",
+      "notes": "Add notes...",
+      "receiptNumber": "Enter receipt number"
+    },
+    "validation": {
+      "dealRequired": "Deal is required",
+      "amountRequired": "Amount is required",
+      "amountMin": "Amount must be greater than zero",
+      "methodRequired": "Payment method is required"
+    },
+    "messages": {
+      "createSuccess": "Payment recorded successfully",
+      "updateSuccess": "Payment updated successfully",
+      "confirmSuccess": "Payment confirmed",
+      "refundSuccess": "Payment refunded",
+      "deleteConfirm": "Are you sure you want to delete this payment?"
+    },
+    "actions": {
+      "view": "View",
+      "confirm": "Confirm",
+      "refund": "Refund",
+      "print": "Print",
+      "download": "Download"
+    },
+    "filters": {
+      "all": "All",
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "failed": "Failed",
+      "refunded": "Refunded",
+      "today": "Today",
+      "thisWeek": "This Week",
+      "thisMonth": "This Month",
+      "overdue": "Overdue"
+    },
+    "stats": {
+      "title": "Payment Statistics",
+      "total": "Total Payments",
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "overdue": "Overdue",
+      "thisMonth": "This Month",
+      "totalAmount": "Total Amount"
+    },
+    "table": {
+      "reference": "Reference",
+      "deal": "Deal",
+      "client": "Client",
+      "amount": "Amount",
+      "method": "Method",
+      "status": "Status",
+      "date": "Date",
+      "dueDate": "Due Date",
+      "actions": "Actions"
+    },
+    "alerts": {
+      "overdue": "Overdue",
+      "dueToday": "Due Today",
+      "dueTomorrow": "Due Tomorrow",
+      "dueThisWeek": "Due This Week"
+    },
+    "totals": {
+      "totalReceived": "Total Received",
+      "totalPending": "Total Pending",
+      "totalOverdue": "Total Overdue"
+    },
+    "selectDealFirst": "Select deal first",
+    "availableInstallments": "Available Installments",
+    "noInstallments": "No installments available",
+    "paymentFor": "Payment for",
+    "installmentNumber": "Installment number"
+  },
+  "commissions": {
+    "title": "Commissions",
+    "subtitle": "Manage broker commissions",
+    "calculate": "Calculate Commission",
+    "approve": "Approve",
+    "settle": "Settle",
+    "pay": "Pay",
+    "dispute": "Dispute",
+    "locked": "Locked",
+    "commissionDetails": "Commission Details",
+    "searchPlaceholder": "Search by broker or deal...",
+    "emptyTitle": "No commissions found",
+    "emptyDescription": "Commissions will appear here when deals are closed",
+    "statuses": {
+      "CALCULATED": "Calculated",
+      "APPROVED": "Approved",
+      "SETTLED": "Settled",
+      "PAID": "Paid",
+      "DISPUTED": "Disputed"
+    },
+    "statusColors": {
+      "CALCULATED": "bg-blue-100 text-blue-800",
+      "APPROVED": "bg-green-100 text-green-800",
+      "SETTLED": "bg-purple-100 text-purple-800",
+      "PAID": "bg-emerald-100 text-emerald-800",
+      "DISPUTED": "bg-red-100 text-red-800"
+    },
+    "fields": {
+      "deal": "Deal",
+      "broker": "Broker",
+      "baseAmount": "Base Amount",
+      "vatAmount": "VAT Amount",
+      "totalAmount": "Total Amount",
+      "status": "Status",
+      "calculatedAt": "Calculated At",
+      "approvedAt": "Approved At",
+      "settledAt": "Settled At",
+      "paidAt": "Paid At",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "notes": "Add notes..."
+    },
+    "validation": {
+      "amountMin": "Amount must be greater than zero"
+    },
+    "messages": {
+      "approveSuccess": "Commission approved",
+      "settleSuccess": "Commission settled",
+      "paySuccess": "Commission paid",
+      "disputeSuccess": "Commission disputed",
+      "confirmApprove": "Are you sure you want to approve this commission?",
+      "confirmSettle": "Are you sure you want to settle this commission?",
+      "confirmPay": "Are you sure you want to pay this commission?"
+    },
+    "actions": {
+      "view": "View",
+      "approve": "Approve",
+      "settle": "Settle",
+      "pay": "Pay",
+      "dispute": "Dispute"
+    },
+    "filters": {
+      "all": "All",
+      "calculated": "Calculated",
+      "approved": "Approved",
+      "settled": "Settled",
+      "paid": "Paid",
+      "disputed": "Disputed"
+    },
+    "stats": {
+      "title": "Commission Statistics",
+      "total": "Total Commissions",
+      "calculated": "Calculated",
+      "approved": "Approved",
+      "settled": "Settled",
+      "paid": "Paid",
+      "totalAmount": "Total Amount",
+      "totalVat": "Total VAT"
+    },
+    "table": {
+      "deal": "Deal",
+      "broker": "Broker",
+      "baseAmount": "Base Amount",
+      "vat": "VAT",
+      "total": "Total",
+      "status": "Status",
+      "date": "Date",
+      "actions": "Actions"
+    },
+    "distribution": {
+      "title": "Commission Distribution",
+      "broker": "Broker Share",
+      "company": "Company Share",
+      "percentage": "Percentage"
+    },
+    "vatInfo": "VAT (14%)"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage system and office settings",
+    "organization": "Organization",
+    "branches": "Branches",
+    "users": "Users",
+    "roles": "Roles & Permissions",
+    "integrations": "Integrations",
+    "notifications": "Notifications",
+    "security": "Security",
+    "appearance": "Appearance",
+    "language": "Language",
+    "regional": "Regional Settings",
+    "commission": "Commission Settings",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "saved": "Saved",
+    "fields": {
+      "officeName": "Office Name (EN)",
+      "officeNameAr": "Office Name (AR)",
+      "taxId": "Tax ID (RIN)",
+      "brokerLicenseNo": "Broker License Number",
+      "classification": "Classification",
+      "phone": "Phone",
+      "email": "Email",
+      "city": "City",
+      "address": "Address"
+    },
+    "classifications": {
+      "A": "Grade A",
+      "B": "Grade B",
+      "C": "Grade C"
+    },
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "currencies": {
+      "EGP": "Egyptian Pound",
+      "USD": "US Dollar",
+      "SAR": "Saudi Riyal",
+      "AED": "UAE Dirham"
+    },
+    "timezones": {
+      "Cairo": "Cairo (GMT+2)",
+      "Riyadh": "Riyadh (GMT+3)",
+      "Dubai": "Dubai (GMT+4)"
+    },
+    "commissionRates": {
+      "brokerRate": "Broker Rate (%)",
+      "managerRate": "Manager Rate (%)",
+      "companyRate": "Company Rate (%)",
+      "totalMustBe100": "Total must be 100%"
+    },
+    "notificationSettings": {
+      "emailNotifications": "Email Notifications",
+      "smsNotifications": "SMS Notifications",
+      "whatsappNotifications": "WhatsApp Notifications"
+    }
+  },
+  "branches": {
+    "title": "Branch Management",
+    "subtitle": "Add, edit, and delete office branches",
+    "newBranch": "Add New Branch",
+    "editBranch": "Edit Branch",
+    "searchPlaceholder": "Search by name or city...",
+    "emptyTitle": "No branches found",
+    "emptyDescription": "Start by adding a new branch",
+    "emptyAddButton": "Add Branch",
+    "fields": {
+      "name": "Branch Name (EN)",
+      "nameAr": "Branch Name (AR)",
+      "etaBranchCode": "ETA Branch Code",
+      "isHeadquarters": "Headquarters",
+      "address": "Address",
+      "city": "City",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "placeholders": {
+      "name": "Branch Name",
+      "nameAr": "Branch Name (Arabic)",
+      "etaBranchCode": "Select branch code",
+      "address": "Detailed address...",
+      "phone": "+20 123 456 7890",
+      "email": "branch@example.com"
+    },
+    "validation": {
+      "nameRequired": "Branch name is required",
+      "cityRequired": "City is required",
+      "addressRequired": "Address is required",
+      "emailInvalid": "Invalid email address"
+    },
+    "messages": {
+      "createSuccess": "Branch created successfully",
+      "updateSuccess": "Branch updated successfully",
+      "deleteSuccess": "Branch deleted successfully",
+      "deleteConfirm": "Are you sure you want to delete this branch?",
+      "cannotDeleteHeadquarters": "Cannot delete headquarters branch"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "table": {
+      "name": "Name",
+      "city": "City",
+      "phone": "Phone",
+      "isHeadquarters": "HQ",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "stats": {
+      "total": "Total Branches",
+      "headquarters": "Headquarters",
+      "active": "Active"
+    },
+    "headquarters": "Headquarters",
+    "inactive": "Inactive",
+    "etaCodeInfo": "Code used in Egyptian electronic invoicing",
+    "setAsHeadquarters": "Set as Headquarters",
+    "users": "Users",
+    "properties": "Properties"
+  },
+  "emptyStates": {
+    "default": {
+      "title": "No Data",
+      "description": "No items found here"
+    },
+    "noResults": {
+      "title": "No Results",
+      "description": "Try changing your search criteria"
+    },
+    "noClients": {
+      "title": "No Clients",
+      "description": "Add a new client to get started"
+    },
+    "noLeads": {
+      "title": "No Leads",
+      "description": "Add a new lead to track potential clients"
+    },
+    "noProperties": {
+      "title": "No Properties",
+      "description": "Add a new property to display here"
+    },
+    "noDeals": {
+      "title": "No Deals",
+      "description": "Start by adding a new deal"
+    },
+    "noActivities": {
+      "title": "No Activities",
+      "description": "No activities recorded yet"
+    },
+    "noDocuments": {
+      "title": "No Documents",
+      "description": "Upload a new document"
+    }
+  },
+  "offline": {
+    "online": "Online",
+    "offlineMessage": "You are offline - data will sync when connected",
+    "pendingSync": "You have {count} items pending sync",
+    "pendingCount": "{count} pending",
+    "syncNow": "Sync Now",
+    "syncing": "Syncing...",
+    "syncSuccess": "Sync completed successfully",
+    "lastSync": "Last sync",
+    "timeNow": "Now",
+    "timeMinutesAgo": "{count} min ago",
+    "timeHoursAgo": "{count} hr ago",
+    "timeDaysAgo": "{count} days ago"
+  },
+  "errors": {
+    "unexpectedError": "An unexpected error occurred",
+    "unexpectedErrorDesc": "We apologize for this error. Please try again or return to the home page.",
+    "retry": "Retry",
+    "goHome": "Home Page",
+    "loadFailed": "Failed to load data",
+    "networkError": "Connection Error",
+    "networkErrorDesc": "Unable to connect to the server. Please check your internet connection.",
+    "permissionDenied": "Access Denied",
+    "permissionDeniedDesc": "You do not have the required permission to access this page."
+  },
+  "uploads": {
+    "title": "Upload Images",
+    "uploadImages": "Upload Images",
+    "dragDropHint": "Drag images here or click to select",
+    "maxImages": "Maximum {count} images",
+    "maxSize": "Maximum size {size}MB",
+    "allowedTypes": "Allowed types: JPEG, PNG, WebP, GIF",
+    "uploading": "Uploading...",
+    "uploadSuccess": "Image uploaded successfully",
+    "uploadError": "Failed to upload image",
+    "deleteConfirm": "Are you sure you want to delete this image?",
+    "deleteSuccess": "Image deleted",
+    "setPrimary": "Set as primary",
+    "primary": "Primary",
+    "reorder": "Reorder",
+    "saving": "Saving...",
+    "saved": "Saved",
+    "dragDropTitle": "Drag images here",
+    "clickToSelect": "or click to select",
+    "processing": "Processing...",
+    "uploadProgress": "Upload progress",
+    "cancelUpload": "Cancel upload",
+    "errors": {
+      "fileTooBig": "File too large. Maximum {size}MB",
+      "invalidType": "Invalid file type",
+      "maxImagesReached": "Maximum images reached",
+      "uploadFailed": "Upload failed",
+      "networkError": "Network error",
+      "presignedUrlFailed": "Failed to get upload URL",
+      "confirmFailed": "Failed to confirm upload"
+    },
+    "entityTypes": {
+      "property": "Property",
+      "client": "Client",
+      "deal": "Deal",
+      "contract": "Contract",
+      "document": "Document",
+      "user_avatar": "User Avatar",
+      "organization_logo": "Organization Logo"
+    },
+    "imageCount": "{count} of {max} images",
+    "noImagesUploaded": "No images uploaded yet",
+    "addImagesHint": "Add property images to show clients",
+    "imageOrderSaved": "Image order saved"
+  },
+  "reservations": {
+    "title": "Reservations",
+    "subtitle": "Manage property reservations",
+    "newReservation": "New Reservation",
+    "searchPlaceholder": "Search by name or address...",
+    "emptyTitle": "No reservations",
+    "emptyDescription": "No reservations currently",
+    "statuses": {
+      "active": "Active",
+      "expired": "Expired",
+      "cancelled": "Cancelled",
+      "converted": "Converted"
+    },
+    "statusColors": {
+      "active": "bg-green-100 text-green-800",
+      "expired": "bg-gray-100 text-gray-800",
+      "cancelled": "bg-red-100 text-red-800",
+      "converted": "bg-blue-100 text-blue-800"
+    },
+    "lockTypes": {
+      "temporary": "Temporary Lock",
+      "confirmed": "Confirmed Lock"
+    },
+    "lockTypeColors": {
+      "temporary": "bg-yellow-100 text-yellow-800",
+      "confirmed": "bg-green-100 text-green-800"
+    },
+    "fields": {
+      "deal": "Deal",
+      "client": "Client",
+      "property": "Property",
+      "lockType": "Lock Type",
+      "depositAmount": "Deposit Amount",
+      "depositMethod": "Payment Method",
+      "depositPaidAt": "Deposit Date",
+      "lockedAt": "Lock Date",
+      "expiresAt": "Expiry Date",
+      "status": "Status",
+      "timeRemaining": "Time Remaining"
+    },
+    "placeholders": {
+      "selectDeal": "Select deal",
+      "notes": "Add notes..."
+    },
+    "validation": {
+      "dealRequired": "Deal is required",
+      "depositAmountRequired": "Deposit amount is required",
+      "depositAmountMin": "Deposit must be greater than zero",
+      "expiresAtRequired": "Expiry date is required",
+      "expiresAtFuture": "Expiry date must be in the future"
+    },
+    "messages": {
+      "createSuccess": "Reservation created successfully",
+      "cancelSuccess": "Reservation cancelled",
+      "confirmSuccess": "Reservation confirmed",
+      "extendSuccess": "Reservation extended",
+      "cancelConfirm": "Are you sure you want to cancel this reservation?"
+    },
+    "actions": {
+      "view": "View",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "extend": "Extend",
+      "convert": "Convert to Contract"
+    },
+    "filters": {
+      "all": "All",
+      "active": "Active",
+      "expired": "Expired",
+      "temporary": "Temporary",
+      "confirmed": "Confirmed"
+    },
+    "stats": {
+      "title": "Reservation Statistics",
+      "total": "Total Reservations",
+      "active": "Active",
+      "expired": "Expired",
+      "expiringSoon": "Expiring Soon",
+      "totalDeposit": "Total Deposit"
+    },
+    "table": {
+      "client": "Client",
+      "property": "Property",
+      "lockType": "Type",
+      "deposit": "Deposit",
+      "lockedAt": "Lock Date",
+      "expiresAt": "Expiry Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "countdown": {
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds",
+      "expired": "Expired",
+      "expiresIn": "Expires in"
+    },
+    "noDeal": "No deal",
+    "noClient": "No client",
+    "noProperty": "No property"
+  },
+  "paymentSchedules": {
+    "title": "Payment Schedules",
+    "subtitle": "Track installment payments",
+    "emptyTitle": "No payment schedules",
+    "emptyDescription": "Payment schedules will appear when deals are created",
+    "fields": {
+      "deal": "Deal",
+      "client": "Client",
+      "property": "Property",
+      "totalAmount": "Total Amount",
+      "paidAmount": "Paid Amount",
+      "remainingAmount": "Remaining Amount",
+      "installmentsCount": "Installments Count",
+      "paidInstallments": "Paid Installments",
+      "progress": "Progress"
+    },
+    "installment": {
+      "number": "Installment #",
+      "amount": "Amount",
+      "dueDate": "Due Date",
+      "paidAt": "Paid Date",
+      "status": "Status",
+      "statuses": {
+        "PENDING": "Pending",
+        "PAID": "Paid",
+        "OVERDUE": "Overdue",
+        "PARTIAL": "Partial"
+      },
+      "statusColors": {
+        "PENDING": "bg-yellow-100 text-yellow-800",
+        "PAID": "bg-green-100 text-green-800",
+        "OVERDUE": "bg-red-100 text-red-800",
+        "PARTIAL": "bg-orange-100 text-orange-800"
+      }
+    },
+    "timeline": {
+      "title": "Timeline",
+      "view": "View Schedule",
+      "list": "List",
+      "calendar": "Calendar"
+    },
+    "alerts": {
+      "overdue": "Overdue",
+      "dueToday": "Due Today",
+      "dueThisWeek": "Due This Week",
+      "dueThisMonth": "Due This Month",
+      "overdueInstallments": "Overdue Installments",
+      "upcomingInstallments": "Upcoming Installments"
+    },
+    "stats": {
+      "title": "Installment Statistics",
+      "totalDeals": "Total Deals",
+      "totalInstallments": "Total Installments",
+      "paid": "Paid",
+      "pending": "Pending",
+      "overdue": "Overdue",
+      "totalValue": "Total Value",
+      "paidValue": "Paid Value",
+      "remainingValue": "Remaining Value"
+    },
+    "filters": {
+      "all": "All",
+      "overdue": "Overdue",
+      "dueThisWeek": "Due This Week",
+      "dueThisMonth": "Due This Month"
+    },
+    "progress": "Payment Progress",
+    "viewDeal": "View Deal",
+    "recordPayment": "Record Payment"
+  },
+  "eta": {
+    "title": "Electronic Invoicing",
+    "newReceipt": "New Receipt",
+    "statuses": {
+      "PENDING": "Pending",
+      "VALID": "Valid",
+      "INVALID": "Invalid",
+      "CANCELLED": "Cancelled",
+      "QUEUED_FOR_RETRY": "Queued for Retry"
+    }
+  },
+  "users": {
+    "title": "User Management",
+    "subtitle": "Add, edit, and delete system users",
+    "newUser": "Add User",
+    "editUser": "Edit User",
+    "inviteUser": "Invite User",
+    "searchPlaceholder": "Search by name or email...",
+    "emptyTitle": "No users found",
+    "emptyDescription": "Start by adding a new user to the system",
+    "emptyAddButton": "Add User",
+    "fields": {
+      "firstName": "First Name (EN)",
+      "lastName": "Last Name (EN)",
+      "firstNameAr": "First Name (AR)",
+      "lastNameAr": "Last Name (AR)",
+      "email": "Email",
+      "phone": "Phone",
+      "role": "Role",
+      "branch": "Branch",
+      "sendInvite": "Send invite to user"
+    },
+    "roles": {
+      "OWNER": "Owner",
+      "GENERAL_MANAGER": "General Manager",
+      "SALES_MANAGER": "Sales Manager",
+      "BROKER": "Broker",
+      "ACCOUNTANT": "Accountant",
+      "COMPLIANCE_OFFICER": "Compliance Officer",
+      "FIELD_AGENT": "Field Agent",
+      "RECEPTIONIST": "Receptionist",
+      "READ_ONLY": "Read Only"
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "roleRequired": "Role is required"
+    },
+    "messages": {
+      "createSuccess": "User created successfully",
+      "updateSuccess": "User updated successfully",
+      "deleteSuccess": "User deleted successfully",
+      "inviteSuccess": "Invitation sent successfully",
+      "deleteConfirm": "Are you sure you want to delete this user?"
+    },
+    "permissions": "Permissions",
+    "inactive": "Inactive",
+    "emailNotVerified": "Email not verified",
+    "mfaEnabled": "MFA",
+    "noBranch": "No branch"
+  },
+  "automation": {
+    "title": "Automation Rules",
+    "subtitle": "Create and manage automated rules",
+    "newRule": "Create New Rule",
+    "editRule": "Edit Rule",
+    "emptyTitle": "No automation rules",
+    "emptyDescription": "Start by creating a new automation rule to automate repetitive tasks",
+    "emptyAddButton": "Create Rule",
+    "searchPlaceholder": "Search by name or trigger...",
+    "stats": {
+      "totalRules": "Total Rules",
+      "activeRules": "Active Rules",
+      "totalRuns": "Total Runs",
+      "successRate": "Success Rate"
+    },
+    "filters": {
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive",
+      "search": "Search"
+    },
+    "table": {
+      "name": "Rule Name",
+      "trigger": "Trigger",
+      "status": "Status",
+      "lastRun": "Last Run",
+      "actions": "Actions",
+      "runCount": "Run Count"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "triggers": {
+      "title": "Trigger",
+      "subtitle": "The event that will activate the rule",
+      "selectTrigger": "Select Trigger",
+      "searchTrigger": "Search for trigger...",
+      "noResults": "No matching results",
+      "groups": {
+        "leads": "Leads",
+        "deals": "Deals",
+        "payments": "Payments",
+        "documents": "Documents",
+        "viewings": "Viewings",
+        "contracts": "Contracts"
+      },
+      "types": {
+        "lead.created": "New Lead",
+        "lead.created_desc": "When a new lead is added",
+        "lead.stage_changed": "Lead Stage Changed",
+        "lead.stage_changed_desc": "When a lead's stage changes",
+        "lead.assigned": "Lead Assigned",
+        "lead.assigned_desc": "When a lead is assigned to someone",
+        "deal.created": "New Deal",
+        "deal.created_desc": "When a new deal is created",
+        "deal.stage_changed": "Deal Stage Changed",
+        "deal.stage_changed_desc": "When a deal's stage changes",
+        "deal.closed": "Deal Closed",
+        "deal.closed_desc": "When a deal is closed (won or lost)",
+        "payment.received": "Payment Received",
+        "payment.received_desc": "When a new payment is received",
+        "payment.overdue": "Payment Overdue",
+        "payment.overdue_desc": "When a payment is overdue",
+        "document.uploaded": "Document Uploaded",
+        "document.uploaded_desc": "When a new document is uploaded",
+        "document.expiring": "Document Expiring",
+        "document.expiring_desc": "When a document is about to expire",
+        "viewing.scheduled": "Viewing Scheduled",
+        "viewing.scheduled_desc": "When a new viewing is scheduled",
+        "viewing.completed": "Viewing Completed",
+        "viewing.completed_desc": "When a viewing is completed",
+        "contract.signed": "Contract Signed",
+        "contract.signed_desc": "When a contract is signed"
+      }
+    },
+    "conditions": {
+      "title": "Conditions",
+      "subtitle": "Optional - Add additional conditions",
+      "addCondition": "Add Condition",
+      "addGroup": "Add Group",
+      "removeCondition": "Remove Condition",
+      "removeGroup": "Remove Group",
+      "emptyTitle": "No conditions",
+      "emptyDescription": "Add conditions to restrict rule execution",
+      "and": "And",
+      "or": "Or",
+      "conditionsCount": "condition(s)",
+      "field": "Field",
+      "operator": "Operator",
+      "value": "Value",
+      "operators": {
+        "equals": "Equals",
+        "not_equals": "Not Equals",
+        "contains": "Contains",
+        "not_contains": "Not Contains",
+        "greater_than": "Greater Than",
+        "less_than": "Less Than",
+        "greater_than_or_equal": "Greater Than or Equal",
+        "less_than_or_equal": "Less Than or Equal",
+        "in": "In List",
+        "not_in": "Not In List",
+        "is_empty": "Is Empty",
+        "is_not_empty": "Is Not Empty",
+        "starts_with": "Starts With",
+        "ends_with": "Ends With"
+      },
+      "fields": {
+        "stage": "Stage",
+        "status": "Status",
+        "budget": "Budget",
+        "source": "Source",
+        "assignedToId": "Assigned To",
+        "dealType": "Deal Type",
+        "agreedPrice": "Agreed Price",
+        "amount": "Amount",
+        "method": "Payment Method",
+        "notes": "Notes"
+      }
+    },
+    "actions": {
+      "title": "Actions",
+      "subtitle": "Actions to be executed",
+      "addAction": "Add Action",
+      "removeAction": "Remove Action",
+      "emptyTitle": "No actions added",
+      "emptyDescription": "Add actions to be executed when conditions are met",
+      "order": "Order",
+      "delay": "Delay",
+      "seconds": "second(s)",
+      "test": "Test",
+      "types": {
+        "send_notification": "Send Notification",
+        "send_notification_desc": "Send notification to users",
+        "send_whatsapp": "Send WhatsApp",
+        "send_whatsapp_desc": "Send WhatsApp message",
+        "send_email": "Send Email",
+        "send_email_desc": "Send email",
+        "create_task": "Create Task",
+        "create_task_desc": "Create a new task",
+        "update_field": "Update Field",
+        "update_field_desc": "Update a field value",
+        "assign_to": "Assign To",
+        "assign_to_desc": "Assign item to someone",
+        "trigger_webhook": "Trigger Webhook",
+        "trigger_webhook_desc": "Send HTTP request"
+      },
+      "fields": {
+        "title": "Title",
+        "body": "Body",
+        "message": "Message",
+        "subject": "Subject",
+        "description": "Description",
+        "to": "To",
+        "from": "From",
+        "userId": "User",
+        "role": "Role",
+        "assignedToId": "Assigned To",
+        "dueInDays": "Due In (days)",
+        "priority": "Priority",
+        "field": "Field",
+        "value": "Value",
+        "url": "URL",
+        "method": "Method",
+        "headers": "Headers",
+        "templateName": "Template Name"
+      },
+      "variables": {
+        "title": "Variables",
+        "lead_client_name": "Client Name",
+        "lead_client_phone": "Client Phone",
+        "lead_stage": "Stage",
+        "lead_budget": "Budget",
+        "deal_agreedPrice": "Agreed Price",
+        "deal_property_title": "Property Title",
+        "user_name": "User Name",
+        "date": "Current Date",
+        "time": "Current Time"
+      },
+      "priorities": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "roles": {
+        "all": "All Users",
+        "owner": "Owner",
+        "gm": "General Manager",
+        "sales_manager": "Sales Manager",
+        "broker": "Broker"
+      }
+    },
+    "builder": {
+      "steps": {
+        "trigger": "Trigger",
+        "conditions": "Conditions",
+        "actions": "Actions"
+      },
+      "ruleName": "Rule Name",
+      "ruleNamePlaceholder": "Example: Notify on lead stage change",
+      "isActive": "Activate Rule",
+      "save": "Save Rule",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "test": "Test",
+      "testing": "Testing...",
+      "runNow": "Run Now",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "messages": {
+      "createSuccess": "Rule created successfully",
+      "updateSuccess": "Rule updated successfully",
+      "deleteSuccess": "Rule deleted successfully",
+      "toggleActive": "Rule activated",
+      "toggleInactive": "Rule deactivated",
+      "duplicateSuccess": "Rule duplicated successfully",
+      "runSuccess": "Rule executed",
+      "testSuccess": "Rule matches the data",
+      "testFail": "Rule does not match the data",
+      "deleteConfirm": "Are you sure you want to delete this rule?",
+      "deleteWarning": "This action cannot be undone",
+      "nameRequired": "Rule name is required",
+      "triggerRequired": "Trigger is required",
+      "actionsRequired": "At least one action is required",
+      "loadError": "Failed to load data",
+      "saveError": "Failed to save rule",
+      "deleteError": "Failed to delete rule",
+      "testError": "Failed to test rule"
+    }
+  },
+  "aiCopilot": {
+    "title": "AI Copilot",
+    "subtitle": "Your intelligent assistant for real estate management",
+    "welcome": "Hello! I'm AI Copilot",
+    "welcomeMessage": "Your intelligent assistant for real estate management. I can help you analyze data, suggest best practices, and answer your queries.",
+    "placeholder": "Type your question here...",
+    "thinking": "Thinking...",
+    "cancel": "Cancel",
+    "copy": "Copy",
+    "copied": "Copied",
+    "clearHistory": "Clear conversation",
+    "disclaimer": "AI Copilot may produce inaccurate information. Verify important information.",
+    "contexts": {
+      "general": "General",
+      "leads": "Leads",
+      "properties": "Properties",
+      "deals": "Deals",
+      "analytics": "Analytics"
+    },
+    "suggestedPrompts": {
+      "general": [
+        "What are the best practices for lead management?",
+        "How can I improve my deal closing rate?",
+        "What are the most important reports to track office performance?"
+      ],
+      "leads": [
+        "Which leads are most likely to convert?",
+        "Which clients need urgent follow-up?",
+        "Rate this lead for me"
+      ],
+      "properties": [
+        "What are the most requested properties?",
+        "Which properties need price reduction?",
+        "What properties are suitable for this client?"
+      ],
+      "deals": [
+        "What deals are at risk?",
+        "How can I speed up the deal closing process?",
+        "What deals are expected this month?"
+      ],
+      "analytics": [
+        "How did the team perform this month?",
+        "What are the most effective client sources?",
+        "Compare this month's performance to last month"
+      ]
+    },
+    "tryThese": "Try one of these questions:"
+  },
+  "empty": {
+    "noData": "No data",
+    "noLeads": "No leads",
+    "noProperties": "No properties",
+    "noDeals": "No deals",
+    "noResults": "No results",
+    "addFirst": "Add first",
+    "noClients": "No clients"
+  },
+  "clients": {
+    "title": "Clients",
+    "newClient": "New Client",
+    "editClient": "Edit Client",
+    "clientDetails": "Client Details",
+    "list": "Client List",
+    "searchPlaceholder": "Search by name or phone...",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "firstNameAr": "First Name (Arabic)",
+    "lastNameAr": "Last Name (Arabic)",
+    "phone": "Phone",
+    "phone2": "Additional Phone",
+    "email": "Email",
+    "nationalId": "National ID",
+    "nationality": "Nationality",
+    "clientType": "Client Type",
+    "companyName": "Company Name",
+    "taxId": "Tax ID",
+    "source": "Client Source",
+    "tags": "Tags",
+    "notes": "Notes",
+    "isVip": "VIP Client",
+    "createdAt": "Added Date",
+    "lastActivity": "Last Activity",
+    "types": {
+      "individual": "Individual",
+      "company": "Company"
+    },
+    "sources": {
+      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "website": "Website",
+      "referral": "Referral",
+      "portal": "Property Portal",
+      "other": "Other"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "merge": "Merge",
+      "convertToLead": "Convert to Lead"
+    },
+    "confirmDelete": "Are you sure you want to delete this client?",
+    "cannotDeleteWithDeals": "Cannot delete a client with active deals",
+    "phoneExists": "Phone number already registered",
+    "phoneExistsWarning": "Phone number already registered for client: {name}",
+    "duplicateFound": "Found a client with the same phone number",
+    "mergeTitle": "Merge Clients",
+    "mergeDescription": "All data will be moved from source client to target client",
+    "sourceClient": "Source Client",
+    "targetClient": "Target Client",
+    "mergeSuccess": "Client merged successfully",
+    "createSuccess": "Client created successfully",
+    "updateSuccess": "Client updated successfully",
+    "deleteSuccess": "Client deleted successfully",
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Invalid phone number",
+      "emailInvalid": "Invalid email address",
+      "nationalIdInvalid": "Invalid national ID"
+    },
+    "table": {
+      "name": "Name",
+      "contact": "Contact",
+      "type": "Type",
+      "source": "Source",
+      "vip": "VIP",
+      "addedDate": "Added Date"
+    },
+    "filters": {
+      "all": "All",
+      "vip": "VIP Only",
+      "individuals": "Individuals",
+      "companies": "Companies"
+    },
+    "emptyState": {
+      "title": "No clients",
+      "description": "Start by adding your first client",
+      "addButton": "Add Client"
+    },
+    "stats": {
+      "total": "Total Clients",
+      "vip": "VIP Clients",
+      "newThisMonth": "New this month",
+      "activeDeals": "Active Deals"
+    }
+  },
+  "activities": {
+    "title": "Activities",
+    "timeline": "Timeline",
+    "newActivity": "New Activity",
+    "addActivity": "Add Activity",
+    "editActivity": "Edit Activity",
+    "activityDetails": "Activity Details",
+    "noActivities": "No activities",
+    "noActivitiesDescription": "No activities recorded yet",
+    "loadMore": "Load More",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "types": {
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "meeting": "Meeting",
+      "note": "Note",
+      "viewing": "Viewing",
+      "contract": "Contract",
+      "payment": "Payment",
+      "system": "System"
+    },
+    "typeIcons": {
+      "call": "📞",
+      "whatsapp": "💬",
+      "email": "📧",
+      "meeting": "👥",
+      "note": "📝",
+      "viewing": "🏠",
+      "contract": "📄",
+      "payment": "💰",
+      "system": "⚙️"
+    },
+    "entityTypes": {
+      "lead": "Lead",
+      "client": "Client",
+      "property": "Property",
+      "deal": "Deal",
+      "contract": "Contract",
+      "payment": "Payment"
+    },
+    "fields": {
+      "type": "Activity Type",
+      "title": "Title",
+      "description": "Description",
+      "date": "Date",
+      "time": "Time",
+      "user": "User",
+      "relatedTo": "Related To",
+      "aiGenerated": "AI Generated"
+    },
+    "placeholders": {
+      "title": "Enter activity title",
+      "description": "Enter activity details...",
+      "selectType": "Select activity type"
+    },
+    "validation": {
+      "titleRequired": "Title is required",
+      "typeRequired": "Activity type is required",
+      "titleMinLength": "Title must be at least 3 characters",
+      "titleMaxLength": "Title cannot exceed 200 characters",
+      "bodyMaxLength": "Description cannot exceed 2000 characters"
+    },
+    "messages": {
+      "createSuccess": "Activity created successfully",
+      "updateSuccess": "Activity updated successfully",
+      "deleteSuccess": "Activity deleted successfully",
+      "deleteConfirm": "Are you sure you want to delete this activity?"
+    },
+    "filters": {
+      "all": "All",
+      "byType": "By Type",
+      "byUser": "By User",
+      "byDate": "By Date"
+    },
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "older": "Older"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "lastUpdated": "Last Updated",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing...",
+    "fromCache": "From cache",
+    "kpis": {
+      "pipelineValue": "Pipeline Value",
+      "newLeads": "New Leads",
+      "dealsClosed": "Deals Closed",
+      "totalCommission": "Expected Commission",
+      "availableProperties": "Available Properties",
+      "scheduledViewings": "Scheduled Viewings"
+    },
+    "trends": {
+      "up": "Up",
+      "down": "Down",
+      "stable": "Stable",
+      "fromLastMonth": "from last month",
+      "noChange": "No change"
+    },
+    "charts": {
+      "leadsByStage": "Leads by Stage",
+      "propertiesByType": "Properties by Type",
+      "monthlyTrends": "Monthly Trends",
+      "activitiesByType": "Activities by Type"
+    },
+    "leadsStats": {
+      "title": "Leads Statistics",
+      "totalLeads": "Total Leads",
+      "totalBudget": "Total Budget",
+      "newLeads": "New",
+      "qualifiedLeads": "Qualified",
+      "closedWon": "Closed (Won)",
+      "closedLost": "Closed (Lost)"
+    },
+    "propertiesStats": {
+      "title": "Properties Statistics",
+      "total": "Total Properties",
+      "available": "Available",
+      "reserved": "Reserved",
+      "sold": "Sold",
+      "rented": "Rented",
+      "totalValue": "Total Value"
+    },
+    "clientsStats": {
+      "title": "Clients Statistics",
+      "total": "Total Clients",
+      "individuals": "Individuals",
+      "companies": "Companies",
+      "newThisMonth": "New this month"
+    },
+    "activitiesStats": {
+      "title": "Activities Statistics",
+      "total": "Total Activities",
+      "today": "Today",
+      "thisWeek": "This Week",
+      "calls": "Calls",
+      "whatsapp": "WhatsApp",
+      "viewings": "Viewings"
+    },
+    "alerts": {
+      "title": "Alerts",
+      "noAlerts": "No alerts",
+      "staleLeads": "Leads without follow-up",
+      "staleLeadsDescription": "{count} leads have not been followed up in over 3 days",
+      "expiringReservations": "Expiring Reservations",
+      "expiringReservationsDescription": "{count} temporary reservations will expire within 24 hours",
+      "propertiesWithoutImages": "Properties without images",
+      "propertiesWithoutImagesDescription": "{count} properties have no images"
+    },
+    "topAgents": {
+      "title": "Top Agents",
+      "name": "Name",
+      "dealsClosed": "Deals Closed",
+      "totalValue": "Total Value",
+      "leadsAssigned": "Leads Assigned",
+      "noAgents": "No data available"
+    },
+    "monthlyTrends": {
+      "title": "Monthly Trends (Last 6 Months)",
+      "month": "Month",
+      "leads": "Leads",
+      "properties": "Properties",
+      "clients": "Clients",
+      "dealsClosed": "Deals Closed"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "addLead": "Add Lead",
+      "addProperty": "Add Property",
+      "addClient": "Add Client",
+      "scheduleViewing": "Schedule Viewing"
+    },
+    "colors": {
+      "blue": "Blue",
+      "green": "Green",
+      "purple": "Purple",
+      "yellow": "Yellow",
+      "indigo": "Indigo",
+      "pink": "Pink",
+      "red": "Red",
+      "orange": "Orange"
+    },
+    "loading": "Loading data...",
+    "error": "Error loading data"
+  },
+  "search": {
+    "title": "Global Search",
+    "placeholder": "Search for client, property, deal...",
+    "noResults": "No results",
+    "noResultsHint": "Try different search terms",
+    "resultsCount": "{count} results",
+    "searchTime": "{time} ms",
+    "suggestions": "Suggestions",
+    "recent": "Recent searches",
+    "navigate": "to navigate",
+    "select": "to select",
+    "close": "to close",
+    "types": {
+      "all": "All",
+      "clients": "Clients",
+      "leads": "Leads",
+      "properties": "Properties",
+      "deals": "Deals"
+    },
+    "errors": {
+      "tooShort": "Search text must be at least 2 characters",
+      "rateLimit": "Search limit exceeded, please try again later"
+    }
+  },
+  "inbox": {
+    "title": "Inbox",
+    "subtitle": "Manage conversations and messages",
+    "searchPlaceholder": "Search by name or phone number...",
+    "allStatuses": "All Statuses",
+    "statusOpen": "Open",
+    "statusPending": "Pending",
+    "statusResolved": "Resolved",
+    "emptyTitle": "No conversations",
+    "emptyDescription": "Conversations will appear here when WhatsApp messages are received",
+    "unknown": "Unknown",
+    "noMessages": "No messages",
+    "assignedTo": "Assigned To",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "conversationNotFound": "Conversation not found",
+    "backToInbox": "Back to Inbox",
+    "typeMessage": "Type your message...",
+    "channels": {
+      "whatsapp": "WhatsApp",
+      "sms": "SMS",
+      "email": "Email"
+    },
+    "statusLabels": {
+      "OPEN": "Open",
+      "PENDING": "Pending",
+      "RESOLVED": "Resolved"
+    }
+  },
+  "contracts": {
+    "title": "Contracts",
+    "subtitle": "Manage sale and rental contracts",
+    "newContract": "New Contract",
+    "editContract": "Edit Contract",
+    "contractDetails": "Contract Details",
+    "searchPlaceholder": "Search by contract number...",
+    "emptyTitle": "No contracts",
+    "emptyDescription": "Contracts will appear here after deals are completed",
+    "emptyAddButton": "Add Contract",
+    "statuses": {
+      "all": "All",
+      "pending": "Pending",
+      "signed": "Signed",
+      "cancelled": "Cancelled"
+    },
+    "statusColors": {
+      "pending": "bg-yellow-100 text-yellow-800",
+      "signed": "bg-green-100 text-green-800",
+      "cancelled": "bg-red-100 text-red-800"
+    },
+    "fields": {
+      "contractNumber": "Contract Number",
+      "contractDate": "Contract Date",
+      "deal": "Deal",
+      "property": "Property",
+      "client": "Client",
+      "dealType": "Deal Type",
+      "agreedPrice": "Agreed Price",
+      "signedByClient": "Client Signature",
+      "signedByOffice": "Office Signature",
+      "signedAt": "Signing Date",
+      "fileUrl": "Contract File",
+      "notes": "Notes",
+      "parties": "Contract Parties",
+      "signatures": "Signatures",
+      "attachments": "Attachments",
+      "timeline": "Timeline"
+    },
+    "dealTypes": {
+      "sale": "Sale",
+      "rent": "Rent",
+      "management": "Management"
+    },
+    "table": {
+      "number": "Number",
+      "date": "Date",
+      "type": "Type",
+      "property": "Property",
+      "client": "Client",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "download": "Download",
+      "sign": "Sign",
+      "cancel": "Cancel"
+    },
+    "messages": {
+      "createSuccess": "Contract created successfully",
+      "updateSuccess": "Contract updated successfully",
+      "signSuccess": "Contract signed successfully",
+      "cancelSuccess": "Contract cancelled",
+      "confirmSign": "Are you sure you want to sign this contract?",
+      "confirmCancel": "Are you sure you want to cancel this contract?"
+    },
+    "noFile": "No file",
+    "notSigned": "Not Signed",
+    "signed": "Signed",
+    "pendingSignature": "Pending Signature",
+    "partyFirst": "First Party (Seller/Lessor)",
+    "partySecond": "Second Party (Buyer/Lessee)",
+    "officeSignature": "Office Signature",
+    "clientSignature": "Client Signature",
+    "attachmentUpload": "Upload Attachment",
+    "noAttachments": "No attachments",
+    "viewDeal": "View Deal",
+    "viewProperty": "View Property",
+    "viewClient": "View Client"
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Manage client and property documents",
+    "newDocument": "Upload Document",
+    "editDocument": "Edit Document",
+    "documentDetails": "Document Details",
+    "searchPlaceholder": "Search by title or type...",
+    "emptyTitle": "No documents",
+    "emptyDescription": "Start by uploading documents for clients and properties",
+    "emptyAddButton": "Upload Document",
+    "statuses": {
+      "all": "All",
+      "pending_review": "Pending Review",
+      "verified": "Verified",
+      "rejected": "Rejected",
+      "expired": "Expired"
+    },
+    "statusColors": {
+      "pending_review": "bg-yellow-100 text-yellow-800",
+      "verified": "bg-green-100 text-green-800",
+      "rejected": "bg-red-100 text-red-800",
+      "expired": "bg-gray-100 text-gray-800"
+    },
+    "ocrStatuses": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed"
+    },
+    "entityTypes": {
+      "all": "All",
+      "client": "Client",
+      "property": "Property",
+      "deal": "Deal",
+      "contract": "Contract"
+    },
+    "documentTypes": {
+      "all": "All",
+      "national_id": "National ID Card",
+      "passport": "Passport",
+      "commercial_register": "Commercial Register",
+      "tax_card": "Tax Card",
+      "power_of_attorney": "Power of Attorney",
+      "ownership_deed": "Ownership Deed",
+      "contract": "Contract",
+      "other": "Other"
+    },
+    "fields": {
+      "title": "Document Title",
+      "entityType": "Related To",
+      "entityId": "Entity",
+      "documentType": "Document Type",
+      "status": "Status",
+      "ocrStatus": "OCR Status",
+      "fileUrl": "File",
+      "sizeBytes": "Size",
+      "mimeType": "File Type",
+      "expiresAt": "Expiry Date",
+      "uploadedBy": "Uploaded By",
+      "verifiedBy": "Verified By",
+      "verifiedAt": "Verification Date",
+      "notes": "Notes",
+      "ocrData": "OCR Data",
+      "versionHistory": "Version History",
+      "createdAt": "Upload Date"
+    },
+    "placeholders": {
+      "title": "Enter document title",
+      "selectEntityType": "Select entity type",
+      "selectEntity": "Select entity",
+      "selectDocumentType": "Select document type",
+      "notes": "Add notes..."
+    },
+    "table": {
+      "title": "Title",
+      "type": "Type",
+      "entity": "Related To",
+      "status": "Status",
+      "ocr": "OCR",
+      "uploaded": "Upload Date",
+      "actions": "Actions"
+    },
+    "actions": {
+      "view": "View",
+      "download": "Download",
+      "verify": "Verify",
+      "reject": "Reject",
+      "delete": "Delete"
+    },
+    "messages": {
+      "uploadSuccess": "Document uploaded successfully",
+      "verifySuccess": "Document verified",
+      "rejectSuccess": "Document rejected",
+      "deleteSuccess": "Document deleted",
+      "deleteConfirm": "Are you sure you want to delete this document?",
+      "verifyConfirm": "Are you sure you want to verify this document?",
+      "rejectConfirm": "Are you sure you want to reject this document?"
+    },
+    "dragDropHint": "Drag file here or click to select",
+    "allowedTypes": "PDF, Images, Word",
+    "maxSize": "Maximum 10MB",
+    "preview": "Preview",
+    "noPreview": "Cannot preview this file",
+    "downloadFile": "Download File",
+    "ocrResults": "OCR Results",
+    "noOcrData": "No data extracted",
+    "ocrProcessing": "Processing OCR...",
+    "relatedEntity": "Related Entity",
+    "rejectionReason": "Rejection Reason",
+    "rejectionReasonPlaceholder": "Enter rejection reason...",
+    "expiresWarning": "Expiring Soon",
+    "expiredWarning": "Expired"
+  },
+  "viewings": {
+    "title": "Viewings",
+    "subtitle": "Schedule and manage property viewings",
+    "newViewing": "Schedule Viewing",
+    "editViewing": "Edit Viewing",
+    "viewingDetails": "Viewing Details",
+    "searchPlaceholder": "Search by name or address...",
+    "emptyTitle": "No viewings",
+    "emptyDescription": "Start by scheduling a new viewing",
+    "emptyAddButton": "Schedule Viewing",
+    "statuses": {
+      "scheduled": "Scheduled",
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "no_show": "No Show"
+    },
+    "statusColors": {
+      "scheduled": "bg-blue-100 text-blue-800",
+      "confirmed": "bg-green-100 text-green-800",
+      "completed": "bg-purple-100 text-purple-800",
+      "cancelled": "bg-red-100 text-red-800",
+      "no_show": "bg-gray-100 text-gray-800"
+    },
+    "fields": {
+      "lead": "Lead",
+      "property": "Property",
+      "scheduledAt": "Viewing Date & Time",
+      "status": "Status",
+      "notes": "Notes",
+      "feedback": "Post-Viewing Feedback",
+      "rating": "Rating",
+      "duration": "Duration (minutes)",
+      "conductedAt": "Conducted At"
+    },
+    "placeholders": {
+      "selectLead": "Select Lead",
+      "selectProperty": "Select Property",
+      "notes": "Add viewing notes...",
+      "feedback": "Add post-viewing feedback...",
+      "reason": "Cancellation reason..."
+    },
+    "validation": {
+      "leadRequired": "Lead is required",
+      "propertyRequired": "Property is required",
+      "scheduledAtRequired": "Viewing date and time are required",
+      "scheduledAtFuture": "Date must be in the future",
+      "ratingRange": "Rating must be between 1 and 5"
+    },
+    "messages": {
+      "createSuccess": "Viewing scheduled successfully",
+      "updateSuccess": "Viewing updated successfully",
+      "cancelSuccess": "Viewing cancelled",
+      "confirmSuccess": "Viewing confirmed",
+      "completeSuccess": "Viewing marked as completed",
+      "deleteConfirm": "Are you sure you want to cancel this viewing?",
+      "conflictError": "Another viewing is scheduled at this time"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "complete": "Complete",
+      "reschedule": "Reschedule"
+    },
+    "filters": {
+      "all": "All",
+      "scheduled": "Scheduled",
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "today": "Today",
+      "thisWeek": "This Week",
+      "upcoming": "Upcoming",
+      "past": "Past"
+    },
+    "stats": {
+      "title": "Viewings Statistics",
+      "scheduled": "Scheduled",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noShow": "No Show",
+      "today": "Today",
+      "thisWeek": "This Week"
+    },
+    "table": {
+      "client": "Client",
+      "property": "Property",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "calendar": {
+      "title": "Calendar",
+      "list": "List",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "noViewings": "No viewings on this day"
+    },
+    "confirmCancel": "Confirm Cancellation",
+    "cancelReason": "Cancellation Reason",
+    "cancelReasonPlaceholder": "Enter cancellation reason (optional)",
+    "confirmComplete": "Confirm Completion",
+    "addFeedback": "Add Feedback",
+    "rateViewing": "Rate Viewing",
+    "clientNotArrived": "Client did not arrive",
+    "viewProperty": "View Property",
+    "viewLead": "View Lead",
+    "conflictWarning": "Conflict",
+    "conflictDescription": "Another viewing is scheduled for the same property at approximately the same time",
+    "upcomingViewings": "Upcoming Viewings",
+    "pastViewings": "Past Viewings",
+    "noUpcoming": "No upcoming viewings",
+    "noPast": "No past viewings"
+  },
+  "reconciliation": {
+    "title": "Collection Dashboard",
+    "subtitle": "Track installments and collections",
+    "kpis": {
+      "totalDue": "Total Due",
+      "collected": "Collected",
+      "overdue": "Overdue",
+      "collectionRate": "Collection Rate"
+    },
+    "overdueTable": {
+      "title": "Overdue Installments",
+      "clientName": "Client Name",
+      "dealNumber": "Deal Number",
+      "overdueAmount": "Overdue Amount",
+      "daysOverdue": "Days Overdue",
+      "status": "Delay Status",
+      "contactClient": "Contact Client",
+      "empty": "No overdue installments",
+      "noOverdue": "Excellent! No overdue installments"
+    },
+    "delayStatus": {
+      "critical": "Critical",
+      "warning": "Warning",
+      "normal": "Normal",
+      "criticalDays": "More than 30 days",
+      "warningDays": "15-30 days",
+      "normalDays": "Less than 15 days"
+    },
+    "chart": {
+      "title": "Monthly Collections",
+      "collected": "Collected",
+      "due": "Due",
+      "month": "Month"
+    },
+    "filters": {
+      "branch": "Branch",
+      "period": "Period",
+      "delayStatus": "Delay Status",
+      "allBranches": "All Branches",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "last3Months": "Last 3 Months",
+      "last6Months": "Last 6 Months",
+      "thisYear": "This Year",
+      "all": "All",
+      "criticalOnly": "Critical Only",
+      "warningOnly": "Warning Only"
+    },
+    "lastUpdated": "Last Updated",
+    "refresh": "Refresh Data",
+    "exportReport": "Export Report"
+  },
+  "financialReports": {
+    "title": "Financial Reports",
+    "subtitle": "Comprehensive financial performance reports",
+    "monthlyRevenue": {
+      "title": "Monthly Revenue Report",
+      "totalRevenue": "Total Revenue",
+      "previousMonth": "Previous Month",
+      "comparison": "Comparison",
+      "increase": "Increase",
+      "decrease": "Decrease",
+      "noChange": "No Change"
+    },
+    "etaSummary": {
+      "title": "Electronic Invoicing Summary (ETA)",
+      "totalInvoices": "Number of Invoices",
+      "totalAmount": "Total Amount",
+      "validInvoices": "Valid Invoices",
+      "invalidInvoices": "Invalid Invoices",
+      "pendingInvoices": "Pending Invoices",
+      "valid": "Valid",
+      "invalid": "Invalid",
+      "pending": "Pending"
+    },
+    "commissionSummary": {
+      "title": "Commissions Summary",
+      "calculated": "Calculated Commissions",
+      "approved": "Approved Commissions",
+      "paid": "Paid Commissions",
+      "pendingApproval": "Pending Approval",
+      "pendingPayment": "Pending Payment",
+      "totalAmount": "Total Amount"
+    },
+    "export": {
+      "title": "Export Reports",
+      "excel": "Export Excel",
+      "pdf": "Export PDF",
+      "exporting": "Exporting...",
+      "exportSuccess": "Report exported successfully",
+      "exportError": "Error during export"
+    },
+    "filters": {
+      "period": "Period",
+      "branch": "Branch",
+      "allBranches": "All Branches",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "last3Months": "Last 3 Months",
+      "last6Months": "Last 6 Months",
+      "thisYear": "This Year",
+      "custom": "Custom"
+    },
+    "chart": {
+      "revenueTrend": "Revenue Trend",
+      "monthly": "Monthly",
+      "amount": "Amount",
+      "revenue": "Revenue"
+    },
+    "table": {
+      "month": "Month",
+      "revenue": "Revenue",
+      "collected": "Collected",
+      "pending": "Pending",
+      "rate": "Collection Rate"
+    },
+    "noData": "No data for the selected period",
+    "generateReport": "Generate Report",
+    "downloadReport": "Download Report"
+  },
+  "ai": {
+    "title": "AI Copilot",
+    "subtitle": "Your intelligent assistant for real estate management",
+    "welcome": "Hello! I'm AI Copilot",
+    "welcomeMessage": "Your intelligent assistant for real estate management. I can help you analyze data, suggest best practices, and answer your queries.",
+    "howCanIHelp": "How can I help you?",
+    "askQuestion": "Ask me anything about clients, properties, or deals",
+    "thinking": "Thinking...",
+    "typePlaceholder": "Type your question here...",
+    "send": "Send",
+    "cancel": "Cancel",
+    "copy": "Copy",
+    "copied": "Copied",
+    "clearHistory": "Clear conversation",
+    "openFullPage": "Open in full page",
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "close": "Close",
+    "disclaimer": "AI Copilot may produce inaccurate information. Verify important information.",
+    "connectionError": "Failed to connect to server",
+    "processingError": "Error processing your request",
+    "context": {
+      "title": "Conversation Context",
+      "general": "General",
+      "leads": "Leads",
+      "properties": "Properties",
+      "deals": "Deals",
+      "analytics": "Analytics"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "summarizeClient": "Summarize this client",
+      "suggestProperties": "Suggest suitable properties",
+      "writeFollowup": "Write follow-up message",
+      "analyzeDeal": "Analyze the deal",
+      "scoreLead": "Score this lead",
+      "generateReport": "Deal report"
+    },
+    "suggestedPrompts": {
+      "title": "Try one of these questions:",
+      "general": [
+        "What are the best practices for lead management?",
+        "How can I improve my deal closing rate?",
+        "What are the most important reports to track office performance?"
+      ],
+      "leads": [
+        "Which leads are most likely to convert?",
+        "Which clients need urgent follow-up?",
+        "Rate this lead for me"
+      ],
+      "properties": [
+        "What are the most requested properties?",
+        "Which properties need price reduction?",
+        "What properties are suitable for this client?"
+      ],
+      "deals": [
+        "What deals are at risk?",
+        "How can I speed up the deal closing process?",
+        "What deals are expected this month?"
+      ],
+      "analytics": [
+        "How did the team perform this month?",
+        "What are the most effective client sources?",
+        "Compare this month's performance to last month"
+      ]
+    },
+    "history": {
+      "title": "Previous Conversations",
+      "save": "Save Current",
+      "messages": "messages",
+      "noConversations": "No previous conversations"
+    },
+    "prompts": {
+      "title": "Saved Prompts",
+      "save": "Save Prompt",
+      "saveTitle": "Save Prompt",
+      "titlePlaceholder": "Example: New client follow-up",
+      "noPrompts": "No saved prompts. You can save any prompt from the conversation."
+    },
+    "settings": {
+      "title": "AI Settings",
+      "temperature": "Creativity (Temperature)",
+      "temperatureHint": "Higher value = more creative responses",
+      "maxTokens": "Max Response Length",
+      "maxTokensUnit": "words",
+      "autoSave": "Auto Save",
+      "showQuickActions": "Show Quick Actions",
+      "reset": "Reset to Defaults"
+    },
+    "leadScore": {
+      "title": "AI Score",
+      "hot": "Hot",
+      "warm": "Warm",
+      "cold": "Cold",
+      "rescore": "Rescore",
+      "factors": "Scoring Factors",
+      "budgetAlignment": "Budget Alignment",
+      "timelineUrgency": "Timeline Urgency",
+      "engagementLevel": "Engagement Level",
+      "propertyMatch": "Property Match"
+    }
+  },
+  "ocr": {
+    "title": "Document Scanner",
+    "subtitle": "Extract data with AI",
+    "selectDocumentType": "Select Document Type",
+    "selectDocumentTypeHint": "Specify document type for accurate data extraction",
+    "startCamera": "Start Camera",
+    "capture": "Capture",
+    "retake": "Retake",
+    "extractData": "Extract Data",
+    "processing": "Processing image...",
+    "processingHint": "Extracting data using AI...",
+    "resultTitle": "OCR Results",
+    "extractedFields": "Extracted Fields",
+    "extractedFieldsHint": "You can edit the data before confirming",
+    "confirmAndFill": "Confirm & Fill Form",
+    "confirming": "Confirming...",
+    "noFieldsExtracted": "No fields extracted from document",
+    "confidence": "Recognition Confidence",
+    "confidenceHigh": "High",
+    "confidenceMedium": "Medium",
+    "confidenceLow": "Low",
+    "lowConfidenceWarning": "Low recognition confidence",
+    "lowConfidenceHint": "Please review the extracted data carefully and make necessary adjustments before confirming.",
+    "documentTypes": {
+      "national_id": "National ID Card",
+      "passport": "Passport",
+      "property_contract": "Property Contract",
+      "receipt": "Receipt",
+      "other": "Other Document"
+    },
+    "fields": {
+      "name": "Name",
+      "nameAr": "Name (Arabic)",
+      "nationalId": "National ID",
+      "passportNumber": "Passport Number",
+      "address": "Address",
+      "birthDate": "Birth Date",
+      "issueDate": "Issue Date",
+      "expiryDate": "Expiry Date",
+      "phone": "Phone",
+      "email": "Email",
+      "propertyAddress": "Property Address",
+      "propertyArea": "Property Area",
+      "propertyType": "Property Type",
+      "ownerName": "Owner Name",
+      "buyerName": "Buyer Name",
+      "price": "Price",
+      "contractDate": "Contract Date",
+      "receiptNumber": "Receipt Number",
+      "amount": "Amount",
+      "date": "Date",
+      "vendorName": "Vendor Name",
+      "vendorAddress": "Vendor Address"
+    },
+    "errors": {
+      "cameraAccessDenied": "Camera access denied. Please allow access from browser settings.",
+      "cameraNotFound": "No camera found on this device.",
+      "cameraStartFailed": "Failed to start camera. Please try again.",
+      "captureFailed": "Failed to capture image",
+      "ocrFailed": "Failed to process image",
+      "noCameraActive": "Camera not active",
+      "notSupported": "Camera not supported on this browser"
+    }
+  },
+  "pwa": {
+    "installTitle": "Install App",
+    "installHint": "Install the app on your device for quick access and offline work",
+    "installButton": "Install Now",
+    "installLater": "Later",
+    "installed": "App Installed",
+    "updateAvailable": "New Update Available",
+    "updateNow": "Update Now",
+    "offlineReady": "App Ready for Offline Work",
+    "offlineMode": "Offline mode",
+    "offlineHint": "You can use the app offline and data will be saved locally"
+  }
+}

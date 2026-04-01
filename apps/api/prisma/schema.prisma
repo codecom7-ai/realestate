@@ -1,0 +1,1125 @@
+// ═══════════════════════════════════════════════════════════════
+// Prisma Schema - نظام تشغيل المكتب العقاري المصري
+// Single-Tenant Version
+// ═══════════════════════════════════════════════════════════════
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ENUMS
+// ═══════════════════════════════════════════════════════════════
+
+enum UserRole {
+  OWNER
+  GENERAL_MANAGER
+  SALES_MANAGER
+  BROKER
+  ACCOUNTANT
+  COMPLIANCE_OFFICER
+  FIELD_AGENT
+  RECEPTIONIST
+  READ_ONLY
+}
+
+enum LeadStage {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPERTY_PRESENTED
+  VIEWING_SCHEDULED
+  VIEWED
+  NEGOTIATING
+  RESERVED
+  CONTRACT_SENT
+  CONTRACT_SIGNED
+  CLOSED_WON
+  CLOSED_LOST
+}
+
+enum DealStage {
+  LEAD
+  VIEWING
+  NEGOTIATION
+  RESERVATION
+  CONTRACT_PREPARATION
+  CONTRACT_SIGNED
+  PAYMENT_ACTIVE
+  HANDOVER_PENDING
+  CLOSED
+  CANCELLED
+}
+
+enum PropertyStatus {
+  AVAILABLE
+  RESERVED_TEMP
+  RESERVED_CONFIRMED
+  SOLD
+  RENTED
+  SUSPENDED
+  UNDER_MAINTENANCE
+}
+
+enum PropertyType {
+  APARTMENT
+  VILLA
+  DUPLEX
+  PENTHOUSE
+  STUDIO
+  OFFICE
+  SHOP
+  WAREHOUSE
+  LAND
+  COMPOUND_UNIT
+}
+
+enum FinishingType {
+  FULLY_FINISHED
+  SEMI_FINISHED
+  CORE_SHELL
+  ULTRA_LUXURY
+}
+
+enum DocumentStatus {
+  PENDING_REVIEW
+  VERIFIED
+  REJECTED
+  EXPIRED
+}
+
+enum CommissionStatus {
+  CALCULATED
+  APPROVED
+  SETTLED
+  PAID
+  DISPUTED
+}
+
+enum PaymentMethod {
+  CASH
+  CHECK
+  BANK_TRANSFER
+  INSTAPAY
+  FAWRY
+  PAYMOB_CARD
+  PAYMOB_WALLET
+  PAYMOB_BNPL
+}
+
+enum ETAReceiptStatus {
+  PENDING
+  VALID
+  INVALID
+  CANCELLED
+  QUEUED_FOR_RETRY
+}
+
+enum POSDeviceStatus {
+  ACTIVE
+  INACTIVE
+  RETIRED
+  SUSPENDED
+}
+
+enum MessageDirection {
+  INCOMING
+  OUTGOING
+}
+
+enum MessageStatus {
+  PENDING
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+enum ConversationStatus {
+  OPEN
+  RESOLVED
+  PENDING
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ORGANIZATION — منظمة واحدة ثابتة
+// تُنشأ مرة واحدة عند Setup Wizard
+// ═══════════════════════════════════════════════════════════════
+
+model Organization {
+  id               String   @id @default(uuid())
+  name             String
+  nameAr           String?
+  slug             String?  @unique
+  legalName        String?
+  commercialRegNo  String?  // رقم السجل التجاري
+  taxId            String?  // الرقم الضريبي (RIN لـ ETA)
+  brokerLicenseNo  String?  // رقم ترخيص السمسرة 578
+  classification   String?  // تصنيف 578 (A|B|C)
+  phone            String?
+  email            String?
+  address          String?
+  city             String?
+  logoUrl          String?
+  primaryCurrency  String   @default("EGP")
+  timezone         String   @default("Africa/Cairo")
+  locale           String   @default("ar")
+  isSetupDone      Boolean  @default(false)
+  preferences      Json     @default("{}")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  branches          Branch[]
+  users             User[]
+  teams             Team[]
+  clients           Client[]
+  leads             Lead[]
+  properties        Property[]
+  projects          Project[]
+  developers        Developer[]
+  deals             Deal[]
+  documents         Document[]
+  complianceRecords ComplianceRecord[]
+  posDevices        PosDevice[]
+  etaReceipts       ETAReceipt[]
+  automationRules   AutomationRule[]
+  notifications     Notification[]
+  auditLogs         AuditLog[]
+  aiUsageLogs       AiUsageLog[]
+  conversations     Conversation[]
+  messages          Message[]
+  commissions       Commission[]
+  activities        Activity[]
+  viewings          Viewing[]
+  propertyLocks     PropertyLock[]
+  settings          Setting[]
+
+  @@index([taxId])
+  @@index([brokerLicenseNo])
+  @@map("organizations")
+}
+
+model Branch {
+  id             String   @id @default(uuid())
+  organizationId String
+  name           String
+  nameAr         String?
+  etaBranchCode  String?  // كود الفرع في ETA (إلزامي للإرسال)
+  address        String?
+  city           String?
+  phone          String?
+  managerId      String?
+  isHeadquarters Boolean  @default(false)
+  isActive       Boolean  @default(true)
+  settings       Json     @default("{}")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  manager      User?        @relation("BranchManager", fields: [managerId], references: [id])
+  users        User[]
+  teams        Team[]
+  deals        Deal[]
+  properties   Property[]
+  posDevices   PosDevice[]
+
+  @@index([organizationId])
+  @@index([etaBranchCode])
+  @@index([isActive])
+  @@map("branches")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// POS DEVICES (Flutter كبديل POS)
+// ═══════════════════════════════════════════════════════════════
+
+model PosDevice {
+  id                String          @id @default(uuid())
+  organizationId    String
+  branchId          String
+  assignedToUserId  String?
+  posSerial         String          // يُسجَّل في ETA — حتى 100 حرف
+  posOsVersion      String
+  posModelFramework String
+  deviceName        String?
+  deviceModel       String?
+  status            POSDeviceStatus @default(ACTIVE)
+  lastSeenAt        DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  branch       Branch       @relation(fields: [branchId], references: [id])
+  assignedUser User?        @relation(fields: [assignedToUserId], references: [id])
+  etaReceipts  ETAReceipt[]
+
+  @@unique([organizationId, posSerial])
+  @@index([organizationId])
+  @@map("pos_devices")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// USERS & ROLES
+// ═══════════════════════════════════════════════════════════════
+
+model User {
+  id                   String    @id @default(uuid())
+  organizationId       String
+  branchId             String?
+  email                String    @unique
+  phone                String?
+  passwordHash         String
+  firstName            String
+  lastName             String
+  firstNameAr          String?
+  lastNameAr           String?
+  role                 UserRole  @default(BROKER)
+  permissions          String[]  @default([])
+  avatarUrl            String?
+  brokerLicenseNo      String?
+  brokerLicenseExp     DateTime?
+  brokerClassification String?
+  isMfaEnabled         Boolean   @default(false)
+  mfaSecret            String?
+  isActive             Boolean   @default(true)
+  isEmailVerified      Boolean   @default(false)
+  lastLoginAt          DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  deletedAt            DateTime?
+
+  organization     Organization   @relation(fields: [organizationId], references: [id])
+  branch           Branch?        @relation(fields: [branchId], references: [id])
+  managedBranches  Branch[]       @relation("BranchManager")
+  refreshTokens    RefreshToken[]
+  leads            Lead[]         @relation("AssignedBroker")
+  deals            Deal[]         @relation("AssignedBroker")
+  commissions      Commission[]
+  lockedCommissions Commission[]  @relation("CommissionLocker")
+  posDevices       PosDevice[]
+  activities       Activity[]
+  auditLogs        AuditLog[]
+  assignedConversations Conversation[] @relation("AssignedAgent")
+  createdMessages Message[] @relation("MessageCreator")
+
+  @@index([organizationId, role])
+  @@index([organizationId, branchId])
+  @@index([email])
+  @@index([phone])
+  @@index([isActive])
+  @@index([organizationId, brokerLicenseExp])
+  @@index([organizationId, isActive])
+  @@map("users")
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  isRevoked Boolean  @default(false)
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@map("refresh_tokens")
+}
+
+model Team {
+  id             String   @id @default(uuid())
+  organizationId String
+  branchId       String?
+  name           String
+  managerId      String?
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  branch       Branch?      @relation(fields: [branchId], references: [id])
+  
+  @@index([organizationId])
+  @@map("teams")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CLIENTS & LEADS
+// ═══════════════════════════════════════════════════════════════
+
+model Client {
+  id             String    @id @default(uuid())
+  organizationId String
+  firstName      String
+  lastName       String
+  firstNameAr    String?
+  lastNameAr     String?
+  phone          String
+  phone2         String?
+  email          String?
+  nationalId     String?   // Encrypted AES-256-GCM
+  nationality    String    @default("EG")
+  clientType     String    @default("individual")
+  companyName    String?
+  taxId          String?
+  source         String?
+  tags           String[]  @default([])
+  notes          String?
+  isVip          Boolean   @default(false)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  deletedAt      DateTime?
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  leads        Lead[]
+  deals        Deal[]
+  conversations Conversation[]
+
+  @@index([organizationId, phone])
+  @@index([organizationId, email])
+  @@index([organizationId, isVip])
+  @@index([deletedAt])
+  @@index([organizationId, createdAt])
+  @@index([organizationId, source])
+  @@map("clients")
+}
+
+model Lead {
+  id                String      @id @default(uuid())
+  organizationId    String
+  clientId          String?
+  assignedToId      String?
+  stage             LeadStage   @default(NEW)
+  source            String?
+  budget            Float?
+  budgetCurrency    String      @default("EGP")
+  preferredAreas    String[]    @default([])
+  propertyTypes     PropertyType[] @default([])
+  minSize           Float?
+  maxSize           Float?
+  minBedrooms       Int?
+  maxBedrooms       Int?
+  notes             String?
+  aiScore           Float?
+  aiScoreDetails    Json?
+  expectedCloseDate DateTime?
+  lostReason        String?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  deletedAt         DateTime?
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  client       Client?      @relation(fields: [clientId], references: [id])
+  assignedTo   User?        @relation("AssignedBroker", fields: [assignedToId], references: [id])
+  viewings     Viewing[]
+  conversations Conversation[]
+
+  @@index([organizationId, stage])
+  @@index([organizationId, assignedToId])
+  @@index([organizationId, clientId])
+  @@index([organizationId, source])
+  @@index([deletedAt])
+  @@index([organizationId, createdAt])
+  @@index([organizationId, stage, assignedToId])
+  @@index([organizationId, expectedCloseDate])
+  @@map("leads")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PROPERTIES
+// ═══════════════════════════════════════════════════════════════
+
+model Property {
+  id             String         @id @default(uuid())
+  organizationId String
+  branchId       String?
+  projectId      String?
+  developerId    String?
+  title          String
+  titleAr        String?
+  description    String?
+  propertyType   PropertyType
+  finishingType  FinishingType?
+  status         PropertyStatus @default(AVAILABLE)
+  city           String
+  district       String?
+  address        String?
+  floor          Int?
+  unitNumber     String?
+  areaM2         Float
+  bedrooms       Int?
+  bathrooms      Int?
+  parking        Int?
+  askingPrice    Float
+  currency       String         @default("EGP")
+  isListed       Boolean        @default(true)
+  isOffPlan      Boolean        @default(false)
+  commissionRate Float?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  deletedAt      DateTime?
+
+  organization   Organization         @relation(fields: [organizationId], references: [id])
+  branch         Branch?              @relation(fields: [branchId], references: [id])
+  project        Project?             @relation(fields: [projectId], references: [id])
+  developer      Developer?           @relation(fields: [developerId], references: [id])
+  images         PropertyImage[]
+  priceHistory   PropertyPriceHistory[]
+  lock           PropertyLock?
+  viewings       Viewing[]
+  deals          Deal[]
+
+  @@index([organizationId, status])
+  @@index([organizationId, propertyType])
+  @@index([organizationId, city])
+  @@index([organizationId, branchId])
+  @@index([organizationId, projectId])
+  @@index([askingPrice])
+  @@index([deletedAt])
+  @@index([organizationId, isListed])
+  @@index([organizationId, status, propertyType])
+  @@index([organizationId, askingPrice])
+  @@index([organizationId, bedrooms])
+  @@index([organizationId, developerId])
+  @@index([organizationId, district])
+  @@map("properties")
+}
+
+model PropertyImage {
+  id         String   @id @default(uuid())
+  propertyId String
+  url        String
+  key        String
+  order      Int      @default(0)
+  isPrimary  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  property Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  
+  @@index([propertyId])
+  @@map("property_images")
+}
+
+model PropertyPriceHistory {
+  id          String   @id @default(uuid())
+  propertyId  String
+  price       Float
+  changedById String?
+  reason      String?
+  changedAt   DateTime @default(now())
+
+  property Property @relation(fields: [propertyId], references: [id])
+  
+  @@index([propertyId])
+  @@map("property_price_history")
+}
+
+model PropertyLock {
+  id             String    @id @default(uuid())
+  organizationId String
+  propertyId     String    @unique  // يمنع الحجز المزدوج
+  lockedByDealId String?   @unique
+  lockType       String    // temporary | confirmed
+  lockedAt       DateTime  @default(now())
+  expiresAt      DateTime?
+  unlockedAt     DateTime?
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  property Property @relation(fields: [propertyId], references: [id])
+  
+  @@index([organizationId])
+  @@map("property_locks")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PROJECTS & DEVELOPERS
+// ═══════════════════════════════════════════════════════════════
+
+model Project {
+  id             String   @id @default(uuid())
+  organizationId String
+  developerId    String?
+  name           String
+  nameAr         String?
+  location       String?
+  city           String?
+  description    String?
+  deliveryDate   DateTime?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  developer    Developer?   @relation(fields: [developerId], references: [id])
+  properties   Property[]
+
+  @@index([organizationId])
+  @@map("projects")
+}
+
+model Developer {
+  id              String   @id @default(uuid())
+  organizationId  String
+  name            String
+  nameAr          String?
+  website         String?
+  phone           String?
+  email           String?
+  contactPerson   String?
+  commissionTerms Json?
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  projects     Project[]
+  properties   Property[]
+
+  @@index([organizationId])
+  @@index([isActive])
+  @@map("developers")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DEALS & RESERVATIONS
+// ═══════════════════════════════════════════════════════════════
+
+model Deal {
+  id               String    @id @default(uuid())
+  organizationId   String
+  branchId         String?
+  leadId           String?
+  clientId         String?
+  propertyId       String?
+  assignedBrokerId String?
+  cobrokerUserId   String?
+  externalBroker   String?
+  stage            DealStage @default(LEAD)
+  dealType         String    // sale|rent|management
+  agreedPrice      Float?
+  currency         String    @default("EGP")
+  notes            String?
+  closedAt         DateTime?
+  closedReason     String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  deletedAt        DateTime?
+
+  organization    Organization     @relation(fields: [organizationId], references: [id])
+  branch          Branch?          @relation(fields: [branchId], references: [id])
+  client          Client?          @relation(fields: [clientId], references: [id])
+  property        Property?        @relation(fields: [propertyId], references: [id])
+  assignedBroker  User?            @relation("AssignedBroker", fields: [assignedBrokerId], references: [id])
+  reservation     Reservation?
+  contract        Contract?
+  paymentSchedule PaymentSchedule?
+  commissions     Commission[]
+
+  @@index([organizationId, stage])
+  @@index([organizationId, assignedBrokerId])
+  @@index([organizationId, clientId])
+  @@index([organizationId, propertyId])
+  @@index([organizationId, dealType])
+  @@index([deletedAt])
+  @@index([organizationId, createdAt])
+  @@index([organizationId, closedAt])
+  @@index([organizationId, stage, assignedBrokerId])
+  @@map("deals")
+}
+
+model Reservation {
+  id             String        @id @default(uuid())
+  dealId         String        @unique
+  organizationId String
+  depositAmount  Float
+  depositMethod  PaymentMethod
+  depositPaidAt  DateTime?
+  expiresAt      DateTime
+  notes          String?
+  createdAt      DateTime      @default(now())
+
+  deal Deal @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  
+  @@index([organizationId])
+  @@index([organizationId, expiresAt])
+  @@map("reservations")
+}
+
+model Contract {
+  id             String    @id @default(uuid())
+  dealId         String    @unique
+  organizationId String
+  contractNumber String?
+  contractDate   DateTime?
+  signedByClient Boolean   @default(false)
+  signedByOffice Boolean   @default(false)
+  signedAt       DateTime?
+  fileUrl        String?
+  notes          String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  deal Deal @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  
+  @@index([organizationId])
+  @@index([organizationId, contractNumber])
+  @@index([organizationId, signedAt])
+  @@map("contracts")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PAYMENTS
+// ═══════════════════════════════════════════════════════════════
+
+model PaymentSchedule {
+  id             String   @id @default(uuid())
+  dealId         String   @unique
+  organizationId String
+  totalAmount    Float
+  currency       String   @default("EGP")
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  deal         Deal          @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  installments Installment[]
+
+  @@index([organizationId])
+  @@map("payment_schedules")
+}
+
+model Installment {
+  id                String    @id @default(uuid())
+  paymentScheduleId String
+  organizationId    String
+  installmentNumber Int
+  type              String    // deposit|first_payment|installment|handover
+  amount            Float
+  currency          String    @default("EGP")
+  dueDate           DateTime
+  notes             String?
+  status            String    @default("pending")
+  createdAt         DateTime  @default(now())
+
+  paymentSchedule PaymentSchedule @relation(fields: [paymentScheduleId], references: [id], onDelete: Cascade)
+  payments        Payment[]
+
+  @@index([organizationId, dueDate])
+  @@index([organizationId, status])
+  @@index([paymentScheduleId])
+  @@map("installments")
+}
+
+model Payment {
+  id             String        @id @default(uuid())
+  organizationId String
+  installmentId  String?
+  dealId         String?
+  amount         Float
+  currency       String        @default("EGP")
+  method         PaymentMethod
+  status         String        @default("pending")
+  checkNumber    String?
+  bankName       String?
+  transactionRef String?
+  gatewayRef     String?
+  paidAt         DateTime?
+  dueDate        DateTime?
+  notes          String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  installment Installment? @relation(fields: [installmentId], references: [id])
+  etaReceipt  ETAReceipt?
+
+  @@index([organizationId, status])
+  @@index([organizationId, dueDate])
+  @@index([organizationId, dealId])
+  @@index([organizationId, status, dueDate])
+  @@map("payments")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ETA RECEIPTS
+// ═══════════════════════════════════════════════════════════════
+
+model ETAReceipt {
+  id              String           @id @default(uuid())
+  organizationId  String
+  paymentId       String           @unique
+  posDeviceId     String
+  submissionUUID  String?
+  documentUUID    String?          // SHA256 hex (64 chars)
+  previousUUID    String?
+  longId          String?
+  internalId      String
+  status          ETAReceiptStatus @default(PENDING)
+  receiptType     String           @default("professional")
+  documentVersion String           @default("1.2")
+  receiptPayload  String
+  etaResponse     String?
+  submittedAt     DateTime?
+  processedAt     DateTime?
+  retryCount      Int              @default(0)
+  lastError       String?
+  qrCodeData      String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  payment      Payment      @relation(fields: [paymentId], references: [id])
+  posDevice    PosDevice    @relation(fields: [posDeviceId], references: [id])
+
+  @@index([organizationId, status])
+  @@map("eta_receipts")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// COMMISSIONS
+// ═══════════════════════════════════════════════════════════════
+
+model Commission {
+  id              String           @id @default(uuid())
+  organizationId  String
+  dealId          String
+  userId          String?
+  commissionType  String           // broker|manager|company|external
+  baseAmount      Float
+  percentage      Float?
+  amount          Float
+  vatAmount       Float            @default(0)
+  totalAmount     Float
+  currency        String           @default("EGP")
+  status          CommissionStatus @default(CALCULATED)
+  isLocked        Boolean          @default(false)
+  lockedAt        DateTime?
+  lockedById      String?
+  settledAt       DateTime?
+  paidAt          DateTime?
+  notes           String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  deal         Deal         @relation(fields: [dealId], references: [id])
+  user         User?        @relation(fields: [userId], references: [id])
+  lockedBy     User?        @relation("CommissionLocker", fields: [lockedById], references: [id])
+
+  @@index([organizationId, status])
+  @@index([organizationId, userId])
+  @@index([organizationId, dealId])
+  @@index([organizationId, paidAt])
+  @@index([organizationId, status, userId])
+  @@map("commissions")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// VIEWINGS
+// ═══════════════════════════════════════════════════════════════
+
+model Viewing {
+  id             String   @id @default(uuid())
+  organizationId String
+  leadId         String
+  propertyId     String
+  scheduledAt    DateTime
+  conductedAt    DateTime?
+  duration       Int?
+  feedback       String?
+  rating         Int?
+  status         String   @default("scheduled")
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  lead         Lead         @relation(fields: [leadId], references: [id])
+  property     Property     @relation(fields: [propertyId], references: [id])
+
+  @@index([organizationId, scheduledAt])
+  @@index([organizationId, status])
+  @@index([organizationId, leadId])
+  @@index([organizationId, propertyId])
+  @@map("viewings")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DOCUMENTS & COMPLIANCE
+// ═══════════════════════════════════════════════════════════════
+
+model Document {
+  id             String         @id @default(uuid())
+  organizationId String
+  entityType     String
+  entityId       String
+  documentType   String
+  title          String
+  fileUrl        String
+  fileKey        String
+  mimeType       String
+  sizeBytes      Int
+  status         DocumentStatus @default(PENDING_REVIEW)
+  ocrStatus      String?
+  ocrData        Json?
+  expiresAt      DateTime?
+  uploadedById   String?
+  verifiedById   String?
+  verifiedAt     DateTime?
+  notes          String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+
+  @@index([organizationId, entityType, entityId])
+  @@index([organizationId, status])
+  @@index([organizationId, documentType])
+  @@index([expiresAt])
+  @@map("documents")
+}
+
+model ComplianceRecord {
+  id              String   @id @default(uuid())
+  organizationId  String
+  entityType      String
+  entityId        String
+  recordType      String
+  referenceNumber String?
+  issuedAt        DateTime?
+  expiresAt       DateTime?
+  status          String   @default("valid")
+  documentUrl     String?
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+
+  @@index([organizationId, expiresAt])
+  @@map("compliance_records")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACTIVITIES & NOTIFICATIONS
+// ═══════════════════════════════════════════════════════════════
+
+model Activity {
+  id             String   @id @default(uuid())
+  organizationId String
+  userId         String?
+  entityType     String
+  entityId       String
+  activityType   String
+  title          String
+  body           String?
+  metadata       Json?
+  aiGenerated    Boolean  @default(false)
+  occurredAt     DateTime @default(now())
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  user         User?        @relation(fields: [userId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([organizationId, occurredAt])
+  @@index([organizationId, userId])
+  @@index([organizationId, activityType])
+  @@map("activities")
+}
+
+model Notification {
+  id             String   @id @default(uuid())
+  organizationId String
+  userId         String
+  type           String
+  title          String
+  body           String
+  data           Json?
+  isRead         Boolean  @default(false)
+  readAt         DateTime?
+  channel        String   @default("in_app")
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+
+  @@index([userId, isRead])
+  @@index([organizationId, type])
+  @@index([organizationId, createdAt])
+  @@map("notifications")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CONVERSATIONS & MESSAGES (WhatsApp, etc.)
+// ═══════════════════════════════════════════════════════════════
+
+model Conversation {
+  id             String   @id @default(uuid())
+  organizationId String
+  clientId       String?
+  leadId         String?
+  assignedToId   String?
+  channel        String   @default("whatsapp") // whatsapp | sms | email
+  externalId     String?  // WhatsApp phone number or external reference
+  status         String   @default("active") // active | closed | archived
+  lastMessageAt  DateTime @default(now())
+  unreadCount    Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  client       Client?      @relation(fields: [clientId], references: [id])
+  lead         Lead?        @relation(fields: [leadId], references: [id])
+  assignedTo   User?        @relation("AssignedAgent", fields: [assignedToId], references: [id])
+  messages     Message[]
+
+  @@index([organizationId, channel])
+  @@index([organizationId, clientId])
+  @@index([organizationId, lastMessageAt])
+  @@index([organizationId, assignedToId])
+  @@index([organizationId, status])
+  @@index([organizationId, leadId])
+  @@map("conversations")
+}
+
+model Message {
+  id             String   @id @default(uuid())
+  organizationId String
+  conversationId String
+  direction      String   // inbound | outbound
+  content        String
+  contentType    String   @default("text") // text | image | document | template
+  mediaUrl       String?
+  mediaType      String?  // image | video | audio | document
+  status         String   @default("sent") // sent | delivered | read | failed
+  externalId     String?  // Message ID from WhatsApp
+  templateName   String?  // WhatsApp template name if applicable
+  templateParams String?  // JSON array of template parameters
+  metadata       String?
+  sentAt         DateTime @default(now())
+  deliveredAt    DateTime?
+  readAt         DateTime?
+  failedAt       DateTime?
+  failureReason  String?
+  createdBy      String?
+  createdAt      DateTime @default(now())
+
+  organization Organization  @relation(fields: [organizationId], references: [id])
+  conversation Conversation @relation(fields: [conversationId], references: [id])
+  creator      User?         @relation("MessageCreator", fields: [createdBy], references: [id])
+
+  @@index([organizationId, conversationId])
+  @@index([organizationId, sentAt])
+  @@index([conversationId, sentAt])
+  @@index([organizationId, status])
+  @@map("messages")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// AUTOMATION
+// ═══════════════════════════════════════════════════════════════
+
+model AutomationRule {
+  id             String   @id @default(uuid())
+  organizationId String
+  name           String
+  trigger        String
+  conditions     Json     @default("{}")
+  actions        Json     @default("[]")
+  isActive       Boolean  @default(true)
+  lastRunAt      DateTime?
+  runCount       Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  
+  @@index([organizationId])
+  @@index([organizationId, trigger])
+  @@index([organizationId, isActive])
+  @@map("automation_rules")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// AUDIT (Append-Only)
+// ═══════════════════════════════════════════════════════════════
+
+model AuditLog {
+  id             String   @id @default(uuid())
+  organizationId String
+  userId         String?
+  action         String
+  entityType     String
+  entityId       String?
+  oldValue       Json?
+  newValue       Json?
+  ipAddress      String?
+  userAgent      String?
+  sessionId      String?
+  occurredAt     DateTime @default(now())
+  // NO deletedAt — append-only
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  user         User?        @relation(fields: [userId], references: [id])
+
+  @@index([organizationId, occurredAt])
+  @@index([entityType, entityId])
+  @@index([organizationId, action])
+  @@index([organizationId, userId])
+  @@map("audit_logs")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// AI USAGE
+// ═══════════════════════════════════════════════════════════════
+
+model AiUsageLog {
+  id             String   @id @default(uuid())
+  organizationId String
+  userId         String?
+  feature        String
+  provider       String
+  model          String
+  tier           Int
+  inputTokens    Int
+  outputTokens   Int
+  costUsd        Float
+  latencyMs      Int
+  success        Boolean
+  errorMessage   String?
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  
+  @@index([organizationId, createdAt])
+  @@map("ai_usage_logs")
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SETTINGS - إعدادات التكاملات (مكان .env)
+// ═══════════════════════════════════════════════════════════════
+
+model Setting {
+  id             String   @id @default(uuid())
+  organizationId String
+  category       String   // eta | ai | payments | storage | whatsapp | firebase
+  key            String   // e.g., eta_clientId, ai_anthropicKey
+  value          String   // Encrypted value (AES-256-GCM)
+  isSecret       Boolean  @default(true) // Whether to hide value in responses
+  lastVerifiedAt DateTime? // When the connection was last tested
+  lastVerifiedBy String?  // User who tested
+  verificationStatus String? @default("untested") // untested | success | failed
+  verificationError String? // Last error message if failed
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+
+  @@unique([organizationId, category, key])
+  @@index([organizationId, category])
+  @@map("settings")
+}
+
+

@@ -1,0 +1,520 @@
+.
+├── apps
+│   ├── api
+│   │   ├── prisma
+│   │   │   ├── migrations
+│   │   │   │   ├── 20260323055432_init
+│   │   │   │   │   └── migration.sql
+│   │   │   │   └── migration_lock.toml
+│   │   │   ├── schema.prisma
+│   │   │   └── seed.ts
+│   │   ├── src
+│   │   │   ├── cache
+│   │   │   │   ├── cache.module.ts
+│   │   │   │   └── cache.service.ts
+│   │   │   ├── common
+│   │   │   │   ├── decorators
+│   │   │   │   │   ├── current-user.decorator.ts
+│   │   │   │   │   ├── public.decorator.ts
+│   │   │   │   │   └── require-permissions.decorator.ts
+│   │   │   │   ├── pipes
+│   │   │   │   │   └── xss-sanitization.pipe.ts
+│   │   │   │   └── utils
+│   │   │   │       └── sanitize.util.ts
+│   │   │   ├── config
+│   │   │   │   └── index.ts
+│   │   │   ├── middleware
+│   │   │   │   ├── csrf.middleware.ts
+│   │   │   │   └── setup.middleware.ts
+│   │   │   ├── modules
+│   │   │   │   ├── activities
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── create-activity.dto.ts
+│   │   │   │   │   ├── activities.controller.ts
+│   │   │   │   │   ├── activities.module.ts
+│   │   │   │   │   └── activities.service.ts
+│   │   │   │   ├── ai
+│   │   │   │   │   ├── cron
+│   │   │   │   │   │   └── daily-digest.cron.ts
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── ai.dto.ts
+│   │   │   │   │   ├── services
+│   │   │   │   │   │   ├── churn-risk.service.ts
+│   │   │   │   │   │   ├── intent-detection.service.ts
+│   │   │   │   │   │   └── next-best-action.service.ts
+│   │   │   │   │   ├── ai-router.service.ts
+│   │   │   │   │   ├── ai.controller.ts
+│   │   │   │   │   ├── ai.module.ts
+│   │   │   │   │   ├── ai.service.spec.ts
+│   │   │   │   │   └── ai.service.ts
+│   │   │   │   ├── audit
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── audit-query.dto.ts
+│   │   │   │   │   ├── audit.controller.ts
+│   │   │   │   │   ├── audit.module.ts
+│   │   │   │   │   └── audit.service.ts
+│   │   │   │   ├── auth
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── login.dto.ts
+│   │   │   │   │   ├── guards
+│   │   │   │   │   │   ├── jwt-auth.guard.ts
+│   │   │   │   │   │   └── permissions.guard.ts
+│   │   │   │   │   ├── strategies
+│   │   │   │   │   │   └── jwt.strategy.ts
+│   │   │   │   │   ├── auth.controller.ts
+│   │   │   │   │   ├── auth.module.ts
+│   │   │   │   │   ├── auth.service.spec.ts
+│   │   │   │   │   └── auth.service.ts
+│   │   │   │   ├── automation
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── automation.dto.ts
+│   │   │   │   │   ├── automation.controller.ts
+│   │   │   │   │   ├── automation.module.ts
+│   │   │   │   │   ├── automation.service.spec.ts
+│   │   │   │   │   ├── automation.service.ts
+│   │   │   │   │   └── rules-engine.service.ts
+│   │   │   │   ├── branches
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   ├── create-branch.dto.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   └── update-branch.dto.ts
+│   │   │   │   │   ├── branches.controller.ts
+│   │   │   │   │   ├── branches.module.ts
+│   │   │   │   │   └── branches.service.ts
+│   │   │   │   ├── clients
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   ├── create-client.dto.ts
+│   │   │   │   │   │   └── update-client.dto.ts
+│   │   │   │   │   ├── clients.controller.ts
+│   │   │   │   │   ├── clients.module.ts
+│   │   │   │   │   └── clients.service.ts
+│   │   │   │   ├── commissions
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── commissions.dto.ts
+│   │   │   │   │   ├── commissions.controller.ts
+│   │   │   │   │   ├── commissions.module.ts
+│   │   │   │   │   ├── commissions.service.spec.ts
+│   │   │   │   │   └── commissions.service.ts
+│   │   │   │   ├── communication
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── communication.dto.ts
+│   │   │   │   │   ├── communication.controller.ts
+│   │   │   │   │   ├── communication.module.ts
+│   │   │   │   │   └── communication.service.ts
+│   │   │   │   ├── compliance
+│   │   │   │   │   ├── cron
+│   │   │   │   │   │   └── compliance.cron.ts
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── compliance.dto.ts
+│   │   │   │   │   ├── compliance.controller.ts
+│   │   │   │   │   ├── compliance.module.ts
+│   │   │   │   │   └── compliance.service.ts
+│   │   │   │   ├── contracts
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── contracts.dto.ts
+│   │   │   │   │   ├── contracts.controller.ts
+│   │   │   │   │   ├── contracts.module.ts
+│   │   │   │   │   └── contracts.service.ts
+│   │   │   │   ├── conversations
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   ├── conversation.dto.ts
+│   │   │   │   │   │   └── conversations.dto.ts
+│   │   │   │   │   ├── conversations.controller.ts
+│   │   │   │   │   ├── conversations.module.ts
+│   │   │   │   │   └── conversations.service.ts
+│   │   │   │   ├── dashboard
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── dashboard.dto.ts
+│   │   │   │   │   ├── dashboard.controller.ts
+│   │   │   │   │   ├── dashboard.module.ts
+│   │   │   │   │   └── dashboard.service.ts
+│   │   │   │   ├── deals
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── deals.dto.ts
+│   │   │   │   │   ├── deals.controller.ts
+│   │   │   │   │   ├── deals.module.ts
+│   │   │   │   │   └── deals.service.ts
+│   │   │   │   ├── documents
+│   │   │   │   │   ├── config
+│   │   │   │   │   │   └── document-types.config.ts
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── documents.dto.ts
+│   │   │   │   │   ├── workers
+│   │   │   │   │   │   └── ocr.worker.ts
+│   │   │   │   │   ├── documents.controller.ts
+│   │   │   │   │   ├── documents.module.ts
+│   │   │   │   │   └── documents.service.ts
+│   │   │   │   ├── eta
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── eta.dto.ts
+│   │   │   │   │   ├── workers
+│   │   │   │   │   │   └── receipt-submission.worker.ts
+│   │   │   │   │   ├── eta-auth.service.ts
+│   │   │   │   │   ├── eta-receipt.service.ts
+│   │   │   │   │   ├── eta-signer.service.ts
+│   │   │   │   │   ├── eta-uuid.service.ts
+│   │   │   │   │   ├── eta.controller.ts
+│   │   │   │   │   └── eta.module.ts
+│   │   │   │   ├── leads
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── create-lead.dto.ts
+│   │   │   │   │   ├── leads.controller.ts
+│   │   │   │   │   ├── leads.module.ts
+│   │   │   │   │   ├── leads.service.spec.ts
+│   │   │   │   │   └── leads.service.ts
+│   │   │   │   ├── notifications
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── notification.dto.ts
+│   │   │   │   │   ├── notifications.controller.ts
+│   │   │   │   │   ├── notifications.module.ts
+│   │   │   │   │   └── notifications.service.ts
+│   │   │   │   ├── organization
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── organization.dto.ts
+│   │   │   │   │   ├── organization.controller.ts
+│   │   │   │   │   ├── organization.module.ts
+│   │   │   │   │   └── organization.service.ts
+│   │   │   │   ├── payment-schedules
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── payment-schedules.dto.ts
+│   │   │   │   │   ├── payment-schedules.controller.ts
+│   │   │   │   │   ├── payment-schedules.module.ts
+│   │   │   │   │   └── payment-schedules.service.ts
+│   │   │   │   ├── payments
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── payments.dto.ts
+│   │   │   │   │   ├── payments.controller.ts
+│   │   │   │   │   ├── payments.module.ts
+│   │   │   │   │   └── payments.service.ts
+│   │   │   │   ├── pos-devices
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── pos-device.dto.ts
+│   │   │   │   │   ├── pos-devices.controller.ts
+│   │   │   │   │   ├── pos-devices.module.ts
+│   │   │   │   │   └── pos-devices.service.ts
+│   │   │   │   ├── properties
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── create-property.dto.ts
+│   │   │   │   │   ├── properties.controller.ts
+│   │   │   │   │   ├── properties.module.ts
+│   │   │   │   │   ├── properties.service.spec.ts
+│   │   │   │   │   └── properties.service.ts
+│   │   │   │   ├── public
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── public.dto.ts
+│   │   │   │   │   ├── public.controller.ts
+│   │   │   │   │   ├── public.module.ts
+│   │   │   │   │   └── public.service.ts
+│   │   │   │   ├── realtime
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── realtime.dto.ts
+│   │   │   │   │   ├── realtime.gateway.ts
+│   │   │   │   │   ├── realtime.module.ts
+│   │   │   │   │   └── realtime.service.ts
+│   │   │   │   ├── reservations
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── reservations.dto.ts
+│   │   │   │   │   ├── reservations.controller.ts
+│   │   │   │   │   ├── reservations.module.ts
+│   │   │   │   │   └── reservations.service.ts
+│   │   │   │   ├── search
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── search.dto.ts
+│   │   │   │   │   ├── search.controller.ts
+│   │   │   │   │   ├── search.module.ts
+│   │   │   │   │   └── search.service.ts
+│   │   │   │   ├── settings
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── settings.dto.ts
+│   │   │   │   │   ├── settings.controller.ts
+│   │   │   │   │   ├── settings.module.ts
+│   │   │   │   │   └── settings.service.ts
+│   │   │   │   ├── setup
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── setup.dto.ts
+│   │   │   │   │   ├── setup.controller.ts
+│   │   │   │   │   ├── setup.module.ts
+│   │   │   │   │   └── setup.service.ts
+│   │   │   │   ├── uploads
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── upload.dto.ts
+│   │   │   │   │   ├── uploads.controller.ts
+│   │   │   │   │   ├── uploads.module.ts
+│   │   │   │   │   └── uploads.service.ts
+│   │   │   │   ├── users
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   ├── create-user.dto.ts
+│   │   │   │   │   │   └── update-user.dto.ts
+│   │   │   │   │   ├── users.controller.ts
+│   │   │   │   │   ├── users.module.ts
+│   │   │   │   │   └── users.service.ts
+│   │   │   │   ├── viewings
+│   │   │   │   │   ├── dto
+│   │   │   │   │   │   └── viewings.dto.ts
+│   │   │   │   │   ├── viewings.controller.ts
+│   │   │   │   │   ├── viewings.module.ts
+│   │   │   │   │   └── viewings.service.ts
+│   │   │   │   └── whatsapp
+│   │   │   │       ├── dto
+│   │   │   │       │   └── whatsapp.dto.ts
+│   │   │   │       ├── whatsapp.controller.ts
+│   │   │   │       ├── whatsapp.module.ts
+│   │   │   │       └── whatsapp.service.ts
+│   │   │   ├── prisma
+│   │   │   │   ├── prisma.module.ts
+│   │   │   │   └── prisma.service.ts
+│   │   │   ├── workers
+│   │   │   │   └── ocr.worker.ts
+│   │   │   ├── app.module.ts
+│   │   │   └── main.ts
+│   │   ├── check-users.ts
+│   │   ├── nest-cli.json
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   ├── customer-portal
+│   │   ├── app
+│   │   │   ├── properties
+│   │   │   │   └── page.tsx
+│   │   │   ├── request
+│   │   │   │   └── [propertyId]
+│   │   │   │       └── page.tsx
+│   │   │   ├── error.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── loading.tsx
+│   │   │   ├── not-found.tsx
+│   │   │   └── page.tsx
+│   │   ├── lib
+│   │   │   ├── ErrorBoundary.tsx
+│   │   │   └── api.ts
+│   │   ├── styles
+│   │   │   └── globals.css
+│   │   ├── next.config.ts
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── web
+│       ├── app
+│       │   ├── [locale]
+│       │   │   ├── (auth)
+│       │   │   │   ├── login
+│       │   │   │   │   └── page.tsx
+│       │   │   │   └── layout.tsx
+│       │   │   ├── dashboard
+│       │   │   │   ├── ai-copilot
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── audit-logs
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── automation
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── clients
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   ├── edit
+│       │   │   │   │   │   │   └── page.tsx
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── commissions
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── compliance
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── contracts
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── deals
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── documents
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── eta
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── financial-reports
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── inbox
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── leads
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   ├── edit
+│       │   │   │   │   │   │   └── page.tsx
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── payment-schedules
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── payments
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── properties
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   ├── edit
+│       │   │   │   │   │   │   └── page.tsx
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── reconciliation
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── reports
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── reservations
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── settings
+│       │   │   │   │   ├── branches
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── users
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── viewings
+│       │   │   │   │   ├── [id]
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   ├── new
+│       │   │   │   │   │   └── page.tsx
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── error.tsx
+│       │   │   │   ├── layout.tsx
+│       │   │   │   ├── loading.tsx
+│       │   │   │   └── page.tsx
+│       │   │   ├── downloads
+│       │   │   │   └── page.tsx
+│       │   │   ├── setup
+│       │   │   │   ├── layout.tsx
+│       │   │   │   └── page.tsx
+│       │   │   ├── error.tsx
+│       │   │   ├── layout.tsx
+│       │   │   ├── not-found.tsx
+│       │   │   ├── page.tsx
+│       │   │   └── providers.tsx
+│       │   └── page.tsx
+│       ├── components
+│       │   ├── activities
+│       │   │   ├── ActivityTimeline.tsx
+│       │   │   └── AddActivityForm.tsx
+│       │   ├── ai
+│       │   │   ├── AIChatMessage.tsx
+│       │   │   ├── AICopilotPanel.tsx
+│       │   │   ├── AIQuickActions.tsx
+│       │   │   └── LeadScoreBadge.tsx
+│       │   ├── automation
+│       │   │   ├── ActionBuilder.tsx
+│       │   │   ├── ConditionBuilder.tsx
+│       │   │   ├── RuleBuilder.tsx
+│       │   │   ├── RulesList.tsx
+│       │   │   └── TriggerSelector.tsx
+│       │   ├── dashboard
+│       │   │   ├── KPICard.tsx
+│       │   │   ├── LeadsChart.tsx
+│       │   │   ├── PipelineOverview.tsx
+│       │   │   └── RecentActivities.tsx
+│       │   ├── ocr
+│       │   │   ├── CameraOCR.tsx
+│       │   │   └── OCRResultModal.tsx
+│       │   ├── search
+│       │   │   └── GlobalSearch.tsx
+│       │   ├── settings
+│       │   │   └── IntegrationsSettings.tsx
+│       │   ├── shared
+│       │   │   ├── BottomNav.tsx
+│       │   │   ├── EmptyState.tsx
+│       │   │   ├── ErrorBoundary.tsx
+│       │   │   ├── LanguageProvider.tsx
+│       │   │   ├── LanguageSwitcher.tsx
+│       │   │   ├── OfflineIndicator.tsx
+│       │   │   ├── PermissionGate.tsx
+│       │   │   ├── Sidebar.tsx
+│       │   │   ├── SkeletonLoader.tsx
+│       │   │   ├── SkipLink.tsx
+│       │   │   ├── ThemeProvider.tsx
+│       │   │   └── TopBar.tsx
+│       │   └── uploads
+│       │       └── ImageUploader.tsx
+│       ├── hooks
+│       │   ├── useAuth.ts
+│       │   ├── useCameraOCR.ts
+│       │   ├── useLocale.ts
+│       │   └── useOffline.ts
+│       ├── lib
+│       │   ├── db
+│       │   │   ├── indexeddb.ts
+│       │   │   └── sync-manager.ts
+│       │   ├── api.ts
+│       │   └── utils.ts
+│       ├── messages
+│       │   ├── ar.json
+│       │   └── en.json
+│       ├── public
+│       │   ├── downloads
+│       │   │   └── VPS-PostgreSQL-Migration-Guide.md
+│       │   ├── manifest.json
+│       │   ├── project-backup.tar.gz
+│       │   └── sw.js
+│       ├── styles
+│       │   ├── animations.css
+│       │   └── globals.css
+│       ├── eslint.config.mjs
+│       ├── i18n.ts
+│       ├── middleware.ts
+│       ├── next-env.d.ts
+│       ├── next.config.ts
+│       ├── package.json
+│       └── tsconfig.json
+├── db
+│   └── custom.db
+├── infrastructure
+│   └── postgres
+│       └── init.sql
+├── packages
+│   ├── shared-types
+│   │   ├── src
+│   │   │   └── index.ts
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── shared-utils
+│       ├── src
+│       │   └── index.ts
+│       ├── package.json
+│       └── tsconfig.json
+├── upload
+│   ├── CLAUDE.md
+│   ├── README.md
+│   ├── analysis-and-recommendations.md
+│   ├── api-contracts.md
+│   ├── architecture.md
+│   ├── claude.md
+│   ├── data-model.md
+│   ├── detailed-screens-analysis.md
+│   ├── marketing-analysis-report.md
+│   ├── pasted_image_1774190131579.png
+│   ├── pasted_image_1774190719808.png
+│   ├── phase-status.md
+│   ├── plan.md
+│   ├── prd.md
+│   ├── project-rules.md
+│   ├── security.md
+│   ├── skill.md
+│   ├── tasks.md
+│   ├── tree.txt
+│   └── updates.md
+├── CLAUDE.md
+├── README.md
+├── bun.lock
+├── docker-compose.yml
+├── package-lock.json
+├── package.json
+├── tree.txt
+├── turbo.json
+└── worklog.md
+
+174 directories, 344 files

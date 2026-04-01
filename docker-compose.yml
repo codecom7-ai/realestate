@@ -1,0 +1,123 @@
+version: '3.9'
+
+services:
+  # ═══════════════════════════════════════════════════════════════
+  # PostgreSQL 17
+  # ═══════════════════════════════════════════════════════════════
+  postgres:
+    image: postgres:17-alpine
+    container_name: realestate-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: realestate_os
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infrastructure/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d realestate_os"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ═══════════════════════════════════════════════════════════════
+  # Redis 7.4
+  # ═══════════════════════════════════════════════════════════════
+  redis:
+    image: redis:7.4-alpine
+    container_name: realestate-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ═══════════════════════════════════════════════════════════════
+  # n8n - Automation Workflows
+  # ═══════════════════════════════════════════════════════════════
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: realestate-n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=admin123
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=realestate_os
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=postgres
+      - N8N_ENCRYPTION_KEY=your-encryption-key-change-me
+    volumes:
+      - n8n_data:/home/node/.n8n
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:5678/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ═══════════════════════════════════════════════════════════════
+  # API Server (NestJS) - for production
+  # ═══════════════════════════════════════════════════════════════
+  # api:
+  #   build:
+  #     context: ./apps/api
+  #     dockerfile: Dockerfile
+  #   container_name: realestate-api
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3001:3001"
+  #   environment:
+  #     - NODE_ENV=production
+  #     - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/realestate_os
+  #     - REDIS_URL=redis://redis:6379
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # Web Server (Next.js) - for production
+  # ═══════════════════════════════════════════════════════════════
+  # web:
+  #   build:
+  #     context: ./apps/web
+  #     dockerfile: Dockerfile
+  #   container_name: realestate-web
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=production
+  #     - NEXT_PUBLIC_API_URL=http://api:3001
+  #   depends_on:
+  #     - api
+
+volumes:
+  postgres_data:
+  redis_data:
+  n8n_data:
+
+networks:
+  default:
+    name: realestate-network
